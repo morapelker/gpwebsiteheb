@@ -68,10 +68,6 @@ class Header extends Component {
             this.setState({showProducts});
     };
 
-    componentWillReceiveProps(props, context) {
-        this.setState({showProducts: false});
-    }
-
     render() {
         const {classes} = this.props;
         return (
@@ -97,14 +93,45 @@ class Header extends Component {
                     </div>
 
                 </div>
-                <Collapse in={this.state.showProducts} classes={{container: classes.container}} style={{top: this.props.shrinked ? 50 : 70}}>
+                <Collapse in={this.state.showProducts} onMouseLeave={() => {
+                    this.setState({showProducts: false});
+                }} classes={{container: classes.container}}
+                          style={{top: this.props.shrinked ? 50 : 70}}>
                     <div style={{
                         background: 'rgba(255,0,0,0.3)',
                         width: '100%',
                         minWidth: 450,
-                        height: 300,
-                        zIndex: 10
+                        paddingBottom: 30,
+                        zIndex: 10,
                     }}>
+                        <div style={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            justifyContent: 'space-evenly'
+                        }}>
+                            <div style={{height: 200, width: 130, marginTop: 30, background: 'green'}}>
+
+                            </div>
+                            <div style={{height: 200, width: 130, marginTop: 30, background: 'green'}}>
+
+                            </div>
+                            <div style={{height: 200, width: 130, marginTop: 30, background: 'green'}}>
+
+                            </div>
+                            <div style={{height: 200, width: 130, marginTop: 30, background: 'green'}}>
+
+                            </div>
+                            <div style={{height: 200, width: 130, marginTop: 30, background: 'green'}}>
+
+                            </div>
+                            <div style={{height: 200, width: 130, marginTop: 30, background: 'green'}}>
+
+                            </div>
+                            <div style={{height: 200, width: 130, marginTop: 30, background: 'green'}}>
+
+                            </div>
+                        </div>
+
 
                     </div>
                 </Collapse>
