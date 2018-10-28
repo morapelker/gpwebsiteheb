@@ -1,0 +1,30 @@
+.routeSpan {
+    cursor: pointer;
+    color: #999;
+    margin-left: 20px;
+    font-family: Open sans regular, Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.routeSpan:hover {
+    color: #39b54a;
+}
+
+.title, .text {
+    font-family: Skia, sans-serif;
+    color: white;
+}
+
+.title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.text {
+    font-size: 1.5em;
+}
+
+.icon {
+    margin-left: 20px;
+    color: #39b54a;
+    cursor: pointer;
+}

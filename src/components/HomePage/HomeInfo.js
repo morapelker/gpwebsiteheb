@@ -1,8 +1,9 @@
 import React from 'react';
 
-const HomeInfo = props => {
+const HomeInfo = ({info}) => {
     return (
-        <div>
+        <div style={{padding: 30, width: 300}}>
+            <img src={'images/' + info.image} style={{}} alt={''} />
         </div>
     );
 };
