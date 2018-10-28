@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import './App.css';
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import HomePage from "./components/HomePage/HomePage";
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
+import {library} from '@fortawesome/fontawesome-svg-core'
+import {fab} from '@fortawesome/free-brands-svg-icons'
+
 library.add(fab);
 
 class App extends Component {
@@ -39,7 +40,7 @@ class App extends Component {
                     top: 0,
                     width: '100%'
                 }}>
-                    <HomePage />
+                    <HomePage/>
                 </div>
                 <Header shrinked={this.state.shrinked}/>
             </div>

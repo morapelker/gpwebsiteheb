@@ -6,7 +6,7 @@ const onClick = item => () => {
     console.log('clicked', item.location);
 };
 
-const HomeRouter = ({items}) => {
+const HomeRouter = ({items, productsSelector}) => {
     return (
         <div style={{
             display: 'flex',
@@ -16,7 +16,9 @@ const HomeRouter = ({items}) => {
             justifyContent: 'flex-end', width: '100%'
         }}>
             {items.map((item, index) =>
-                <span className={'routeSpan'} key={index} onClick={onClick(item)}>
+                <span className={'routeSpan'} key={index} onClick={onClick(item)} onMouseEnter={() => {
+                    productsSelector(item.label === 'Products')
+                }}>
                     {item.label}
             </span>)}
             <FontAwesomeIcon className={'icon'} icon={['fab' , 'facebook']} />
