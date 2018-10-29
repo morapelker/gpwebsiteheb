@@ -23,7 +23,7 @@ const SlideItem = ({item}) => {
                     maxWidth: 1200,
                     justifyContent: 'center'
                 }}>
-                    <h4>
+                    <h4 style={{textAlign: 'center'}}>
                         <span className={'title'}>{item.title}</span>
                     </h4>
                     {item.text.map((line, index) =>

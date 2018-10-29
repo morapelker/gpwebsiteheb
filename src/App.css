@@ -1,9 +1,30 @@
 .App {
     text-align: center;
     height: 100%;
-    overflow: auto;
+    overflow-y: auto;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Skia, sans-serif;
 }
 
 h4 {
     font-size: 2em;
+    text-align: left;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+#element::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }

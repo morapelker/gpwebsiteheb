@@ -1,12 +1,19 @@
 import React from 'react';
 import './router.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {withRouter} from "react-router-dom";
 
-const onClick = item => () => {
-    console.log('clicked', item.location);
+const onClick = (item, history) => () => {
+    if (history.location.pathname === item.location)
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    else
+        history.push(item.location);
 };
 
-const HomeRouter = ({items, productsSelector}) => {
+const HomeRouter = ({items, productsSelector, history}) => {
     return (
         <div style={{
             display: 'flex',
@@ -16,7 +23,7 @@ const HomeRouter = ({items, productsSelector}) => {
             justifyContent: 'flex-end', width: '100%'
         }}>
             {items.map((item, index) =>
-                <span className={'routeSpan'} key={index} onClick={onClick(item)} onMouseEnter={() => {
+                <span className={'routeSpan'} key={index} onClick={onClick(item, history)} onMouseEnter={() => {
                     productsSelector(item.label === 'Products')
                 }}>
                     {item.label}
@@ -27,4 +34,4 @@ const HomeRouter = ({items, productsSelector}) => {
     );
 };
 
-export default HomeRouter;
+export default withRouter(HomeRouter);

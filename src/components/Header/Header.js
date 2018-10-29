@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import HomeRouter from "../HomePage/HomeRouter";
 import Collapse from '@material-ui/core/Collapse';
 import {withStyles} from '@material-ui/core/styles';
+import HeaderUnit from "./HeaderUnit";
 
 const styles = {
     container: {
@@ -35,7 +36,7 @@ const items = [
         location: '/about'
     }, {
         label: 'Advantages',
-        location: '/about'
+        location: '/advantages'
     }, {
         label: 'Products',
         location: '/about'
@@ -54,12 +55,41 @@ const items = [
     }
 ];
 
+const products = [
+    {
+        text: 'Light Switch',
+        whiteImage: 'lightwhite.png',
+        blackImage: 'lightblack.png',
+        url: 'light'
+    }, {
+        text: 'Shutter Switch',
+        whiteImage: 'shutterwhite.png',
+        blackImage: 'shutterblack.png',
+        url: 'shutter'
+    }, {
+        text: 'Power Switch',
+        whiteImage: 'powerwhite.png',
+        blackImage: 'powerblack.png',
+        url: 'power'
+    }, {
+        text: 'Sense Switch',
+        whiteImage: 'sensewhite.png',
+        blackImage: 'senseblack.png',
+        url: 'sense'
+    }, {
+        text: 'Sensor',
+        whiteImage: 'sensorwhite.png',
+        blackImage: 'sensorblack.png',
+        url: 'sensor'
+    }
+];
 
 class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showProducts: false
+            showProducts: false,
+            dark: false
         };
     }
 
@@ -74,7 +104,7 @@ class Header extends Component {
             <div>
                 <div style={{
                     ...ourStyles.root,
-                    height: this.props.shrinked ? 30 : 50,
+                    height: this.props.shrinked ? 50 : 70,
                     background: this.props.shrinked ? 'white' : 'rgba(255,255,255,0.85)',
                     paddingTop: 10,
                     paddingBottom: 10,
@@ -98,40 +128,58 @@ class Header extends Component {
                 }} classes={{container: classes.container}}
                           style={{top: this.props.shrinked ? 50 : 70}}>
                     <div style={{
-                        background: 'rgba(255,0,0,0.3)',
                         width: '100%',
                         minWidth: 450,
                         paddingBottom: 30,
                         zIndex: 10,
+                        display: 'flex',
+                        borderBottomLeftRadius: 10,
+                        borderBottomRightRadius: 10,
+                        background: this.state.dark ? '#b3b3b3' : 'white'
                     }}>
                         <div style={{
+                            flex: 1,
                             display: 'flex',
                             flexWrap: 'wrap',
                             justifyContent: 'space-evenly'
                         }}>
-                            <div style={{height: 200, width: 130, marginTop: 30, background: 'green'}}>
-
-                            </div>
-                            <div style={{height: 200, width: 130, marginTop: 30, background: 'green'}}>
-
-                            </div>
-                            <div style={{height: 200, width: 130, marginTop: 30, background: 'green'}}>
-
-                            </div>
-                            <div style={{height: 200, width: 130, marginTop: 30, background: 'green'}}>
-
-                            </div>
-                            <div style={{height: 200, width: 130, marginTop: 30, background: 'green'}}>
-
-                            </div>
-                            <div style={{height: 200, width: 130, marginTop: 30, background: 'green'}}>
-
-                            </div>
-                            <div style={{height: 200, width: 130, marginTop: 30, background: 'green'}}>
-
-                            </div>
+                            {products.map((product, index) => <HeaderUnit key={index} product={product} dark={this.state.dark}/>)}
                         </div>
+                        <div style={{
+                            width: 80, height: 40, display: 'flex',
+                            justifyContent: 'space-evenly',
+                            paddingTop: 7
+                        }}>
+                            <span
+                                onClick={() => {
+                                    this.setState({dark: true});
+                                }}
+                                style={{
+                                    width: 25,
+                                    borderRadius: 10,
+                                    borderWidth: 3,
+                                    borderColor: this.state.dark ? '#00ff00' : 'black',
+                                    height: 25,
+                                    borderStyle: 'solid',
+                                    background: 'black',
+                                    cursor: 'pointer'
+                                }}/>
 
+                            <span
+                                onClick={() => {
+                                    this.setState({dark: false});
+                                }}
+                                style={{
+                                    width: 25,
+                                    borderWidth: 3,
+                                    borderStyle: 'solid',
+                                    borderRadius: 10,
+                                    borderColor: this.state.dark ? 'white' : '#00ff00',
+                                    height: 25,
+                                    background: 'white',
+                                    cursor: 'pointer'
+                                }}/>
+                        </div>
 
                     </div>
                 </Collapse>
