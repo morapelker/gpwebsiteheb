@@ -3,14 +3,14 @@ import './App.css';
 import Header from "./components/Header/Header";
 import HomePage from "./components/HomePage/HomePage";
 import {library} from '@fortawesome/fontawesome-svg-core';
-import {faQuoteRight} from '@fortawesome/free-solid-svg-icons';
+import {faQuoteRight, faPlus} from '@fortawesome/free-solid-svg-icons';
 import {fab} from '@fortawesome/free-brands-svg-icons';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import AboutPage from "./components/AboutPage/AboutPage";
 import AdvantagesPage from "./components/Advantages/AdvantagesPage";
+import FaqPage from "./components/FAQ/FaqPage";
 
-library.add(fab);
-library.add(faQuoteRight);
+library.add(faQuoteRight, faPlus, fab);
 
 class App extends Component {
     constructor(props, context) {
@@ -51,6 +51,7 @@ class App extends Component {
                                 <Route exact path='/' component={HomePage}/>
                                 <Route exact path='/about' component={AboutPage}/>
                                 <Route exact path='/advantages' component={AdvantagesPage}/>
+                                <Route exact path='/faq' component={FaqPage}/>
                             </Switch>
                         </div>
                         <Header shrinked={this.state.shrinked}/>

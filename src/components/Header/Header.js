@@ -48,7 +48,7 @@ const items = [
         location: '/about'
     }, {
         label: 'FAQ',
-        location: '/about'
+        location: '/faq'
     }, {
         label: 'Contact',
         location: '/about'
