@@ -1,11 +1,19 @@
 import React, {Component} from 'react';
 import QuestionAnswer from "./QuestionAnswer";
+import {questions} from './questions';
 
 class FaqPage extends Component {
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
         window.scrollTo(0, 0);
+        this.state = {
+            openQuestion: -1
+        }
     }
+
+    questionClicked = index => {
+        this.setState({openQuestion: index === this.state.openQuestion ? -1 : index});
+    };
 
     render() {
         return (
@@ -36,14 +44,19 @@ class FaqPage extends Component {
                     paddingLeft: '20%',
                     paddingRight: '20%',
                     width: '100%',
-                    height: 500,
                     display: 'flex',
-                    flexDirection: 'column'
+                    flexDirection: 'column',
                 }}>
-                    <QuestionAnswer question={'hey?'} answer={'yes'} />
-                    <QuestionAnswer question={'hey?'} answer={'yes'} open={true} />
-                    <QuestionAnswer question={'hey?'} answer={'yes'} />
-                    <QuestionAnswer question={'hey?'} answer={'yes'} />
+                    {questions.map((question, index) =>
+                        <QuestionAnswer key={index}
+                                        onClick={() => {
+                                            this.questionClicked(index);
+                                        }}
+                                        open={this.state.openQuestion === index}
+                                        question={question.question}
+                                        answer={question.answer}/>
+                    )}
+                    <div style={{height: 100}} />
                 </div>
             </div>
         );
