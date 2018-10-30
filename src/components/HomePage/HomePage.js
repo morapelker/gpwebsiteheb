@@ -37,7 +37,6 @@ class HomePage extends Component {
                 <MainSlideShow/>
                 <div style={{
                     marginTop: 10,
-                    height: 1000,
                     width: '100%'
                 }}>
                     <div style={{
