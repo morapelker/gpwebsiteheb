@@ -25,8 +25,8 @@ const info = [
 ];
 
 class HomePage extends Component {
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
         window.scrollTo(0, 0);
         this.state = {};
     }

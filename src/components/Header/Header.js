@@ -39,19 +39,20 @@ const items = [
         location: '/advantages'
     }, {
         label: 'Products',
-        location: '/about'
+        location: '/products',
+        hash: ''
     }, {
         label: 'Information Center',
-        location: '/about'
+        location: '/niy',
     }, {
         label: 'Apps',
-        location: '/about'
+        location: '/niy',
     }, {
         label: 'FAQ',
         location: '/faq'
     }, {
         label: 'Contact',
-        location: '/about'
+        location: '/niy'
     }
 ];
 
@@ -81,6 +82,21 @@ const products = [
         whiteImage: 'sensorwhite.png',
         blackImage: 'sensorblack.png',
         url: 'sensor'
+    }, {
+        text: 'IR Bridge',
+        whiteImage: 'irwhite.png',
+        blackImage: 'irblack.png',
+        url: 'irbridge'
+    }, {
+        text: 'Internet Gateway',
+        whiteImage: 'ighcwhite.png',
+        blackImage: 'ighcblack.png',
+        url: 'internetgateway'
+    }, {
+        text: 'Keypad',
+        whiteImage: 'keypadwhite.png',
+        blackImage: 'keypadblack.png',
+        url: 'keypad'
     }
 ];
 
@@ -108,7 +124,8 @@ class Header extends Component {
                     background: this.props.shrinked ? 'white' : 'rgba(255,255,255,0.85)',
                     paddingTop: 10,
                     paddingBottom: 10,
-                    paddingLeft: 10
+                    paddingLeft: 10,
+                    borderBottom: this.props.shrinked ? '1px solid' : 'unset',
                 }}>
                     <div style={{
                         display: 'flex',
@@ -143,7 +160,11 @@ class Header extends Component {
                             flexWrap: 'wrap',
                             justifyContent: 'space-evenly'
                         }}>
-                            {products.map((product, index) => <HeaderUnit key={index} product={product} dark={this.state.dark}/>)}
+                            {products.map((product, index) =>
+                                <HeaderUnit key={index}
+                                            product={product}
+                                            productsSelector={this.showProducts}
+                                            dark={this.state.dark}/>)}
                         </div>
                         <div style={{
                             width: 80, height: 40, display: 'flex',

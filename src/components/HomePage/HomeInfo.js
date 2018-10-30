@@ -8,7 +8,9 @@ const HomeInfo = ({info}) => {
             <h4 style={{textAlign: 'center'}}>{info.title}</h4>
             <span>{info.text}</span>
             <p/>
-            <MatButton text={'Read More'} type={'secondary'} backgroundColor={'default'} />
+            <MatButton type={'secondary'} backgroundColor={'default'}>
+                Read More
+            </MatButton>
         </div>
     );
 };

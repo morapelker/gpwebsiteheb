@@ -38,7 +38,9 @@ const AboutSection = () => {
                     <span style={{color: 'white', fontSize: '1.1em'}}>living. Our goals were achieved by inventing a revolutionary </span>
                     <span style={{color: 'white', fontSize: '1.1em'}}>igh concept that opens the door for a new generation of real </span>
                     <span style={{color: 'white', fontSize: '1.1em'}}>smart homes. igh system is designed...</span>
-                    <MatButton text={'Read More'} type={'secondary'} backgroundColor={'#33cc33'} />
+                    <MatButton type={'secondary'} backgroundColor={'#33cc33'}>
+                        Read More
+                    </MatButton>
                 </div>
 
             </div>

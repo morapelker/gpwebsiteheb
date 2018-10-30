@@ -12,8 +12,8 @@ import MatButton from "../Common/MatButton";
 import InfoPanel from "./InfoPanel";
 
 class AboutPage extends Component {
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
         window.scrollTo(0, 0);
     }
 
@@ -60,10 +60,12 @@ class AboutPage extends Component {
                         <h4 style={{textAlign: 'left'}}>Introduction</h4>
                         {about2.split('\n').map((item, index) => <p
                             style={{width: '100%', textAlign: 'left'}} key={index}>{item}</p>)}
-                        <MatButton style={{width: '30%', minWidth: 200}} text={'Introduction PDF'}
+                        <MatButton style={{width: '30%', minWidth: 200}}
                                    onClick={() => {
                                        console.log('pdf');
-                                   }}/>
+                                   }}>
+                            Introduction PDF
+                        </MatButton>
                     </div>
                     <img src={'/images/intro.png'} alt={''} style={{
                         marginLeft: 10,

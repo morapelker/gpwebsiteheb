@@ -44,6 +44,7 @@ class FaqPage extends Component {
                     paddingLeft: '20%',
                     paddingRight: '20%',
                     width: '100%',
+                    minHeight: 1000,
                     display: 'flex',
                     flexDirection: 'column',
                 }}>

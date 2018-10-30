@@ -13,11 +13,14 @@ const styles = {
     },
 };
 
-const MatButton = ({type, onClick, backgroundColor, text, classes, style}) => {
+const MatButton = ({type, onClick, backgroundColor, classes, style, children, disabled}) => {
     return (
-        <Button variant="contained" color={type} onClick={onClick} style={{...style, backgroundColor : backgroundColor === 'default' ? '#33cc33' : backgroundColor}}
+        <Button disabled={disabled} variant="contained" color={type} onClick={onClick} style={{
+            ...style,
+            backgroundColor: backgroundColor === 'default' ? '#00aa00' : backgroundColor
+        }}
                 classes={classes}>
-            {text}
+            {children}
         </Button>
     );
 };

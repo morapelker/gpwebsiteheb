@@ -31,7 +31,9 @@ const InfoCenterSection = () => {
                 <br/>
                 <p style={{display: 'block', color: 'white', textAlign: 'left', fontSize: '1.3em'}}>We have collected for you the latest news in Smart Homes technology and trends. come and take a look.
                 </p>
-                <MatButton text={'Read More'} type={'primary'} backgroundColor={''} />
+                <MatButton type={'primary'} backgroundColor={''}>
+                    Read More
+                </MatButton>
             </div>
 
         </div>
