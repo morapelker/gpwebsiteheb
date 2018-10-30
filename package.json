@@ -17,10 +17,8 @@
     "react-slideshow-image": "^1.0.8"
   },
   "scripts": {
-    "start": "react-scripts build",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "serve -s build",
-    "poststart": "serve -s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
