@@ -9,7 +9,6 @@ const styles = {
     },
     root: {
         marginTop: 10,
-        marginLeft: 40
     },
 };
 

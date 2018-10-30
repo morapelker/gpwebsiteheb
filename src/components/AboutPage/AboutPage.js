@@ -60,7 +60,7 @@ class AboutPage extends Component {
                         <h4 style={{textAlign: 'left'}}>Introduction</h4>
                         {about2.split('\n').map((item, index) => <p
                             style={{width: '100%', textAlign: 'left'}} key={index}>{item}</p>)}
-                        <MatButton style={{width: '30%', minWidth: 200}}
+                        <MatButton backgroundColor={'default'} style={{width: '30%', minWidth: 200}}
                                    onClick={() => {
                                        console.log('pdf');
                                    }}>
