@@ -18,10 +18,13 @@ const PanelComponent = ({title, text, image, even, whiteText, children, marginTo
                             display: 'flex', width: '100%',
                             flexDirection: even ? 'row' : 'row-reverse'
                         }}>
-                            <img src={'/images/' + image} alt={''}
-                                 style={{
-                                     width: '45%', objectFit: 'scale-down', alignSelf: 'flex-start'
-                                 }}/>
+                            {image ?
+                                <img src={'/images/' + image} alt={''}
+                                     style={{
+                                         width: '45%', objectFit: 'scale-down', alignSelf: 'flex-start'
+                                     }}/> :
+                            <div style={{width: '45%'}} />}
+
                             <p style={{textAlign: 'left', alignSelf: 'center'}}>{item}</p>
                         </div> :
                         <p style={{textAlign: 'left'}} key={index}>{item}</p>)
