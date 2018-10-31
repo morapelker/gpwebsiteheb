@@ -1,0 +1,27 @@
+.page_top_root {
+    position: relative;
+}
+
+.page_top_img {
+    width: 100%;
+    min-height: 140px;
+    object-fit: cover;
+}
+
+.page_top_bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+}
+
+.page_top_text {
+    color: white;
+    position: absolute;
+    left: 20%;
+    bottom: 10%;
+    font-size: 2.5em;
+}

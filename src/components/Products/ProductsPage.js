@@ -27,6 +27,8 @@ import {
 } from "./TextBlocks";
 import MatButton from "../Common/MatButton";
 import {withRouter} from "react-router-dom";
+import '../Common/common.css';
+import './products.css';
 
 class ProductsPage extends Component {
 
@@ -71,25 +73,10 @@ class ProductsPage extends Component {
     render() {
         return (
             <div style={{width: '100%', display: 'flex', flexDirection: 'column'}}>
-                <div style={{position: 'relative'}}>
-                    <img src={'/images/product_banner1_2.jpg'} alt={''}
-                         style={{width: '100%', objectFit: 'cover'}}/>
-                    <div style={{
-                        position: 'absolute',
-                        left: 0,
-                        top: 0,
-                        right: 0,
-                        bottom: 0,
-                        boxShadow: '0 0 10px 0 rgba(0,0,0,0.5)',
-                        background: 'linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%)'
-                    }}>
-                        <span style={{
-                            color: 'white',
-                            position: 'absolute',
-                            left: '20%',
-                            bottom: '10%',
-                            fontSize: '2.5em',
-                        }}>Our Products</span>
+                <div className={'page_top_root'}>
+                    <img className={'page_top_img'} src={'/images/product_banner1_2.jpg'} alt={''} />
+                    <div className={'page_top_bg'}>
+                        <span className={'page_top_text'}>Our Products</span>
                     </div>
                 </div>
                 <LoadControl/>
@@ -108,31 +95,14 @@ class ProductsPage extends Component {
                                  preText={powerPre}
                                  listItems={powerItems}
                 />
-                <div id={'sense'} style={{
-                    width: '100%',
-                    marginTop: 50,
-                    backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'center',
-                    backgroundAttachment: 'fixed',
-                    backgroundSize: 'cover',
-                    position: 'relative',
-                    backgroundImage: 'url(/images/office8_1.jpg)',
-                }}>
+                <div className={'sense_parent'} id={'sense'}>
                     <SwitchComponent even={false} dark={2} src={'sensewhite.png'}
                                      title={'Sense Switch'}
                                      preText={sensePre}
                                      listItems={senseItems}
                     />
                 </div>
-                <div id={'sensor'} style={{
-                    width: '100%',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'center',
-                    backgroundAttachment: 'fixed',
-                    backgroundSize: 'cover',
-                    position: 'relative',
-                    backgroundImage: 'url(/images/products1.jpg)',
-                }}>
+                <div className={'sensor_parent'} id={'sensor'}>
                     <SwitchComponent even={true} dark={2} src={'sensorwhite.png'}
                                      title={'Environmental Sensor'}
                                      height={400}

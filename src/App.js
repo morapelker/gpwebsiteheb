@@ -12,6 +12,7 @@ import FaqPage from "./components/FAQ/FaqPage";
 import ContactPage from "./components/Common/ContactPage";
 import ProductsPage from "./components/Products/ProductsPage";
 import NIY from "./components/NIY";
+import AppsPage from "./components/Apps/AppsPage";
 
 library.add(faQuoteRight, faPlus, fab, faPaperPlane);
 
@@ -44,20 +45,17 @@ class App extends Component {
             <div className="App">
                 <BrowserRouter>
                     <div>
-                        <div style={{
-                            position: 'absolute',
-                            left: 0,
-                            top: 0,
-                            width: '100%'
-                        }}>
+                        <div className={'appRoot'}>
                             <Switch>
                                 <Route exact path='/' component={HomePage}/>
                                 <Route exact path='/about' component={AboutPage}/>
                                 <Route exact path='/advantages' component={AdvantagesPage}/>
                                 <Route exact path='/faq' component={FaqPage}/>
                                 <Route exact path='/niy' component={NIY}/>
+                                <Route exact path='/apps' component={AppsPage}/>
                                 <Route path='/products' render={() => <ProductsPage shrinked={this.state.shrinked} />}/>
                             </Switch>
+                            <div style={{height: 100}} />
                             <ContactPage />
                         </div>
                         <Header shrinked={this.state.shrinked}/>

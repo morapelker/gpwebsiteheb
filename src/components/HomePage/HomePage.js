@@ -24,17 +24,59 @@ const info = [
     }
 ];
 
+function loadImage(url) {
+    const r = (img, resolve) => () => {
+        img.removeEventListener('load', r);
+        img.removeEventListener('error', r);
+        resolve()
+    };
+
+    return new Promise((resolve) => {
+        const img = new Image();
+        img.addEventListener('load', r(img, resolve));
+        img.addEventListener('error', r(img, resolve));
+        img.src = url;
+    });
+}
+
 class HomePage extends Component {
     constructor(props) {
         super(props);
         window.scrollTo(0, 0);
-        this.state = {};
+        this.state = {
+            loadedImages: false
+        };
+    }
+
+    loadedImagesCount = 0;
+
+    imageLoaded = () => {
+        this.loadedImagesCount++;
+        if (this.loadedImagesCount === 4) {
+            this.setState({loadedImages: true});
+        }
+    };
+
+    componentWillMount() {
+        this.loadedImagesCount = 0;
+        loadImage('/images/slide1.jpg').then(() => {
+            this.imageLoaded();
+        });
+        loadImage('/images/slide2.jpg').then(() => {
+            this.imageLoaded();
+        });
+        loadImage('/images/slide3.jpg').then(() => {
+            this.imageLoaded();
+        });
+        loadImage('/images/slide4.jpg').then(() => {
+            this.imageLoaded();
+        });
     }
 
     render() {
         return (
             <div style={{width: '100%'}}>
-                <MainSlideShow/>
+                <MainSlideShow loaded={this.state.loadedImages}/>
                 <div style={{
                     marginTop: 10,
                     width: '100%'

@@ -1,0 +1,24 @@
+.contact_root {
+    width: 80%;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.contact_form_parent {
+    width: 50%;
+    margin-top: 40px;
+    position: relative;
+}
+
+@media only screen and (max-width: 850px) {
+    .contact_form_parent {
+        width: 100%;
+    }
+
+    .contact_root {
+        flex-direction: column;
+    }
+}

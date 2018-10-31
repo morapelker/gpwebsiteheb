@@ -1,6 +1,7 @@
 import React from 'react';
 import {Zoom} from 'react-slideshow-image';
 import SlideItem from "./SlideItem";
+import CircularProgress from "@material-ui/core/CircularProgress/CircularProgress";
 
 const items = [
     {
@@ -48,11 +49,23 @@ const zoomOutProperties = {
     arrows: false,
 };
 
-const MainSlideShow = () => {
+const MainSlideShow = (props) => {
     return (
-        <Zoom {...zoomOutProperties}>
-            {items.map((item, index) => <SlideItem key={index} item={item}/>)}
-        </Zoom>
+        props.loaded ?
+            <Zoom {...zoomOutProperties} style={{width: '100%'}}>
+                {items.map((item, index) => <SlideItem key={index}
+                                                       item={item}/>)}
+            </Zoom>
+            : <div style={{
+                width: '100%',
+                height: '90vh',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center'
+            }}>
+                <CircularProgress style={{width: 80, height: 80}}/>
+            </div>
     );
 };
 

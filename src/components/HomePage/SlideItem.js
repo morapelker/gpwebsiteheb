@@ -3,8 +3,10 @@ import './router.css';
 
 const SlideItem = ({item}) => {
     return (
-        <div style={{width: '100%', height: '100%'}}>
-            <img src={item.source} alt={''} style={{width: '100%', height: '100%', objectFit: 'cover'}}/>
+        <div style={{width: '100%', height: '90vh'}}>
+            <img src={item.source} alt={''}
+                 id={'img'}
+                 style={{width: '100%', height: '100%', objectFit: 'cover'}}/>
             <div style={{
                 position: 'absolute',
                 left: 0,

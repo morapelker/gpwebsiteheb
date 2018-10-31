@@ -10,6 +10,8 @@ import {
 } from "./TextBlocks";
 import MatButton from "../Common/MatButton";
 import InfoPanel from "./InfoPanel";
+import {SmallScreen, LargeScreen} from "../Common/ScreenSizes";
+import '../Common/common.css'
 
 class AboutPage extends Component {
     constructor(props) {
@@ -20,25 +22,10 @@ class AboutPage extends Component {
     render() {
         return (
             <div style={{width: '100%', display: 'flex', flexDirection: 'column'}}>
-                <div style={{position: 'relative'}}>
-                    <img src={'/images/abouttop.jpg'} alt={''}
-                         style={{width: '100%', objectFit: 'cover'}}/>
-                    <div style={{
-                        position: 'absolute',
-                        left: 0,
-                        top: 0,
-                        right: 0,
-                        bottom: 0,
-                        boxShadow: '0 0 10px 0 rgba(0,0,0,0.5)',
-                        background: 'linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%)'
-                    }}>
-                        <span style={{
-                            color: 'white',
-                            position: 'absolute',
-                            left: '20%',
-                            bottom: '10%',
-                            fontSize: '2.5em',
-                        }}>About Us</span>
+                <div className={'page_top_root'}>
+                    <img className={'page_top_img'} src={'/images/abouttop.jpg'} alt={''} />
+                    <div className={'page_top_bg'}>
+                        <span className={'page_top_text'}>About Us</span>
                     </div>
                 </div>
                 <div style={{
@@ -58,8 +45,26 @@ class AboutPage extends Component {
                 }}>
                     <div style={{flex: 1}}>
                         <h4 style={{textAlign: 'left'}}>Introduction</h4>
-                        {about2.split('\n').map((item, index) => <p
-                            style={{width: '100%', textAlign: 'left'}} key={index}>{item}</p>)}
+                        <SmallScreen>
+                            {about2.split('\n').map((item, index) => (index === 0 ?
+                                <div key={index} style={{display: 'flex', width: '100%'}}>
+                                    <p
+                                        style={{flex: 1, textAlign: 'left'}}>{item}</p>
+                                    <img src={'/images/intro.png'} alt={''} style={{
+                                        marginLeft: 10,
+                                        width: '40%',
+                                        objectFit: 'scale-down',
+                                        alignSelf: 'flex-start'
+                                    }}/>
+                                </div>
+                                : <p
+                                    style={{width: '100%', textAlign: 'left'}}
+                                    key={index}>{item}</p>))}
+                        </SmallScreen>
+                        <LargeScreen>
+                            {about2.split('\n').map((item, index) => <p
+                                style={{width: '100%', textAlign: 'left'}} key={index}>{item}</p>)}
+                        </LargeScreen>
                         <MatButton backgroundColor={'default'} style={{width: '30%', minWidth: 200}}
                                    onClick={() => {
                                        console.log('pdf');
@@ -67,13 +72,15 @@ class AboutPage extends Component {
                             Introduction PDF
                         </MatButton>
                     </div>
-                    <img src={'/images/intro.png'} alt={''} style={{
-                        marginLeft: 10,
-                        width: '40%',
-                        objectFit: 'scale-down',
-                        marginTop: 100,
-                        alignSelf: 'flex-start'
-                    }}/>
+                    <LargeScreen>
+                        <img src={'/images/intro.png'} alt={''} style={{
+                            marginLeft: 10,
+                            width: '40%',
+                            objectFit: 'scale-down',
+                            marginTop: 100,
+                            alignSelf: 'flex-start'
+                        }}/>
+                    </LargeScreen>
                 </div>
                 <InfoPanel even={true} image={'app6_0.png'} title={'No Central Processing Unit'}
                            text={about3}/>
@@ -90,7 +97,6 @@ class AboutPage extends Component {
                         height: '100%',
                         background: 'rgba(0,0,0,0.5)',
                         padding: '50px 50px 50px 10%',
-                        boxSizing: 'unset',
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'flex-start'
@@ -103,30 +109,49 @@ class AboutPage extends Component {
                         </ul>
                     </div>
                 </div>
-                <div style={{
-                    width: '100%',
-                    display: 'flex',
-                    paddingLeft: '20%',
-                    paddingRight: '20%',
-                    flexDirection: 'row-reverse',
-                    marginTop: 80
-                }}>
-                    <div style={{flex: 1}}>
+                <SmallScreen>
+                    <div style={{
+                        width: '100%',
+                        paddingLeft: '20%',
+                        paddingRight: '20%',
+                        marginTop: 80
+                    }}>
                         <h4 style={{textAlign: 'left'}}>Installation</h4>
                         <ul>
-                            {aboutInstall.map((item, index) => <li style={{textAlign: 'left'}}
-                                                                   key={index}>{item}</li>)}
+                            {aboutInstall.map((item, index) =>
+                                <li style={{textAlign: 'left'}}
+                                    key={index}>{item}</li>)}
                         </ul>
                     </div>
-                    <img src={'/images/intro.png'} alt={''} style={{
-                        marginLeft: 10,
-                        width: '40%',
-                        objectFit: 'scale-down',
-                        marginTop: 100,
-                        alignSelf: 'flex-start'
-                    }}/>
-                </div>
-                <InfoPanel marginTop={0} even={false} text={aboutSupport} title={'Support & Service'}
+                </SmallScreen>
+                <LargeScreen>
+                    <div style={{
+                        width: '100%',
+                        paddingLeft: '20%',
+                        paddingRight: '20%',
+                        marginTop: 80,
+                        flexDirection: 'row-reverse',
+                        display: 'flex'
+                    }}>
+                        <div style={{flex: 1}}>
+                            <h4 style={{textAlign: 'left'}}>Installation</h4>
+                            <ul>
+                                {aboutInstall.map((item, index) =>
+                                    <li style={{textAlign: 'left'}}
+                                        key={index}>{item}</li>)}
+                            </ul>
+                        </div>
+                        <img src={'/images/building2.png'} alt={''} style={{
+                            marginLeft: 10,
+                            width: '40%',
+                            objectFit: 'scale-down',
+                            marginTop: 100,
+                            alignSelf: 'flex-start'
+                        }}/>
+                    </div>
+                </LargeScreen>
+                <InfoPanel marginTop={0} even={false} text={aboutSupport}
+                           title={'Support & Service'}
                            image={'support2.png'}/>
                 <InfoPanel even={true} text={aboutCustomers} marginTop={0}
                            title={'Who are our potential customers?'} image={'people2.png'}/>

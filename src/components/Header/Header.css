@@ -1,0 +1,33 @@
+.container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+    min-width: 450px;
+    z-index: 10;
+}
+
+.header_root {
+    width: 100%;
+    position: fixed;
+    transition: height 0.2s ease-out;
+    left: 0;
+    z-index: 10;
+    top: 0;
+    height: 70px;
+    background: rgba(255,255,255,0.85);
+    padding: 10px 10px 10px 0;
+}
+
+.header_root.shrinked {
+    background-color: white;
+    border-bottom: 1px solid;
+}
+
+@media only screen and (min-width: 850px) {
+    .header_root.shrinked {
+        height: 50px;
+    }
+}
+

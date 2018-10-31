@@ -1,25 +1,16 @@
 import React from 'react';
 import {autoMode, ecoMode, manMode, products1} from "./TextBlocks";
 import MatButton from "../Common/MatButton";
+import {LargeScreen} from "../Common/ScreenSizes";
 
-const LoadControl = props => {
+const LoadControl = () => {
     return (
-        <div style={{
-            width: '100%',
-            paddingLeft: '10%',
-            paddingRight: '10%',
-            marginTop: 50,
-            display: 'flex',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            backgroundAttachment: 'fixed',
-            backgroundSize: 'cover',
-            backgroundImage: 'url(/images/products1.jpg)',
-        }}>
+        <div className={'product_root'}>
             <div style={{
                 flex: 1,
                 height: '100%',
                 padding: 50,
+                maxWidth: '100%',
                 display: 'flex',
                 flexDirection: 'column',
                 background: 'rgba(0,0,0,0.8)',
@@ -38,8 +29,10 @@ const LoadControl = props => {
                     Smart Switch Manual Download
                 </MatButton>
             </div>
-            <img src={'/images/performance3_1.png'} alt={''}
-                 style={{width: '40%', objectFit: 'scale-down', alignSelf: 'flex-start'}}/>
+            <LargeScreen>
+                <img src={'/images/performance3_1.png'} alt={''}
+                     style={{width: '40%', objectFit: 'scale-down', alignSelf: 'flex-start'}}/>
+            </LargeScreen>
 
         </div>
     );

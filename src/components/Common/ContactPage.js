@@ -3,6 +3,8 @@ import {useInput} from "./Hooks";
 import MatButton from "./MatButton";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import RefreshIndicator from "./RefreshIndicator";
+import {LargeScreen} from "./ScreenSizes";
+import '../Common/contact.css';
 
 const ContactPage = () => {
 
@@ -30,36 +32,34 @@ const ContactPage = () => {
     const val = validate();
 
     return (
-        <div style={{
+        <div id={'contactSection'} style={{
             background: '#cdcdcd',
-            padding: 40,
+            padding: '40px 0',
             boxSizing: 'unset',
             width: '100%',
             display: 'flex',
             flexDirection: 'column'
         }}>
             <span style={{fontSize: '2em', fontWeight: 'bold', textAlign: 'center'}}>Contact</span>
-            <div style={{
-                width: '80%',
-                flex: 1,
-                display: 'flex',
-                margin: 'auto',
-                justifyContent: 'space-evenly'
-            }}>
+            <div className={'contact_root'}>
                 <div style={{
-                    width: '45%',
+                    flex: 1,
                     fontSize: '1.3em',
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'flex-start',
                     marginTop: 40,
-                    lineHeight: 2
+                    lineHeight: 2,
+                    textAlign: 'left'
                 }}>
-                    <span style={{textAlign: 'left', fontWeight: 'bold'}}>Green Point Systems</span>
+                    <span style={{fontWeight: 'bold'}}>Green Point Systems</span>
                     <span>Ha'Eshel 7 st. POB 3136, Caesarea Ind. Park South, Israel</span>
                     <span>Email: <a href={'/'}>info@greenpointsys.com</a> </span>
                 </div>
-                <div style={{width: '50%', marginTop: 40, position: 'relative'}}>
+                <LargeScreen>
+                    <div style={{width: 10}}/>
+                </LargeScreen>
+                <div className={'contact_form_parent'}>
                     <form style={{
                         display: 'flex',
                         flexDirection: 'column',
@@ -73,7 +73,8 @@ const ContactPage = () => {
                         </div>
                         <textarea {...message}
                                   style={{width: '100%', marginTop: 10, resize: 'vertical'}}/>
-                        <MatButton disabled={val} onClick={sendMail} backgroundColor={val ? 'gray' : 'default'} style={{
+                        <MatButton disabled={val} onClick={sendMail}
+                                   backgroundColor={val ? 'gray' : 'default'} style={{
                             width: 300,
                             borderRadius: 20,
                             alignSelf: 'flex-end'
@@ -85,7 +86,7 @@ const ContactPage = () => {
                                 <FontAwesomeIcon className={'icon'} icon={'paper-plane'} size={'2x'}
                                                  style={{color: 'white'}}/>
                                 :
-                                <RefreshIndicator size={30} style={{marginLeft: 10}} />
+                                <RefreshIndicator size={30} style={{marginLeft: 10}}/>
                             }
 
                         </MatButton>

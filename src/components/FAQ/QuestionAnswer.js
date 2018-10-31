@@ -1,12 +1,12 @@
 import React from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Collapse from "@material-ui/core/Collapse/Collapse";
+import './faq.css';
 
 const green = '#33cc33';
 
 const openStyle = {
     display: 'flex', width: '100%',
-    boxSizing: 'unset',
     padding: '10px 10px 0 10px', cursor: 'pointer'
 };
 
@@ -18,7 +18,6 @@ const closeStyle = {
     display: 'flex',
     width: '100%',
     padding: 10,
-    boxSizing: 'unset'
 };
 
 const QuestionAnswer = ({question, answer, open, onClick}) => {
@@ -30,7 +29,7 @@ const QuestionAnswer = ({question, answer, open, onClick}) => {
                     transition: 'transform 0.4s',
                     transform: open ? 'rotate(45deg)' : 'unset'
                 }} className={'icon'} icon={'plus'}/>
-                <span style={{marginLeft: 30}}>{question}</span>
+                <span className={'question_text'}>{question}</span>
             </div>
             <Collapse in={open}>
                 <div style={{

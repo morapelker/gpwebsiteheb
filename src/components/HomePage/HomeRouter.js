@@ -1,18 +1,27 @@
 import React from 'react';
 import './router.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {withRouter} from "react-router-dom";
 
 const onClick = (item, history, selector) => () => {
-    if (history.location.pathname === item.location &&
-        (item.hash === undefined || item.hash === history.location.hash))
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    else
-        history.push(item.location + '#' + (item.hash || ''));
-    selector && selector(false);
+    if (item.location === '/contact') {
+         const contactSection = document.getElementById('contactSection');
+         if (contactSection) {
+             window.scrollTo({
+                 top: contactSection.offsetTop,
+                 behavior: 'smooth'
+             })
+         }
+    } else {
+        if (history.location.pathname === item.location &&
+            (item.hash === undefined || item.hash === history.location.hash))
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        else
+            history.push(item.location + '#' + (item.hash || ''));
+        selector && selector(false);
+    }
 };
 
 const HomeRouter = ({items, productsSelector, history}) => {
@@ -37,4 +46,4 @@ const HomeRouter = ({items, productsSelector, history}) => {
     );
 };
 
-export default withRouter(HomeRouter);
+export default HomeRouter;

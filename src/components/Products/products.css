@@ -1,0 +1,63 @@
+.product_root {
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 50px;
+    display: flex;
+    background-size: cover;
+    background: url('/images/products1.jpg') no-repeat fixed center;
+}
+
+.switch_root {
+    width: 100%;
+    padding: 30px 10%;
+    display: flex;
+    color: black;
+}
+
+.switch_root.odd {
+    flex-direction: row-reverse;
+}
+
+.switch_root.dark {
+    color: white;
+}
+
+.sense_parent {
+    width: 100%;
+    margin-top: 50px;
+    background-size: cover;
+    position: relative;
+    background: url('/images/office8_1.jpg') no-repeat fixed center;
+}
+
+.sensor_parent {
+    width: 100%;
+    position: relative;
+    background: url('/images/products1.jpg') no-repeat fixed center;
+}
+
+@media only screen and (max-width: 850px) {
+    .switch_root.dark {
+        color: black
+    }
+    .switch_root {
+        flex-direction: column;
+    }
+
+    .switch_root.odd {
+        flex-direction: column;
+    }
+
+    .product_root {
+        padding: 0;
+    }
+
+    .sensor_parent {
+        background: white;
+    }
+
+    .sense_parent {
+        background: white;
+    }
+}

@@ -1,22 +1,33 @@
 .App {
     text-align: center;
     height: 100%;
+    -webkit-overflow-scrolling: touch;
     overflow-y: auto;
+    font-family: Skia, sans-serif;
 }
 
 div {
     box-sizing: border-box;
 }
 
-body {
-    font-family: Skia, sans-serif;
+.flex_row {
+    display: flex;
+    width: 100%;
 }
+
 
 h4 {
     font-size: 2em;
     text-align: left;
+    margin: 1.33em 0 0.5em 0;
 }
 
+@media only screen and (max-width: 850px) {
+    .App {
+        font-size: 10px;
+    }
+
+}
 textarea::placeholder, input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #3CBF95;
     opacity: 1; /* Firefox */

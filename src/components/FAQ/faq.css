@@ -1,0 +1,11 @@
+.question_text {
+    margin-left: 30px;
+    align-self: center;
+    text-align: left;
+}
+
+@media only screen and (max-width: 850px) {
+    .question_text {
+        margin-left: 20px;
+    }
+}

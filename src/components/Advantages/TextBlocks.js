@@ -47,6 +47,8 @@ export const quickInstallList = [
     }
 ];
 
-export const reliable = 'With the igh technology there is no net or mesh of any sort, no central command center, the igh System is not dependant on any single component. Every Smart Switch is independent and works autonomously. The igh System has all the required certifications and has passed all regulations.';
+export const reliable = 'With the igh technology there is no net or mesh of any sort, no central command center, ' +
+    'the igh System is not dependant on any single component. Every Smart Switch is independent and works autonomously.\n' +
+    'The igh System has all the required certifications and has passed all regulations.';
 
-export const appDescription = 'Supports iPhone, iPad and Android. The System is fully controlled through the different apps by the user when sitting at home or when he is away without being dependant on any installer. The igh apps don\'t only allow controlling the electricity load but also can show the accumulative electricity load on daily, weekly and yearly charts.';
+export const appDescription = 'Supports iPhone, iPad and Android. The System is fully controlled through the different apps by the user when sitting at home or when he is away without being dependant on any installer.\nThe igh apps don\'t only allow controlling the electricity load but also can show the accumulative electricity load on daily, weekly and yearly charts.';

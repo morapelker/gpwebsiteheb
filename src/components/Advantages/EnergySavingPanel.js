@@ -1,5 +1,6 @@
 import React from 'react';
 import {energySaving1, energySavingList} from "./TextBlocks";
+import {LargeScreen} from "../Common/ScreenSizes";
 
 const EnergySavingPanel = () => {
     return (
@@ -15,11 +16,14 @@ const EnergySavingPanel = () => {
             display: 'flex',
             justifyContent: 'space-evenly'
         }}>
-            <img src={'/images/stats3.png'} alt={''}
-                 style={{width: '40%', objectFit: 'scale-down', alignSelf: 'flex-start'}}/>
+            <LargeScreen>
+                <img src={'/images/stats3.png'} alt={''}
+                     style={{width: '40%', objectFit: 'scale-down', alignSelf: 'flex-start'}}/>
+                <div style={{width: '10%'}}/>
+            </LargeScreen>
             <div style={{
                 background: 'rgba(0,0,0,0.5)',
-                width: '38%',
+                flex: 1,
                 height: '100%',
                 padding: 30,
                 display: 'flex',
@@ -27,14 +31,14 @@ const EnergySavingPanel = () => {
             }}>
                 <h4 style={{color: 'white'}}>Intelligent energy saving</h4>
                 <span style={{color: 'white', textAlign: 'left'}}>{energySaving1}</span>
-                <ul style={{color: 'white'}}>
+                <ul style={{color: 'white', padding: 0}}>
                     {energySavingList.map((item, index) => <li key={index}
                                                                style={{
-                                                                   fontSize: 16,
+                                                                   fontSize: '1em',
                                                                    textAlign: 'left'
                                                                }}>
                                 <span style={{
-                                    fontSize: 16,
+                                    fontSize: '1em',
                                     color: 'white',
                                     textAlign: 'left',
                                 }}> <strong>{item.sub + ' - '}</strong>{item.text}</span>
