@@ -12,8 +12,8 @@ import ReliableSystem from "./ReliableSystem";
 import '../Common/common.css';
 
 class AdvantagesPage extends Component {
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
         window.scrollTo(0, 0);
     }
 

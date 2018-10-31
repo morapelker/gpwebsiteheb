@@ -3,7 +3,7 @@ import MediaQuery from 'react-responsive';
 
 export const SmallScreen = ({children}) => {
     return (
-        <MediaQuery maxDeviceWidth={850}>
+        <MediaQuery maxWidth={850}>
             {children}
         </MediaQuery>
     );
@@ -11,7 +11,7 @@ export const SmallScreen = ({children}) => {
 
 export const LargeScreen = ({children}) => {
     return (
-        <MediaQuery minDeviceWidth={850}>
+        <MediaQuery minWidth={850}>
             {children}
         </MediaQuery>
     );

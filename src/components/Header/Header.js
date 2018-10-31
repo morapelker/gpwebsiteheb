@@ -43,7 +43,7 @@ class Header extends Component {
                             }}/>
                         </SmallScreen>
                         <img src={'/images/logo_green_point.svg'} alt={''}
-                             style={{height: '100%', maxWidth: '100%'}}/>
+                             style={{height: '100%', maxWidth: '100%', marginLeft: 10}}/>
                         <LargeScreen>
                             <HomeRouter history={this.props.history} items={items}
                                         productsSelector={this.showProducts}/>
@@ -69,6 +69,8 @@ class Header extends Component {
                             <div style={{
                                 flex: 1,
                                 display: 'flex',
+                                maxHeight: 500,
+                                overflowY: 'scroll',
                                 flexWrap: 'wrap',
                                 justifyContent: 'space-evenly'
                             }}>

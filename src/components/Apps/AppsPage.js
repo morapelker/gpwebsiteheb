@@ -23,14 +23,15 @@ class AppsPage extends Component {
                         alignSelf: 'center',
                         height: 50,
                         display: 'flex',
-                        marginTop: 10
+                        marginTop: 10,
+                        width: 340
                     }}>
-                        <a href={'https://itunes.apple.com/us/app/igh-compact/id895412247?mt=8'}>
+                        <a style={{width: 170}} href={'https://itunes.apple.com/us/app/igh-compact/id895412247?mt=8'}>
                             <img src={'/images/appstore.png'} alt={''}
-                                 style={{height: '100%'}}/></a>
-                        <a style={{marginLeft: 10}}
+                                 style={{height: '100%', width: '100%'}}/></a>
+                        <a style={{marginLeft: 10, width: 170}}
                            href={'https://play.google.com/store/apps/details?id=com.igh.ighcompact3&hl=en'}><img
-                            src={'/images/googleplay.png'} alt={''} style={{height: '100%'}}/></a>
+                            src={'/images/googleplay.png'} alt={''} style={{height: '100%', width: '100%'}}/></a>
                     </div>
                 </PanelComponent>
                 {otherPanels.map((item, index) => (index === 2 ?

@@ -11,7 +11,7 @@ const SwitchComponent = ({even, src, title, dark, preText, listItems, height, ch
                     <div key={index} style={{
                         display: 'flex',
                         width: '100%',
-                        flexDirection: even ? 'row' : 'row-reverse'
+                        flexDirection: 'row'
                     }}>
                         <img src={'/images/' + src} alt={''} style={{
                             maxWidth: '50%',
@@ -20,7 +20,7 @@ const SwitchComponent = ({even, src, title, dark, preText, listItems, height, ch
                             maxHeight: 100,
                             alignSelf: 'center'
                         }}/>
-                        <p style={{marginLeft: 10, marginRight: 10, alignSelf: 'center'}}>{item}</p>
+                        <p style={{marginLeft: 10, marginRight: 10, alignSelf: 'flex-end'}}>{item}</p>
                     </div> :
                     <p key={index}>{item}</p>))}
                 {listItems && <span className={'h4'}>Unique Features</span>}

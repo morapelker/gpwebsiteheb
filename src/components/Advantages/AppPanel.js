@@ -13,26 +13,27 @@ const AppPanel = () => {
                     paddingLeft: '10%',
                     paddingRight: '10%',
                 }}>
-                    <h4>A friendly and intuitive App</h4>
+                    <h4 style={{textAlign: 'center'}}>A friendly and intuitive App</h4>
                     {appDescription.split('\n').map((item, index) => (index === 0 ?
                             <div key={index} style={{width: '100%', display: 'flex', flexDirection: 'row-reverse'}}>
                                 <img src={'/images/app_front2.png'} alt={''}
                                      style={{width: '40%', objectFit: 'scale-down', alignSelf: 'flex-start'}}/>
-                                <p style={{alignSelf: 'center'}}>{item}</p>
+                                <p style={{alignSelf: 'flex-end'}}>{item}</p>
                             </div> :
                             <p key={index}>{item}</p>
                     ))}
                     <div style={{
-                        alignSelf: 'flex-start',
+                        alignSelf: 'flex-center',
                         height: 50,
+                        width: 340,
                         display: 'flex',
                         marginTop: 10
                     }}>
-                        <a href={'https://itunes.apple.com/us/app/igh-compact/id895412247?mt=8'}>
+                        <a style={{width: 170}} href={'https://itunes.apple.com/us/app/igh-compact/id895412247?mt=8'}>
                             <img src={'/images/appstore.png'} alt={''}
-                                 style={{height: '100%'}}/></a>
-                        <a style={{marginLeft: 10}} href={'https://play.google.com/store/apps/details?id=com.igh.ighcompact3&hl=en'}><img
-                            src={'/images/googleplay.png'} alt={''} style={{height: '100%'}}/></a>
+                                 style={{height: '100%', width: 170}}/></a>
+                        <a style={{marginLeft: 10, width: 170}} href={'https://play.google.com/store/apps/details?id=com.igh.ighcompact3&hl=en'}><img
+                            src={'/images/googleplay.png'} alt={''} style={{height: '100%', width: 170}}/></a>
                     </div>
                 </div>
             </SmallScreen>
@@ -46,7 +47,7 @@ const AppPanel = () => {
                     justifyContent: 'space-evenly'
                 }}>
                     <img src={'/images/app_front2.png'} alt={''}
-                         style={{width: '40%', objectFit: 'scale-down', alignSelf: 'flex-start'}}/>
+                         style={{width: '40%', marginTop: 40, objectFit: 'scale-down', alignSelf: 'flex-start'}}/>
                     <div style={{
                         flex: 1,
                         height: '100%',
@@ -59,13 +60,15 @@ const AppPanel = () => {
                         <div style={{
                             alignSelf: 'center',
                             height: 50,
-                            marginTop: 10
+                            width: 340,
+                            marginTop: 10,
+                            display: 'flex'
                         }}>
-                            <a href={'https://itunes.apple.com/us/app/igh-compact/id895412247?mt=8'}>
+                            <a style={{width: 170}} href={'https://itunes.apple.com/us/app/igh-compact/id895412247?mt=8'}>
                                 <img src={'/images/appstore.png'} alt={''}
-                                     style={{height: '100%'}}/></a>
-                            <a style={{marginLeft: 10}} href={'https://play.google.com/store/apps/details?id=com.igh.ighcompact3&hl=en'}><img
-                                src={'/images/googleplay.png'} alt={''} style={{height: '100%'}}/></a>
+                                     style={{height: '100%', width: 170}}/></a>
+                            <a style={{marginLeft: 10, width: 170}} href={'https://play.google.com/store/apps/details?id=com.igh.ighcompact3&hl=en'}><img
+                                src={'/images/googleplay.png'} alt={''} style={{height: '100%', width: 170}}/></a>
                         </div>
                     </div>
                 </div>

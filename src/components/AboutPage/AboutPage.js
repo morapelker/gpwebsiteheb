@@ -49,7 +49,7 @@ class AboutPage extends Component {
                             {about2.split('\n').map((item, index) => (index === 0 ?
                                 <div key={index} style={{display: 'flex', width: '100%'}}>
                                     <p
-                                        style={{flex: 1, textAlign: 'left'}}>{item}</p>
+                                        style={{flex: 1, textAlign: 'left', alignSelf: 'flex-end'}}>{item}</p>
                                     <img src={'/images/intro.png'} alt={''} style={{
                                         marginLeft: 10,
                                         width: '40%',

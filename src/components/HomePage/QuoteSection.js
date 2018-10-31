@@ -12,13 +12,11 @@ const QuoteSection = () => {
     return (
         <div style={{
             width: '100%',
-            height: 300,
             background: 'white',
             paddingTop: 75,
-            boxSizing: 'border-box'
         }}>
             <div style={{
-                width: '70%', height: 150,
+                width: '70%',
                 margin: '0 auto', background: '#939599',
                 boxShadow: '0 0 15px 1px rgba(0,0,0,0.5)',
                 padding: 30,

@@ -48,29 +48,17 @@ class HomePage extends Component {
         };
     }
 
-    loadedImagesCount = 0;
-
     imageLoaded = () => {
-        this.loadedImagesCount++;
-        if (this.loadedImagesCount === 4) {
-            this.setState({loadedImages: true});
-        }
+        this.setState({loadedImages: true});
     };
 
     componentWillMount() {
-        this.loadedImagesCount = 0;
         loadImage('/images/slide1.jpg').then(() => {
             this.imageLoaded();
         });
-        loadImage('/images/slide2.jpg').then(() => {
-            this.imageLoaded();
-        });
-        loadImage('/images/slide3.jpg').then(() => {
-            this.imageLoaded();
-        });
-        loadImage('/images/slide4.jpg').then(() => {
-            this.imageLoaded();
-        });
+        loadImage('/images/slide2.jpg');
+        loadImage('/images/slide3.jpg');
+        loadImage('/images/slide4.jpg');
     }
 
     render() {

@@ -1,11 +1,11 @@
 import React from 'react';
 import MatButton from "../Common/MatButton";
+import {withRouter} from "react-router-dom";
 
-const AboutSection = () => {
+const AboutSection = ({history}) => {
     return (
         <div style={{
             width: '100%',
-            height: 600,
             backgroundImage: 'url(/images/office7_0.jpg)',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
@@ -14,7 +14,9 @@ const AboutSection = () => {
         }}>
             <div style={{
                 width: '100%',
-                height: '100%',
+                paddingTop: 30,
+                paddingBottom: 30,
+                boxSizing: 'unset',
                 background: 'rgba(0,0,0,0.7)',
                 display: 'flex',
                 flexDirection: 'column',
@@ -26,7 +28,8 @@ const AboutSection = () => {
                     display: 'flex',
                     flexDirection: 'column',
                     paddingLeft: 30,
-                    alignItems: 'flex-start'
+                    alignItems: 'flex-start',
+                    textAlign: 'left'
                 }}>
                     <h4 style={{color: 'white', marginLeft: 40}}>About Us</h4>
                     <span style={{color: 'white', fontSize: '1.1em'}}>Green Point Systems vision was to create a system that fits</span>
@@ -38,7 +41,13 @@ const AboutSection = () => {
                     <span style={{color: 'white', fontSize: '1.1em'}}>living. Our goals were achieved by inventing a revolutionary </span>
                     <span style={{color: 'white', fontSize: '1.1em'}}>igh concept that opens the door for a new generation of real </span>
                     <span style={{color: 'white', fontSize: '1.1em'}}>smart homes. igh system is designed...</span>
-                    <MatButton type={'secondary'} backgroundColor={'#33cc33'}>
+                    <MatButton type={'secondary'}
+                               onClick={() => {
+                                    history.push('/about');
+                               }}
+                               backgroundColor={'#33cc33'} style={{
+                        alignSelf: 'center'
+                    }}>
                         Read More
                     </MatButton>
                 </div>
@@ -49,4 +58,4 @@ const AboutSection = () => {
     );
 };
 
-export default AboutSection;
+export default withRouter(AboutSection);

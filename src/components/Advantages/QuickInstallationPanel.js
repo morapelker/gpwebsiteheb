@@ -11,7 +11,7 @@ const QuickInstallationPanel = () => {
         }}>
             <SmallScreen>
                 <div style={{display: 'flex', width: '100%', flexDirection: 'column'}}>
-                    <h4>Quick & simple installation</h4>
+                    <h4 style={{textAlign: 'center'}}>Quick & simple installation</h4>
                     <div style={{display: 'flex', width: '100%'}}>
                         <img src={'/images/quickinstall.png'} alt={''}
                              style={{
@@ -19,7 +19,7 @@ const QuickInstallationPanel = () => {
                                  objectFit: 'scale-down',
                                  alignSelf: 'flex-start'
                              }}/>
-                        <span style={{textAlign: 'left', flex: 1}}>{quickInstall}</span>
+                        <span style={{textAlign: 'left', flex: 1, alignSelf: 'flex-end'}}>{quickInstall}</span>
                     </div>
                     <ul>
                         {quickInstallList.map((item, index) => <li key={index}
@@ -47,7 +47,7 @@ const QuickInstallationPanel = () => {
                         height: '100%',
                         padding: 30,
                         display: 'flex',
-                        flexDirection: 'column'
+                        flexDirection: 'column',
                     }}>
                         <h4>Quick & simple installation</h4>
                         <span style={{textAlign: 'left'}}>{quickInstall}</span>
