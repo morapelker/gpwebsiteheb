@@ -2,6 +2,7 @@ import React from 'react';
 import {autoMode, ecoMode, manMode, products1} from "./TextBlocks";
 import MatButton from "../Common/MatButton";
 import {LargeScreen} from "../Common/ScreenSizes";
+import ImgWithLoader from "../Common/ImgWithLoader";
 
 const LoadControl = () => {
     return (
@@ -30,7 +31,7 @@ const LoadControl = () => {
                 </MatButton>
             </div>
             <LargeScreen>
-                <img src={'/images/performance3_1.png'} alt={''}
+                <ImgWithLoader src={'/images/performance3_1.png'} alt={''}
                      style={{width: '40%', objectFit: 'scale-down', alignSelf: 'flex-start'}}/>
             </LargeScreen>
 

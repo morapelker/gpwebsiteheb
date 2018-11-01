@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import MainSlideShow from "./MainSlideShow";
 import HomeInfo from "./HomeInfo";
 import AboutSection from "./AboutSection";
-import InfoCenterSection from "./InfoCenterSection";
 import QuoteSection from "./QuoteSection";
 
 const info = [
@@ -88,7 +87,6 @@ class HomePage extends Component {
                         </iframe>
                     </div>
                     <AboutSection/>
-                    <InfoCenterSection/>
                     <QuoteSection/>
                 </div>
             </div>

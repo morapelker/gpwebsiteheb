@@ -1,6 +1,7 @@
 import React from 'react';
 import {quickInstall, quickInstallList} from "./TextBlocks";
 import {LargeScreen, SmallScreen} from "../Common/ScreenSizes";
+import ImgWithLoader from "../Common/ImgWithLoader";
 
 const QuickInstallationPanel = () => {
     return (
@@ -13,7 +14,7 @@ const QuickInstallationPanel = () => {
                 <div style={{display: 'flex', width: '100%', flexDirection: 'column'}}>
                     <h4 style={{textAlign: 'center'}}>Quick & simple installation</h4>
                     <div style={{display: 'flex', width: '100%'}}>
-                        <img src={'/images/quickinstall.png'} alt={''}
+                        <ImgWithLoader src={'/images/quickinstall.png'} alt={''}
                              style={{
                                  width: '40%',
                                  objectFit: 'scale-down',
@@ -35,7 +36,7 @@ const QuickInstallationPanel = () => {
             </SmallScreen>
             <LargeScreen>
                 <div style={{display: 'flex', width: '100%'}}>
-                    <img src={'/images/quickinstall.png'} alt={''}
+                    <ImgWithLoader src={'/images/quickinstall.png'} alt={''}
                          style={{
                              width: '40%',
                              objectFit: 'scale-down',

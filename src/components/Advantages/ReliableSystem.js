@@ -1,6 +1,7 @@
 import React from 'react';
 import {reliable} from "./TextBlocks";
 import {LargeScreen} from "../Common/ScreenSizes";
+import ImgWithLoader from "../Common/ImgWithLoader";
 
 const ReliableSystem = () => {
     return (
@@ -16,7 +17,7 @@ const ReliableSystem = () => {
         }}>
             <div style={{width: '100%', height: '100%', background: 'rgba(0,0,0,0.4)', display: 'flex'}}>
                 <LargeScreen>
-                    <img src={'/images/decentralized2.png'} alt={''}
+                    <ImgWithLoader src={'/images/decentralized2.png'} alt={''}
                          style={{width: '50%', height: '100%', objectFit: 'scale-down', alignSelf: 'flex-start'}}/>
                     <div style={{width: 10}} />
                 </LargeScreen>

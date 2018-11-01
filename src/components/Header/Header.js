@@ -6,19 +6,28 @@ import {withRouter} from "react-router-dom";
 import './Header.css';
 import {items, products} from "./TextBlocks";
 import {LargeScreen, SmallScreen} from "../Common/ScreenSizes";
+import Drawer from "@material-ui/core/Drawer/Drawer";
+import IconButton from "@material-ui/core/IconButton/IconButton";
+import MenuIcon from '@material-ui/icons/Menu';
+import HamburgerMenu from "./HamburgerMenu";
 
 class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
             showProducts: false,
-            dark: false
+            dark: false,
+            drawerOpen: false
         };
     }
 
     showProducts = showProducts => {
         if (showProducts !== this.state.showProducts)
             this.setState({showProducts});
+    };
+
+    toggleDrawer = open => () => {
+        this.setState({drawerOpen: open});
     };
 
     render() {
@@ -34,13 +43,18 @@ class Header extends Component {
                             margin: 'auto'
                         }}>
                         <SmallScreen>
-                            <div style={{
-                                width: 50,
-                                height: '100%',
-                                background: 'red',
-                                marginRight: 10,
-                                marginLeft: 10
-                            }}/>
+                            <IconButton style={{alignSelf: 'center'}} onClick={this.toggleDrawer(true)} color="inherit" aria-label="Menu">
+                                <MenuIcon />
+                            </IconButton>
+                            <Drawer open={this.state.drawerOpen} onClose={this.toggleDrawer(false)}>
+                                <div
+                                    tabIndex={0}
+                                    role="button"
+                                    onKeyDown={this.toggleDrawer(false)}
+                                >
+                                    <HamburgerMenu closeDrawer={this.toggleDrawer(false)} history={this.props.history} />
+                                </div>
+                            </Drawer>
                         </SmallScreen>
                         <img src={'/images/logo_green_point.svg'} alt={''}
                              style={{height: '100%', maxWidth: '100%', marginLeft: 10}}/>

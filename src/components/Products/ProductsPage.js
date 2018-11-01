@@ -9,7 +9,7 @@ import {
     downloadIGHC,
     downloadIR,
     downloadKeypad,
-    downloadSensor,
+    downloadSensor, glassString,
     ighcStrings,
     irItems,
     irPre, keypadItems,
@@ -35,8 +35,9 @@ class ProductsPage extends Component {
     scrollCorrectly = (hash, animated) => {
         const behavior = animated ? 'smooth' : undefined;
         if (!hash || hash.length === 0) {
-            window.scrollTo({
+            window.scroll({
                 top: 0,
+                left: 0,
                 behavior
             });
         } else {
@@ -51,8 +52,9 @@ class ProductsPage extends Component {
                         else
                             return;
                     }
-                    window.scrollTo({
+                    window.scroll({
                         top: top - 40,
+                        left: 0,
                         behavior
                     });
                 }
@@ -178,6 +180,16 @@ class ProductsPage extends Component {
                                    alignSelf: 'center',
                                    marginTop: 30
                                }}>{downloadKeypad}</MatButton>
+                </SwitchComponent>
+                <SwitchComponent
+                    id={'glass'}
+                    even={true}
+                    dark={false}
+                    src={'glasswhite.png'}
+                    title={'Glass Panels'}
+                    marginTop={30}
+                    preText={glassString}
+                >
                 </SwitchComponent>
                 <div style={{
                     width: '100%',

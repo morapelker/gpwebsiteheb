@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PanelComponent from "./PanelComponent";
 import {appPanel1, otherPanels} from "./TextBlocks";
 import '../Common/common.css';
+import ImgWithLoader from "../Common/ImgWithLoader";
 
 class AppsPage extends Component {
     constructor(props, context) {
@@ -27,10 +28,10 @@ class AppsPage extends Component {
                         width: 340
                     }}>
                         <a style={{width: 170}} href={'https://itunes.apple.com/us/app/igh-compact/id895412247?mt=8'}>
-                            <img src={'/images/appstore.png'} alt={''}
+                            <ImgWithLoader src={'/images/appstore.png'} alt={''}
                                  style={{height: '100%', width: '100%'}}/></a>
                         <a style={{marginLeft: 10, width: 170}}
-                           href={'https://play.google.com/store/apps/details?id=com.igh.ighcompact3&hl=en'}><img
+                           href={'https://play.google.com/store/apps/details?id=com.igh.ighcompact3&hl=en'}><ImgWithLoader
                             src={'/images/googleplay.png'} alt={''} style={{height: '100%', width: '100%'}}/></a>
                     </div>
                 </PanelComponent>

@@ -12,6 +12,7 @@ import MatButton from "../Common/MatButton";
 import InfoPanel from "./InfoPanel";
 import {SmallScreen, LargeScreen} from "../Common/ScreenSizes";
 import '../Common/common.css'
+import ImgWithLoader from "../Common/ImgWithLoader";
 
 class AboutPage extends Component {
     constructor(props) {
@@ -50,7 +51,7 @@ class AboutPage extends Component {
                                 <div key={index} style={{display: 'flex', width: '100%'}}>
                                     <p
                                         style={{flex: 1, textAlign: 'left', alignSelf: 'flex-end'}}>{item}</p>
-                                    <img src={'/images/intro.png'} alt={''} style={{
+                                    <ImgWithLoader src={'/images/intro.png'} alt={''} style={{
                                         marginLeft: 10,
                                         width: '40%',
                                         objectFit: 'scale-down',
@@ -73,7 +74,7 @@ class AboutPage extends Component {
                         </MatButton>
                     </div>
                     <LargeScreen>
-                        <img src={'/images/intro.png'} alt={''} style={{
+                        <ImgWithLoader src={'/images/intro.png'} alt={''} style={{
                             marginLeft: 10,
                             width: '40%',
                             objectFit: 'scale-down',
@@ -141,7 +142,7 @@ class AboutPage extends Component {
                                         key={index}>{item}</li>)}
                             </ul>
                         </div>
-                        <img src={'/images/building2.png'} alt={''} style={{
+                        <ImgWithLoader src={'/images/building2.png'} alt={''} style={{
                             marginLeft: 10,
                             width: '40%',
                             objectFit: 'scale-down',

@@ -1,13 +1,13 @@
 import React from 'react';
 import {energySaving1, energySavingList} from "./TextBlocks";
 import {LargeScreen} from "../Common/ScreenSizes";
+import ImgWithLoader from "../Common/ImgWithLoader";
 
 const EnergySavingPanel = () => {
     return (
         <div style={{
-            padding: '10vh',
+            padding: '10vh 10vw',
             width: '100%',
-            height: '90vh',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed',
@@ -17,7 +17,7 @@ const EnergySavingPanel = () => {
             justifyContent: 'space-evenly'
         }}>
             <LargeScreen>
-                <img src={'/images/stats3.png'} alt={''}
+                <ImgWithLoader src={'/images/stats3.png'} alt={''}
                      style={{width: '40%', objectFit: 'scale-down', alignSelf: 'flex-start'}}/>
                 <div style={{width: '10%'}}/>
             </LargeScreen>
@@ -29,7 +29,7 @@ const EnergySavingPanel = () => {
                 display: 'flex',
                 flexDirection: 'column'
             }}>
-                <h4 style={{color: 'white'}}>Intelligent energy saving</h4>
+                <h4 style={{color: 'white', marginTop: 0}}>Intelligent energy saving</h4>
                 <span style={{color: 'white', textAlign: 'left'}}>{energySaving1}</span>
                 <ul style={{color: 'white', padding: 0}}>
                     {energySavingList.map((item, index) => <li key={index}

@@ -1,5 +1,6 @@
 import React from 'react';
 import {LargeScreen, SmallScreen} from "../Common/ScreenSizes";
+import ImgWithLoader from "../Common/ImgWithLoader";
 
 const InfoPanel = ({image, title, text, even, marginTop}) => {
     return (
@@ -20,7 +21,7 @@ const InfoPanel = ({image, title, text, even, marginTop}) => {
                             alignItems: 'flex-end'
                         }}>
                             <p style={{flex: 1, alignSelf: 'flex-end', textAlign: 'left'}}>{item}</p>
-                            <img src={'/images/' + image} alt={''} style={{
+                            <ImgWithLoader src={'/images/' + image} alt={''} style={{
                                 width: '40%',
                                 objectFit: 'scale-down',
                                 alignSelf: 'flex-start'
@@ -40,7 +41,7 @@ const InfoPanel = ({image, title, text, even, marginTop}) => {
                     marginTop: 70,
                     flexDirection: even ? 'row' : 'row-reverse'
                 }}>
-                    <img src={'/images/' + image} alt={''} style={{
+                    <ImgWithLoader src={'/images/' + image} alt={''} style={{
                         width: '40%',
                         marginTop: marginTop === undefined ? 100 : marginTop,
                         objectFit: 'scale-down',

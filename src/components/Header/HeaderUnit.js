@@ -1,5 +1,6 @@
 import React from 'react';
 import {withRouter} from "react-router-dom";
+import ImgWithLoader from "../Common/ImgWithLoader";
 
 const HeaderUnit = ({product, dark, history, productsSelector}) => {
     return (
@@ -14,7 +15,7 @@ const HeaderUnit = ({product, dark, history, productsSelector}) => {
             productsSelector(false);
         }}>
             <span style={{color: dark ? 'white' : 'black', fontWeight: 'bold'}}>{product.text}</span>
-            <img style={{flex: 1, overflow: 'hidden', width: 130, objectFit: 'contain', padding: 10}} alt={''} src={'/images/' + (dark ? product.blackImage : product.whiteImage)} />
+            <ImgWithLoader style={{flex: 1, overflow: 'hidden', width: 130, objectFit: 'contain', padding: 10}} alt={''} src={'/images/' + (dark ? product.blackImage : product.whiteImage)} />
             <img style={{display: 'none'}} src={'/images/' + product.blackImage} alt={''} />
         </div>
     );

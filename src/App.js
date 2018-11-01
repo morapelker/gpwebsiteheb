@@ -3,7 +3,7 @@ import './App.css';
 import Header from "./components/Header/Header";
 import HomePage from "./components/HomePage/HomePage";
 import {library} from '@fortawesome/fontawesome-svg-core';
-import {faQuoteRight, faPlus, faPaperPlane} from '@fortawesome/free-solid-svg-icons';
+import {faQuoteRight, faPlus, faPaperPlane, faBars} from '@fortawesome/free-solid-svg-icons';
 import {fab} from '@fortawesome/free-brands-svg-icons';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import AboutPage from "./components/AboutPage/AboutPage";
@@ -14,12 +14,13 @@ import ProductsPage from "./components/Products/ProductsPage";
 import NIY from "./components/NIY";
 import AppsPage from "./components/Apps/AppsPage";
 
-library.add(faQuoteRight, faPlus, fab, faPaperPlane);
+library.add(faQuoteRight, faPlus, fab, faPaperPlane, faBars);
 
 class App extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {shrinked: false};
+        window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true
     }
 
     handleScroll = ({target}) => {
@@ -58,7 +59,7 @@ class App extends Component {
                             <div style={{height: 100}} />
                             <ContactPage />
                         </div>
-                        <Header shrinked={this.state.shrinked}/>
+                        <Header shrinked={this.state.shrinked} />
                     </div>
                 </BrowserRouter>
             </div>

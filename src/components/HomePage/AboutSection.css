@@ -1,0 +1,17 @@
+.about_section_root {
+    width: 50%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+    align-items: flex-start;
+    text-align: left;
+    color: white;
+}
+
+@media only screen and (max-width: 850px) {
+    .about_section_root {
+        width: 100%;
+    }
+}

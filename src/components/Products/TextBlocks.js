@@ -104,6 +104,10 @@ export const ighcStrings = [
     'Control 3rd Party Systems'
 ];
 
+export const glassString = 'Glass String here----------------------------------------------------\n-' +
+    '----------------------------------------------------\n----------------------------------------------------\n' +
+    '----------------------------------------------------';
+
 export const keypadPre = 'The igh keypad allows rapid and easy management of system devices without ' +
     'any network connection. Each pattern can be integrated with different scenario.\n' +
     '7" portable intelligent keypad that is designed with touch technology giving it a' +

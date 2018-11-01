@@ -4,22 +4,24 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 const onClick = (item, history, selector) => () => {
     if (item.location === '/contact') {
-         const contactSection = document.getElementById('contactSection');
-         if (contactSection) {
-             window.scrollTo({
-                 top: contactSection.offsetTop,
-                 behavior: 'smooth'
-             })
-         }
+        const contactSection = document.getElementById('contactSection');
+        if (contactSection) {
+            window.scroll({
+                top: contactSection.offsetTop,
+                behavior: 'smooth',
+                left: 0
+            })
+        }
     } else {
         if (history.location.pathname === item.location &&
-            (item.hash === undefined || item.hash === history.location.hash))
-            window.scrollTo({
+            (item.hash === undefined || item.hash === history.location.hash)) {
+            window.scroll({
+                left: 0,
                 top: 0,
                 behavior: 'smooth'
             });
-        else
-            history.push(item.location + '#' + (item.hash || ''));
+        } else
+            history.push(item.location);
         selector && selector(false);
     }
 };

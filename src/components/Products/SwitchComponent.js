@@ -1,6 +1,7 @@
 import React from 'react';
 import './products.css';
 import {LargeScreen, SmallScreen} from "../Common/ScreenSizes";
+import ImgWithLoader from "../Common/ImgWithLoader";
 
 const SwitchComponent = ({even, src, title, dark, preText, listItems, height, children, marginTop, id}) => {
     return (
@@ -13,7 +14,7 @@ const SwitchComponent = ({even, src, title, dark, preText, listItems, height, ch
                         width: '100%',
                         flexDirection: 'row'
                     }}>
-                        <img src={'/images/' + src} alt={''} style={{
+                        <ImgWithLoader src={'/images/' + src} alt={''} style={{
                             maxWidth: '50%',
                             objectFit: 'contain',
                             marginTop: marginTop || 0,
@@ -38,7 +39,7 @@ const SwitchComponent = ({even, src, title, dark, preText, listItems, height, ch
                     justifyContent: even ? 'flex-end' : 'flex-start',
                     display: 'flex'
                 }}>
-                    <img src={'/images/' + src} alt={''} style={{
+                    <ImgWithLoader src={'/images/' + src} alt={''} style={{
                         maxWidth: '100%',
                         objectFit: 'contain',
                         marginTop: marginTop || 0,
