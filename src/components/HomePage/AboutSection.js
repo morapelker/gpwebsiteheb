@@ -1,6 +1,5 @@
 import React from 'react';
 import MatButton from "../Common/MatButton";
-import {withRouter} from "react-router-dom";
 import './AboutSection.css';
 import {aboutUs} from "./TextBlocks";
 
@@ -44,4 +43,4 @@ const AboutSection = ({history}) => {
     );
 };
 
-export default withRouter(AboutSection);
+export default AboutSection;

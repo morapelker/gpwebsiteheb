@@ -15,6 +15,9 @@ div {
     width: 100%;
 }
 
+li {
+    text-align: left;
+}
 
 h4 {
     font-size: 2em;
@@ -22,11 +25,14 @@ h4 {
     margin: 1.33em 0 0.5em 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 @media only screen and (max-width: 850px) {
     .App {
         font-size: 10px;
     }
-
 }
 textarea::placeholder, input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #3CBF95;

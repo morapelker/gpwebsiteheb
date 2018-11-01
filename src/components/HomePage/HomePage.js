@@ -3,6 +3,7 @@ import MainSlideShow from "./MainSlideShow";
 import HomeInfo from "./HomeInfo";
 import AboutSection from "./AboutSection";
 import QuoteSection from "./QuoteSection";
+import {withRouter} from "react-router-dom";
 
 const info = [
     {
@@ -74,7 +75,7 @@ class HomePage extends Component {
                         flexWrap: 'wrap',
                         justifyContent: 'center'
                     }}>
-                        {info.map((info, index) => <HomeInfo info={info} key={index}/>)}
+                        {info.map((info, index) => <HomeInfo history={this.props.history} info={info} key={index}/>)}
                     </div>
                     <div
                         style={{width: '100%', height: 0, paddingTop: '50%', position: 'relative'}}>
@@ -86,7 +87,7 @@ class HomePage extends Component {
                                 src="https://www.youtube.com/embed/P1U-8Mgi-yw">
                         </iframe>
                     </div>
-                    <AboutSection/>
+                    <AboutSection history={this.props.history}/>
                     <QuoteSection/>
                 </div>
             </div>
@@ -94,4 +95,4 @@ class HomePage extends Component {
     }
 }
 
-export default HomePage;
+export default withRouter(HomePage);

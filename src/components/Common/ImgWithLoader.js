@@ -4,7 +4,7 @@ import Img from 'react-image'
 
 const ImgWithLoader = (props) => {
     return (
-        <Img style={props.style}
+        <Img className={props.className} style={props.style}
              src={props.src}
              alt={props.alt || ''}
              loader={<RefreshIndicator style={{

@@ -5,7 +5,14 @@
 .page_top_img {
     width: 100%;
     min-height: 140px;
+    max-height: 50vh;
     object-fit: cover;
+}
+
+.root_text_container {
+    padding-left: 20%;
+    padding-right: 20%;
+    width: 100%;
 }
 
 .page_top_bg {
@@ -24,4 +31,20 @@
     left: 20%;
     bottom: 10%;
     font-size: 2.5em;
+}
+
+.page_top_text.panoramic {
+    left: 15%
+}
+
+@media only screen and (max-width: 850px) {
+    .root_text_container {
+        padding-left: 10%;
+        padding-right: 10%;
+        width: 100%;
+    }
+
+    .page_top_text.panoramic {
+        left: 5%
+    }
 }

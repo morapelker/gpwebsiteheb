@@ -42,8 +42,12 @@ const HomeRouter = ({items, productsSelector, history}) => {
                 }}>
                     {item.label}
             </span>)}
-            <FontAwesomeIcon className={'icon'} icon={['fab', 'facebook']}/>
-            <FontAwesomeIcon className={'icon'} icon={['fab', 'youtube']}/>
+            <a href={'https://www.facebook.com/Green-point-systems-238798076273979/'}>
+                <FontAwesomeIcon className={'icon'} icon={['fab', 'facebook']}/>
+            </a>
+            <a href='https://www.youtube.com/channel/UCC7898iqiW5suONL54YRoXg'>
+                <FontAwesomeIcon className={'icon'} icon={['fab', 'youtube']}/>
+            </a>
         </div>
     );
 };

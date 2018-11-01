@@ -57,8 +57,10 @@ class Header extends Component {
                                 </div>
                             </Drawer>
                         </SmallScreen>
-                        <img src={'/images/logo_green_point.svg'} alt={''}
-                             style={{height: '100%', maxWidth: '100%', marginLeft: 10}}/>
+                        <img src={'/images/logo_green_point.svg'} alt={''} onClick={() => {
+                            this.props.history.push('/');
+                        }}
+                             style={{height: '100%', maxWidth: '100%', marginLeft: 10, cursor: 'pointer'}}/>
                         <LargeScreen>
                             <HomeRouter history={this.props.history} items={items}
                                         productsSelector={this.showProducts}/>
