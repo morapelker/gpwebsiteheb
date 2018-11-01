@@ -40,7 +40,8 @@ class Header extends Component {
                             height: '100%',
                             width: '100%',
                             maxWidth: 1230,
-                            margin: 'auto'
+                            margin: 'auto',
+                            alignItems: 'flex-start'
                         }}>
                         <SmallScreen>
                             <IconButton style={{alignSelf: 'center'}} onClick={this.toggleDrawer(true)} color="inherit" aria-label="Menu">
