@@ -66,12 +66,14 @@ class AboutPage extends Component {
                             {about2.split('\n').map((item, index) => <p
                                 style={{width: '100%', textAlign: 'left'}} key={index}>{item}</p>)}
                         </LargeScreen>
-                        <MatButton backgroundColor={'default'} style={{width: '30%', minWidth: 200}}
-                                   onClick={() => {
-                                       console.log('pdf');
-                                   }}>
-                            Introduction PDF
-                        </MatButton>
+                        <a href={'/docs/introduction-en.pdf'}>
+                            <MatButton backgroundColor={'default'} style={{width: '30%', minWidth: 200}}
+                                       onClick={() => {
+                                           console.log('pdf');
+                                       }}>
+                                Introduction PDF
+                            </MatButton>
+                        </a>
                     </div>
                     <LargeScreen>
                         <ImgWithLoader src={'/images/intro.png'} alt={''} style={{

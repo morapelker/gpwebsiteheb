@@ -76,7 +76,7 @@ class ProductsPage extends Component {
         return (
             <div style={{width: '100%', display: 'flex', flexDirection: 'column'}}>
                 <div className={'page_top_root'}>
-                    <img className={'page_top_img'} src={'/images/product_banner1_2.jpg'} alt={''} />
+                    <img className={'page_top_img'} src={'/images/product_banner1_2.jpg'} alt={''}/>
                     <div className={'page_top_bg'}>
                         <span className={'page_top_text'}>Our Products</span>
                     </div>
@@ -123,11 +123,13 @@ class ProductsPage extends Component {
                         <ul style={{textAlign: 'left'}}>
                             {sensorItems3.map((item, index) => <li key={index}>{item}</li>)}
                         </ul>
-                        <MatButton backgroundColor={'default'}
-                                   style={{
-                                       alignSelf: 'center',
-                                       marginTop: 30
-                                   }}>{downloadSensor}</MatButton>
+                        <a href={'/docs/sensor_manual.pdf'}>
+                            <MatButton backgroundColor={'default'}
+                                       style={{
+                                           alignSelf: 'center',
+                                           marginTop: 30
+                                       }}>{downloadSensor}</MatButton>
+                        </a>
                     </SwitchComponent>
                     <SwitchComponent id={'irbridge'} even={false}
                                      dark={2}
@@ -137,11 +139,13 @@ class ProductsPage extends Component {
                                      height={300}
                                      listItems={irItems}
                     >
-                        <MatButton backgroundColor={'default'}
-                                   style={{
-                                       alignSelf: 'center',
-                                       marginTop: 30
-                                   }}>{downloadIR}</MatButton>
+                        <a href={'/docs/ir_manual.pdf'}>
+                            <MatButton backgroundColor={'default'}
+                                       style={{
+                                           alignSelf: 'center',
+                                           marginTop: 30
+                                       }}>{downloadIR}</MatButton>
+                        </a>
                     </SwitchComponent>
                     <SwitchComponent id={'internetgateway'} even={true}
                                      dark={2}
@@ -155,11 +159,13 @@ class ProductsPage extends Component {
                         <p className={'h4'}>{ighcStrings[3]}</p>
                         <p>{ighcStrings[4]}</p>
                         <p className={'h4'}>{ighcStrings[5]}</p>
-                        <MatButton backgroundColor={'default'}
-                                   style={{
-                                       alignSelf: 'center',
-                                       marginTop: 30
-                                   }}>{downloadIGHC}</MatButton>
+                        <a href={'/docs/ighc_manual.pdf'}>
+                            <MatButton backgroundColor={'default'}
+                                       style={{
+                                           alignSelf: 'center',
+                                           marginTop: 30
+                                       }}>{downloadIGHC}</MatButton>
+                        </a>
                     </SwitchComponent>
                 </div>
                 <SwitchComponent
@@ -175,11 +181,13 @@ class ProductsPage extends Component {
                     {keypadItems.map((item, index) =>
                         <span key={index}
                               style={{textAlign: 'left'}}><strong>{item.sub}</strong>{item.text}</span>)}
-                    <MatButton backgroundColor={'default'}
-                               style={{
-                                   alignSelf: 'center',
-                                   marginTop: 30
-                               }}>{downloadKeypad}</MatButton>
+                    <a href={'/docs/keypad_manual.pdf'}>
+                        <MatButton backgroundColor={'default'}
+                                   style={{
+                                       alignSelf: 'center',
+                                       marginTop: 30
+                                   }}>{downloadKeypad}</MatButton>
+                    </a>
                 </SwitchComponent>
                 <SwitchComponent
                     id={'glass'}

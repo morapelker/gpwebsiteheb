@@ -26,13 +26,20 @@ const LoadControl = () => {
                 <p><strong style={{color: 'green'}}>Auto - </strong>{autoMode}</p>
                 <p><strong style={{color: 'orange'}}>Eco - </strong>{ecoMode}</p>
                 <p><strong style={{color: '#c6c6c6'}}>Manual - </strong>{manMode}</p>
-                <MatButton style={{width: 300, alignSelf: 'center'}} backgroundColor={'default'}>
-                    Smart Switch Manual Download
-                </MatButton>
+                <a href={'/docs/smart_switch.pdf'}>
+                    <MatButton style={{width: 300, alignSelf: 'center'}}
+                               backgroundColor={'default'}>
+                        Smart Switch Manual Download
+                    </MatButton>
+                </a>
             </div>
             <LargeScreen>
                 <ImgWithLoader src={'/images/performance3_1.png'} alt={''}
-                     style={{width: '40%', objectFit: 'scale-down', alignSelf: 'flex-start'}}/>
+                               style={{
+                                   width: '40%',
+                                   objectFit: 'scale-down',
+                                   alignSelf: 'flex-start'
+                               }}/>
             </LargeScreen>
 
         </div>
