@@ -7,8 +7,8 @@ const ReliableSystem = () => {
     return (
         <div style={{
             width: '100%',
-            height: '70vh',
             backgroundRepeat: 'no-repeat',
+            maxHeight: '70vh',
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed',
             marginTop: 40,
@@ -29,7 +29,7 @@ const ReliableSystem = () => {
                     flexDirection: 'column',
                     color: 'white'
                 }}>
-                    <h4>A reliable system</h4>
+                    <h4 style={{marginTop: 0}}>A reliable system</h4>
                     {reliable.split('\n').map((item, index) => <p key={index}>{item}</p>)}
                 </div>
             </div>
