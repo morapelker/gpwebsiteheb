@@ -1,25 +1,25 @@
 export const items = [
     {
-        label: 'Home',
+        label: 'בית',
         location: '/'
     }, {
-        label: 'About',
+        label: 'אודות',
         location: '/about'
     }, {
-        label: 'Advantages',
+        label: 'יתרונות',
         location: '/advantages'
     }, {
-        label: 'Products',
+        label: 'מוצרים',
         location: '/products',
         hash: ''
     }, {
-        label: 'Apps',
+        label: 'אפליקציות',
         location: '/apps',
     }, {
-        label: 'FAQ',
+        label: 'שאלות/תשובות',
         location: '/faq'
     }, {
-        label: 'Contact',
+        label: 'צור קשר',
         location: '/contact'
     }
 ];
