@@ -38,7 +38,7 @@ const HomeRouter = ({items, productsSelector, history}) => {
             {items.map((item, index) =>
                 <span className={'routeSpan'} key={index}
                       onClick={onClick(item, history, productsSelector)} onMouseEnter={() => {
-                    productsSelector(item.label === 'Products')
+                    productsSelector(item.location === '/products')
                 }}>
                     {item.label}
             </span>)}

@@ -2,20 +2,12 @@ import React from 'react';
 import {reliable} from "./TextBlocks";
 import {LargeScreen} from "../Common/ScreenSizes";
 import ImgWithLoader from "../Common/ImgWithLoader";
+import './reliable.css';
 
 const ReliableSystem = () => {
     return (
-        <div style={{
-            width: '100%',
-            backgroundRepeat: 'no-repeat',
-            maxHeight: '70vh',
-            backgroundPosition: 'center',
-            backgroundAttachment: 'fixed',
-            marginTop: 40,
-            backgroundSize: 'cover',
-            backgroundImage: 'url(/images/mesh_0.jpg)',
-        }}>
-            <div style={{width: '100%', height: '100%', background: 'rgba(0,0,0,0.4)', display: 'flex'}}>
+        <div className={'reliable_root'}>
+            <div className={'reliable_root_2'}>
                 <LargeScreen>
                     <ImgWithLoader src={'/images/decentralized2.png'} alt={''}
                          style={{width: '50%', height: '100%', objectFit: 'scale-down', alignSelf: 'flex-start'}}/>

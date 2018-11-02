@@ -60,12 +60,13 @@ class App extends Component {
                                 <Route exact path='/hotel' component={HotelPage}/>
                                 <Route exact path='/office' component={OfficePage}/>
                                 <Route exact path='/home' component={IGHHome}/>
-                                <Route path='/products' render={() => <ProductsPage shrinked={this.state.shrinked} />}/>
+                                <Route path='/products' render={() => <ProductsPage
+                                    shrinked={this.state.shrinked}/>}/>
                             </Switch>
-                            <div style={{height: 100}} />
-                            <ContactPage />
+                            <div style={{height: 100}}/>
+                            <ContactPage/>
                         </div>
-                        <Header shrinked={this.state.shrinked} />
+                        <Header shrinked={this.state.shrinked}/>
                     </div>
                 </BrowserRouter>
             </div>

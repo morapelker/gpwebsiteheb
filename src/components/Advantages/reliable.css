@@ -1,0 +1,25 @@
+.reliable_root {
+    width: 100%;
+    margin-top: 40px;
+    background-size: cover;
+    background: url('/images/mesh_0.jpg'), no-repeat fixed center;
+}
+
+.reliable_root_2 {
+    /*
+    width: '100%', height: '100%', background: 'rgba(0,0,0,0.4)', display: 'flex'*/
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+}
+
+@media only screen and (max-width: 850px) {
+    .reliable_root {
+        max-height: 70vh;
+    }
+
+    .reliable_root_2 {
+        background: transparent;
+    }
+}
