@@ -1,31 +1,19 @@
-export const about1 = 'Green Point Systems vision was to create a system that fits everyone’s need.\n' +
-    'A simple operated system that will automatically adapt home environment to the user\'s needs while eliminating energy wastage;' +
-    ' an affordable, simple and easy-to-install solution for a new or existing home. igh system introduces a new hassle free standard of living.\n' +
-    'Our goals were achieved by inventing a revolutionary igh concept that opens the door for a new generation of real smart homes. igh system is' +
-    ' designed to replace the standard wall switch in every household in the world.\nigh’s potential market size is huge because of the ability to' +
-    ' approach not only new or renovated structures as it is done today, but also to already existing structures. Nevertheless, this is not the ' +
-    'only market available. Since igh system is suitable for structures of any size without range limitation, therefore it provides a good solution' +
-    ' not only for the residential market, but also for the commercial market, including office buildings,' +
-    'government offices, educational and cultural institutions, hotels, public areas and any other structures.\nGreen Point ' +
-    'Systems is reformulating the approach of Home Automation and energy management systems. We transfer the control method over ' +
-    'electrical appliances from a manual individual control to a joint software based platform. We create meaningful interactions,' +
-    ' remove complexity and provide a rich and innovative user experience.';
+export const about1 = 'חברת גרינפוינט מערכות פיתחה במשך 5 שנים טכנולוגיה מהפכנית, יחידה מסוגה בעולם אשר פועלת באופן מבוזר ומאפשרת להפעיל את כלל מוצרי הבית בנוחות וביעילות וזאת תוך כדי חיסכון משמעותי בצריכת החשמל.\n' +
+    'החזון שלנו הוא מערכת igh בכל בית בעולם ושיפור איכות החיים של כלל המשתמשים תוך כדי ביטול האנרגיה המבוזבזת שקיימת כמעט בכל בית בעולם.\n' +
+    'המערכת קלה ופשוטה להתקנה והפעלה.\n';
 
-export const about2 = 'Green Point Systems has developed a new innovative technology that combines home and building automation with energy efficiency ' +
-    'under the name of igh - Intelligent Green Home/Hotel.\nigh system has no central controller making it the only Decentralized solution in the world' +
-    ' and allowing simple installation on existing infrastructure free of dependence on any network protocol, making it highly reliable system with ' +
-    'no single point of failure.\nTherefore, the igh solution can be applied to any building at any stage, from planning stages to existing homes and' +
-    ' it convert any home or building into intelligent green environment by replacing the existing wall switch with an igh intelligent switch' +
-    ' without any concern for range limitations.\nEach igh switch has a build-in decision making firmware and it operates independently as' +
-    ' autonomous automated load control system with rich decision making capabilities in accordance with environmental and occupancy ' +
-    'information received from igh solar Sensor based on user’s behavior and preferences.\nThe igh intelligent switches controls any AC powered' +
-    ' load such as lights, curtains or shutters, air conditioning and much more. igh is not only an advanced control system but it’s also a ' +
-    'comprehensive energy management system that creates up to 30% savings in electricity costs without changing user’s behavior or lifestyle.\n' +
-    ' Furthermore, all system configuration, remote service and support, as well as control and monitoring functions are implemented via free' +
-    ' applications without any licensing limitations. igh system innovative technical superiority gives it the ability to break existing conceptual' +
-    ' and technological boundaries and to be integrated into any building, from apartment buildings to commercial buildings, hotels common areas etc,' +
-    ' as an end-to-end solution. Our goal is to transform every building into an intelligent and green environment at an affordable price and simple' +
-    ' installation using existing infrastructure.';
+export const about2 = 'ברוכים הבאים לבית החכם של גרין פוינט, עולם של נוחות חדשנות וחיסכון בחשמל.\n' +
+    'חברת גרין פוינט מפתחת ומייצרת בישראל את הבית החכם מסדרת igh\n' +
+    'הבית החכם שפותח ע"י חברתנו תוכנן לפעול בשבילכם באופן אוטומאטי ולהפוך את המגורים בבית לחוויה מתקדמת של הנאה, נוחות , איכות חיים וחיסכון בחשמל.\n' +
+    'סדרת מוצרי igh של חברת גרין פוינט הינם יחודים  בעלי טכנולוגיה מתקדמת המוגנת בפטנט.\n' +
+    'בסדרת igh ניתן דגש רב לעיצוב המוצרים. היחידות מעוצבות בהזרקה דו שכבתית ומפסקי הנגיעה מעוצבים מזכוכית קריסטאלית מחוסמת המעניקה למוצרים מראה חדשני ויוקרתי.\n' +
+    'המערכת כוללת שילוב בין חישנים חכמים, מתגים וכלל יחידות המערכת דבר המאפשר ניהול הבית באופן אוטומאטי, כך שהבית עובד בשבילכם לפי הצרכים וההגדרות שכוללים תנועה, טמפרטורה, כמות אור ועוד.\n' +
+    'מערכת igh מאפשרת הפיכת כל בית קיים או חדש לבית חכם ולא בזבזני בחשמל ע"י החלפה פשוטה של המפסקים הקיימים במפסקי igh חכמים.\n' +
+    'כל מפסק igh יודע לקבל החלטות באופן עצמאי בהתאם לסגנון חייו של המשתמש. המפסקים החכמים ידליקו ויכבו עבורכם את התאורה, יפתחו ויסגרו את התריסים,ידליקו את המזגן לטמפרטורה הרצויה...\n' +
+    'מערכת igh מאפשרת ניהול אנרגיה וחיסכון של כ 30% בהוצאות החשמל.\n' +
+    'במערכת igh הבית החכם יודע לפעול אוטומאטית.בהתאם להגדרות שלכם ותודות לחישן החכם, להפעיל פעולות כיבוי והדלקה אוטומאטיות בהתאם לתנאים המשתנים. החישן החכם מודד טמפרטורה ומפעיל את המזגן רק שצריך,מזהה תנועה מדליק את התאורה כאשר נכנסים לחדר ומכבה את התאורה כאשר יוצאים מהחדר.\n' +
+    'את המתגים החכמים ניתן להפעיל באמצעות תזמון מראש ולקבוע הדלקה, כיבוי, עוצמה, מצבי עבודה ועוד  בשעות הרצויות.\n' +
+    'הילדים יוצאים מהחדר ושוכחים לכבות את המזגן והאור? אם נבחר מצב אוטומאטי כל פעם שהילדים יצאו מהחדר האור והמזגן יכבו באופן אוטומאטי.';
 
 export const about3 = 'In the last decades, many companies have developed a wide range of Home Automation (HA) ' +
     'systems designed to provide the users with convenient control over electrical appliances. However, ' +

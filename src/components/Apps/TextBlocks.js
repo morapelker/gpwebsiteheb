@@ -1,41 +1,30 @@
-export const appPanel1 = 'Keep in-touch with your home at all times.' +
-    'igh free app is simple to use and provides local and remote control and monitor with ' +
-    'rich and accurate information about users home and enables easily adjustment of system ' +
-    'configuration.\nFurther more, initial igh system setup done via dedicated app automatically without dependence on company technicians.';
+export const appPanel1 = 'האפליקציה החינמית igh היא קלה לשימוש ומאפשרת שליטה ובקרה מקומית ומרחוק. האפליקציה נותנת מידע עשיר ומדוייק על המשתמשים השונים בבית ומאפשרת שינוי הגדרות של המערכת.\n' +
+    'התקנת המערכת בבית נעשית בלעדית ע"י האפליקציה ללא צורך באנשי מקצוע או טכנאי החברה. הורידו את האפליקציה כאן:';
 
 export const otherPanels = [
     {
-        title: 'Control Your Home',
-        text: 'You can control your lights/appliances as if you were standing right next to them at all times.' +
-            ' Turn appliances On and Off, adjust lights to any brightness and even bring shutters to any specific' +
-            ' level. With the app you can adjust modes and set schedulers for all units,' +
-            ' providing you rich and accurate control from you smart-phone/tablet.',
+        title: 'שלוט על הבית שלך',
+        text: 'שליטה על התאורות ומכשירי החשמל השונים בבית כאילו אתם עומדים ממש לידם בכל רגע נתון.' +
+            ' כבו והדליקו מכשירי חשמל, התאימו את עוצמת התאורה בכל חדר וחדר לעוצמה הרצויה ואפילו סגרואת התריסים עד למידה הרצויה. עם האפליקציה תוכלו להגדיר' +
+            ' מצבים ולתזמן תזמונים לכל מתג ומתג בנפרד ולקבל מידע עשיר אודות ניהול האנרגיה וסטטיסטיקות שימוש ישר לנייד או לטבלט.\n',
         image: 'app5.png'
     }, {
-        title: 'Virtual Remote Control',
-        text: 'Turn you smart phone/tablet to any remote control in ' +
-            'your home. With the virtual remote control in hand at all time ' +
-            'there is no more looking for remote controls, you can operate' +
-            ' Audio/Video systems, Air-conditions or any other appliance controlled by infra-red.',
+        title: 'שלטים ווירטואליים',
+        text: 'הפוך את הסמארטפון שלך לשלט רחוק אוניברסלי בבית שלך. עם השלט הוירטואלי בידך כבר לא תצטרך לחפש כל פעם אחר השלט המתאים, תוכל לשלוט במזגן, ' +
+            'מערכת שמע, וידאו, די.וי.די או כל מכשיר אחר הנשלט באמצעות אינפרה אדום.',
         image: 'app6.png'
     }, {
-        title: 'Scenarios',
-        text: 'Create and operate unlimited scenarios. The igh scenario function enables you to record any numbers of activations and ' +
-            'execute them at once at any time.You can record a "good bye" scenario that will close all shutters when you leave home or' +
-            ' a "movie" scenario that will turn on the TV, bring your receiver to movie mode,' +
-            ' close the shutters and dim the lights.\n' +
-            'Never before has it been so easy to build and activate any scenario desired.',
+        title: 'תסריטים',
+        text: 'בבית החכם של igh אתם יוצרים תסריטי הפעלה שונים, באמצעות הגדרה מראש של רצף פעולות אשר יתרחשו בו זמנית' +
+            'בלחיצת כפתור באפליקציה או בהפעלה לפי תזמון זמנים מראש.\n' +
+            'לדוגמא, תוכלו ליצור תסריט ״חזרה מבית ספר״ ובו הטלוויזיה תידלק על התכנית האהובה על ילדיכם, המזגן ידלק, התריסים החשמליים' +
+            'יפתחו והאורות במטבח ידלקו.',
         image: ''
     }, {
-        title: 'Intelligent Energy Management',
-        text: 'Monitor your home from anywhere anytime.' +
-            'With the igh App you can view the occupancy and environmental ' +
-            'information from sensors, follow the usage of lights/appliances ' +
-            'and even get their 48 hours history.\nNow you can stay in-touch with ' +
-            'your home at all times and even receive special notification when desired.' +
-            'The information displayed on the app is accurate and always up-to-date, the app receives on-line updates' +
-            ' from the units so you can see the exact brightness' +
-            ' off each dimmer or even get notification once the bulb is blown.',
+        title: 'ניהול צריכה חכם',
+        text: 'מפסקי igh החכמים יכבו עבורך את התאורה,המזגן והדוד באופן אוטומטי. אין עוד צורך לרדוף אחרי הילדים שיכבו את מוצרי החשמל, מפסקי igh נותנים לכם חופש ודואגים שלא יהיה חשמל מבוזבז בביתכם.' +
+            'חיסכון זה יכול להגיע לכ 30% בהוצאות החשמל.\n' +
+            'בנוסף מפסקי igh מודדים את תצרוכת החשמל בזמן אמת ומציגים לכם את עלות הפעלתם, ידע זה מאפשר לכם שימוש נבון יותר במוצרי חשמל זללניים.',
         image: 'app9.png'
     }
 ];

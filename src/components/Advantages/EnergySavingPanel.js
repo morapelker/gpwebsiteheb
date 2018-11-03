@@ -29,18 +29,17 @@ const EnergySavingPanel = () => {
                 display: 'flex',
                 flexDirection: 'column'
             }}>
-                <h4 style={{color: 'white', marginTop: 0}}>Intelligent energy saving</h4>
-                <span style={{color: 'white', textAlign: 'left'}}>{energySaving1}</span>
+                <h4 style={{color: 'white', marginTop: 0}}>מדידת תצרוכת החשמל</h4>
+                <span style={{color: 'white'}}>{energySaving1}</span>
                 <ul style={{color: 'white', padding: 0}}>
                     {energySavingList.map((item, index) => <li key={index}
                                                                style={{
                                                                    fontSize: '1em',
-                                                                   textAlign: 'left'
+                                                                   textAlign: 'right'
                                                                }}>
                                 <span style={{
                                     fontSize: '1em',
                                     color: 'white',
-                                    textAlign: 'left',
                                 }}> <strong>{item.sub + ' - '}</strong>{item.text}</span>
                     </li>)}
                 </ul>

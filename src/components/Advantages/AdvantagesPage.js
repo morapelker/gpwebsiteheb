@@ -2,11 +2,10 @@ import React, {Component} from 'react';
 import InfoPanel from "../AboutPage/InfoPanel";
 import {
     automation,
-    holistic,
+    holistic, modular, quickInstall,
     stayInTouch,
 } from "./TextBlocks";
 import EnergySavingPanel from "./EnergySavingPanel";
-import QuickInstallationPanel from "./QuickInstallationPanel";
 import AppPanel from "./AppPanel";
 import ReliableSystem from "./ReliableSystem";
 import '../Common/common.css';
@@ -23,19 +22,24 @@ class AdvantagesPage extends Component {
                 <div className={'page_top_root'}>
                     <img className={'page_top_img'} src={'/images/banner_adva2.jpg'} alt={''} />
                     <div className={'page_top_bg'}>
-                        <span className={'page_top_text'}>Advantages</span>
+                        <span className={'page_top_text'}>יתרונות</span>
                     </div>
                 </div>
-                <InfoPanel marginTop={0} even={false} text={holistic}
-                           title={'One holistic solution'}
+                <InfoPanel marginTop={30} even={false} text={holistic}
+                           title={'פתרון רחב וכולל'}
                            image={'igh2_0.png'}/>
-                <InfoPanel even={true} marginTop={0} text={automation} title={'Automation'}
+                <InfoPanel even={true} marginTop={30} text={automation} title={'אוטומציה'}
                            image={'auto3.png'}/>
-                <InfoPanel marginTop={0} even={false} text={stayInTouch}
-                           title={'A home that stays in touch with us'}
+                <InfoPanel marginTop={30} even={false} text={stayInTouch}
+                           title={'דירה ששומרת קשר איתנו'}
                            image={'intouch_0.png'}/>
                 <EnergySavingPanel />
-                <QuickInstallationPanel />
+                <InfoPanel marginTop={30} even={false} text={modular}
+                           title={'מודולריות'}
+                           image={'quickinstall.png'}/>
+                <InfoPanel marginTop={30} even={true} text={quickInstall}
+                           title={'התקנה פשוטה ומהירה'}
+                           image={'install.png'}/>
                 <AppPanel />
                 <ReliableSystem />
             </div>

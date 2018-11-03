@@ -7,18 +7,18 @@ import {withRouter} from "react-router-dom";
 
 const info = [
     {
-        title: 'Intelligent Green Office',
-        text: 'GreenPoint systems redefine the entire working environment and working experience, making your day much more joyful and efficient at the office.',
+        title: 'משרד',
+        text: 'מערכת המשרד החכם של גרינפוינט מגדירה מחדש הרגלי עבודה וחוסכת חשמל. עושה את היום הרבה יותר כיף ויעיל במשרד',
         image: 'office_icon.svg',
         link: 'office'
     }, {
-        title: 'Intelligent Green Hotel',
-        text: 'Intelligent room occupancy detection system that makes decision based on a door magnet and a PIR detector, allowing separate WELCOME and GOODBYE scenario...',
+        title: 'מלון',
+        text: 'המערכת בבתי מלון מקבלת החלטות בהתאם לחיישני תנועה, מגנט בדלת ועוד על מנת לחסוך בחשמל ולשפר את איכות השהייה של האורח בעזרת הרצת תסריט ברוך הבא לחדר מיידית בפתיחת הדלת של אורח חדש',
         image: 'hotel_icon.svg',
         link: 'hotel'
     }, {
-        title: 'Intelligent Green Home',
-        text: 'Close your shutter at night, open it slightly in the morning, close it while you are at work or even manage the room temperature and light automatically by...',
+        title: 'בית',
+        text: 'סגור את התריסים בלילה, פתח אותם מעט בבוקר, סגור אותם כשאתה יוצא לעבודה, ניהול אוטומטי של הדלקות וכיבויי מנורות ובכך חיסכון בחשמל ושיפור איכות חיים',
         image: 'home_icon.svg',
         link: 'home'
     }
@@ -63,8 +63,8 @@ class HomePage extends Component {
 
     render() {
         return (
-            <div style={{width: '100%'}}>
-                <MainSlideShow loaded={this.state.loadedImages}/>
+            <div style={{width: '100%', textAlign: 'center'}}>
+                <MainSlideShow history={this.props.history} loaded={this.state.loadedImages}/>
                 <div style={{
                     marginTop: 10,
                     width: '100%'
@@ -75,16 +75,24 @@ class HomePage extends Component {
                         flexWrap: 'wrap',
                         justifyContent: 'center'
                     }}>
-                        {info.map((info, index) => <HomeInfo history={this.props.history} info={info} key={index}/>)}
+                        {info.map((info, index) => <HomeInfo history={this.props.history}
+                                                             info={info} key={index}/>)}
                     </div>
                     <div
-                        style={{width: '100%', height: 0, paddingTop: '50%', position: 'relative'}}>
+                        style={{
+                            width: '100%',
+                            height: 0,
+                            paddingTop: '50%',
+                            position: 'relative',
+                            paddingLeft: 5,
+                            paddingRight: 5
+                        }}>
                         <iframe title={'IGH Product Introduction'} style={{
-                            position: 'absolute', left: 0, top: 0, right: 0, bottom: 0,
+                            position: 'absolute', left: 0, top: 0, bottom: 0,
                             width: '100%', height: '100%'
                         }}
                                 allowFullScreen="allowfullscreen"
-                                src="https://www.youtube.com/embed/P1U-8Mgi-yw">
+                                src="https://www.youtube.com/embed/w-2Khs6ftNc">
                         </iframe>
                     </div>
                     <AboutSection history={this.props.history}/>

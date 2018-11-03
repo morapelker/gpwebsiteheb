@@ -1,54 +1,43 @@
-export const holistic = 'With igh you are not only getting endless control and monitor capabilities ' +
-    'but also the freedom to lose control. Let your home do all the work for you.\n' +
-    'Move freely in your home and gain the benefits of an intelligent environment that responds to your needs according to your preferences.\n' +
-    'Installing a "dumb" standard switch is a thing of the past. The igh\'s unique autonomous intelligence controls all light and electrical systems bringing intelligent design to every room in your home. Lighting, climate, entertainment, security, communication and more...\n' +
-    'All working seamlessly together for you.';
+export const holistic = 'טכנולוגית igh שולטת בכל תאורה כולל דימור, תריסים ווילונות חשמלים כולל פקודה לפתיחה וסגירה חלקית, ' +
+    'עומסי כוח כגון דוד, מזגן, מכונת כביסה, מוצרי אינפרא אדום כגון מזגנים, טלווזיה וכל מוצרי הבידור.\n';
 
-export const automation = 'The igh Automatic SmartHome System turns on and off lighting, A/Cs and blinds so you will soon forget how to use a switch entirely. \n' +
-    'With the igh System your life is going to become so much easier and accessible, it will do the hard work for you and control the different electrical appliances according to your specific needs.\n' +
-    'How does it work?\n' +
-    'the Smart Sensor detects the amount of light, temperature and motion in the room and passes on the information to the Smart Switches that know how to translate it into a "switch on/off" operation of the different electrical appliances in the home.';
+export const automation = 'שמעתם פעם על בית שעובד בשבילכם? ' +
+    'מערכת הבית החכם האוטומטי מדליקה ומכבה באופן אוטומטי אורות, מזגנים, תריסים, כך שבקרוב תשכחו איך לוחצים על מתגים.\n' +
+    ' עם מערכת ה-Igh החיים שלכם יהפכו להיות הרבה יותר נוחים ונגישים, הבית יעבוד בשבילכם וישלוט במכשירי החשמל השונים על פי הצרכים שתגדירו לו מראש.';
 
-export const stayInTouch = 'igh System sends us emails of our choice ' +
-    'to any mobile phone. For instance, when the kids come back from school and' +
-    ' are in the kitchen, when your assistant comes to work, when its too hot in' +
-    ' the bedroom or when someone is roaming around the house at suspicious hours etc.';
+export const stayInTouch = 'מערכת igh דואגת לשלוח לנו מיילים על פי בחירתנו לטלפון הנייד. לדוגמא - הילדים הגיעו מבית' +
+    ' הספר ונמצאים במטבח, העוזרת הגיעה לעבודה, חם מידי בחדר השינה, מישהו מסתובב בבית בשעות לא הגיוניות ועוד ועוד.';
 
-export const energySaving1 = 'igh is not only an advanced control system but it’s also a comprehensive energy management system that creates up to 30% savings in electricity costs without changing user’s behavior or lifestyle. liberates the user from the duty of turning them off and therefore enables significant energy savng.';
+export const energySaving1 = 'מפסק igh מודד בזמן אמת את תצרוכת החשמל של העומס המחובר אליו כגון דוד מים חמים מזגן ואפילו תאורה. מידע זה מאפשר לנו  להשתמש בתבונה במוצרי חשמל בזבזנים ולעיתים אפילו להחליפם. מפסק igh ' +
+    'החכם מכבה את העומס על פי הגדרתנו באופן אוטומטי כך שלא יהיה בביתנו חשמל מבוזבז.';
 
 export const energySavingList = [
     {
-        sub: 'Unique measurement capabilities',
-        text: 'Embedded power meter within any igh switch.'
+        sub: 'יכולות מדידה ייחודיות',
+        text: 'כל מפסק igh מגיע עם מד צריכה ומודד את הזרם שלו בצורה עצמאית'
     }, {
-        sub: 'Real-time event handler',
-        text: 'Automated scenarios operator in accordance with occurred events.'
+        sub: 'שליחת התראות בזמן אמת',
+        text: 'הפעלת תרחישים ושליחת התראות בהתאם לאירועים בבית'
     }, {
-        sub: 'Real-time location handler',
-        text: 'Operating scenarios according to selected GPS position.'
+        sub: 'מנהל מיקום בזמן אמת',
+        text: 'הרצת תרחישים בהתאם למקום הטלפון באמצעות GPS'
     }
 ];
 
-export const quickInstall = 'Due to the decentralized technology, the igh system quickly integrates in any structure at any stage and converts it into automated green environment.';
+export const modular = 'מערכת הבית החכם הינה מערכת מודולרית.\n' +
+    'את המערכת ניתן להתקין בחלקים מן הבית ובכל עת ניתן להוסיף עוד חדרים.' +
+    'ישנם אנשים שמעדיפים תחילה להתנסות ולהתקין את המערכת בסלון ובחדר הילדים ולאחר זמן מה להוסיף  חדרים בהתאם לרצונות ולצרכים.' +
+    'צוות המתקינים שלנו ישמח להגיע שוב ולהתקין חדרים ואזורים נוספים בעלות של מאות שקלים בודדים.\n' +
+    'אפשר להתקין את המערכת בחדרים שתרצו ולא בכל הבית, בלי צורך בארונות תקשורת וחיווט הבית.' +
+    'ניתן להתקין את מערכת הבית החכם גם בדירות ישנות ואפילו בדירה השכורה שלכם.';
 
-export const quickInstallList = [
-    {
-        sub: 'Straightforward installation',
-        text: 'The igh switches are a direct exchange with a standard wall switch, using existing electrical infrastructure.'
-    }, {
-        sub: 'Large scale areas',
-        text: 'Multiple ethernet gateways solution allow to link large area and overcome RF range limitations.'
-    }, {
-        sub: 'Modularity',
-        text: 'Each igh switch is autonomous and operates independently, therefore the igh system is extensible and transferable.'
-    }, {
-        sub: 'Easy configuration',
-        text: 'System setup done completely via igh APP and keeps the installation simple.'
-    }
-];
+export const quickInstall = 'עם מערכת igh כל בית יכול להיות בית חכם האמיתי בהתקנה פשוטה וקלה.\n' +
+    'את הבית החכם ניתן להתקין גם בדירות ישנות ואפילו בדירות שכורות: ניתן להעביר את המערכת איתכם בעת מעבר בפירוק והתקנה פשוטים על ידי צוות המתקינים שלנו.\n' +
+    'את מערכת הבית החכם ניתן להתקין גם בדירות ישנות ושכורות ובמידה ואתם עוברים דירה ניתן לקחת אותה איתכם.\n';
 
-export const reliable = 'With the igh technology there is no net or mesh of any sort, no central command center, ' +
-    'the igh System is not dependant on any single component. Every Smart Switch is independent and works autonomously.\n' +
-    'The igh System has all the required certifications and has passed all regulations.';
+export const reliable = 'בטכנולוגית igh אין רשת מכל סוג שהוא, אין בקר מרכזי, מערכת igh אינה תלויה במרכיב כזה או אחר, כל מפסק פועל באופן עצמאי ואוטונומי.' +
+    ' למערכת igh תקינה ישראלית מלאה ואישור של חברת החשמל.\n';
 
-export const appDescription = 'Supports iPhone, iPad and Android. The System is fully controlled through the different apps by the user when sitting at home or when he is away without being dependant on any installer.\nThe igh apps don\'t only allow controlling the electricity load but also can show the accumulative electricity load on daily, weekly and yearly charts.';
+export const appDescription = 'תמיכה באייפון, אייפד ואנדרואיד.' +
+    ' המערכת תוכננה כך שדרך האפלקציות השונות המשתמש יכול להגדיר ולשנות את ביתו גם מהבית וגם מרחוק ללא תלות במתקין זה או אחר.\n' +
+    ' אפליקציות igh מאפשרות לא רק לשלוט בעומסים אלה גם לדעת את תצרוכת החשמל המצטברת שלהם על בסיס יומי, שבועי ושנתי.';

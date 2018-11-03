@@ -24,8 +24,8 @@ const SwitchComponent = ({even, src, title, dark, preText, listItems, height, ch
                         <p style={{marginLeft: 10, marginRight: 10, alignSelf: 'flex-end'}}>{item}</p>
                     </div> :
                     <p key={index}>{item}</p>))}
-                {listItems && <span className={'h4'}>Unique Features</span>}
-                {listItems && <ul style={{textAlign: 'left'}}>
+                {listItems && <span className={'h4'}>מאפיינים ייחודיים</span>}
+                {listItems && <ul>
                     {listItems.map((item, index) => <li key={index}>
                         {item}
                     </li>)}
@@ -57,8 +57,8 @@ const SwitchComponent = ({even, src, title, dark, preText, listItems, height, ch
                 }}>
                     <span className={'h4'}>{title}</span>
                     {preText && preText.split('\n').map((item, index) => <p key={index}>{item}</p>)}
-                    {listItems && <span className={'h4'}>Unique Features</span>}
-                    {listItems && <ul style={{textAlign: 'left'}}>
+                    {listItems && <span className={'h4'}>מאפיינים ייחודיים</span>}
+                    {listItems && <ul>
                         {listItems.map((item, index) => <li key={index}>
                             {item}
                         </li>)}

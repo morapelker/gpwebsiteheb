@@ -45,9 +45,9 @@ const QuestionAnswer = ({question, answer, open, onClick}) => {
                         borderWidth: 0
                     }}/>
                     {answer.split('\n').map((item, index) =>
-                        <span
+                        <p
                             key={index}
-                            style={{textAlign: 'left', marginTop: 5, marginLeft: 20}}>{item}</span>
+                            style={{marginTop: 5, marginRight: 20}}>{item}</p>
                     )}
                 </div>
             </Collapse>

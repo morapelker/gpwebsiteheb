@@ -31,7 +31,7 @@ const HamburgerMenu = ({history, closeDrawer}) => {
                 {items.map((item, index) => (item.location === '/products' ?
                     <ul className={'drawer_list sub'}>
                         <li onClick={linkClicked('/products', history, closeDrawer)}
-                            className={'drawer_item'}>Products
+                            className={'drawer_item'}>מוצרים
                         </li>
                         {products.map((item, index) => <li
                             onClick={linkClicked('/products#' + item.url, history, closeDrawer)}
@@ -40,7 +40,8 @@ const HamburgerMenu = ({history, closeDrawer}) => {
                                 height: '100%',
                                 width: 40,
                                 objectFit: 'contain',
-                                marginRight: 5
+                                marginRight: 5,
+                                marginLeft: 5
                             }}
                                            src={'/images/' + item.icon} alt={''}/>{item.text}
                         </li>)}

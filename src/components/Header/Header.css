@@ -8,6 +8,13 @@
     z-index: 10;
 }
 
+.gp_logo {
+    height: 100%;
+    max-width: 100%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
 .drawer_root {
     max-width: 80vw;
     min-width: 200px;
@@ -37,7 +44,7 @@
 
 .drawer_item.sub {
     z-index: 10;
-    padding-left: 30px;
+    padding-right: 30px;
     display: flex;
     align-items: center;
 }

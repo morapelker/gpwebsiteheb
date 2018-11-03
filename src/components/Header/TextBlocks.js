@@ -16,7 +16,7 @@ export const items = [
         label: 'אפליקציות',
         location: '/apps',
     }, {
-        label: 'שאלות/תשובות',
+        label: 'שאלות נפוצות',
         location: '/faq'
     }, {
         label: 'צור קשר',
@@ -26,55 +26,55 @@ export const items = [
 
 export const products = [
     {
-        text: 'Light Switch',
+        text: 'תאורה',
         whiteImage: 'lightwhite.png',
         blackImage: 'lightblack.png',
         url: 'light',
         icon: 'lightgeneric.png'
     }, {
-        text: 'Shutter Switch',
+        text: 'תריס/וילון',
         whiteImage: 'shutterwhite.png',
         blackImage: 'shutterblack.png',
         url: 'shutter',
         icon: 'shuttergeneric.png'
     }, {
-        text: 'Power Switch',
+        text: 'כוח',
         whiteImage: 'powerwhite.png',
         blackImage: 'powerblack.png',
         url: 'power',
         icon: 'powergeneric.png'
     }, {
-        text: 'Sense Switch',
+        text: 'סנס',
         whiteImage: 'sensewhite.png',
         blackImage: 'senseblack.png',
         url: 'sense',
         icon: 'sensegeneric.png'
     }, {
-        text: 'Sensor',
+        text: 'חיישן',
         whiteImage: 'sensorwhite.png',
         blackImage: 'sensorblack.png',
         url: 'sensor',
         icon: 'sensorgeneric.png'
     }, {
-        text: 'IR Bridge',
+        text: 'מגשר IR',
         whiteImage: 'irwhite.png',
         blackImage: 'irblack.png',
         url: 'irbridge',
         icon: 'remotegeneric.png'
     }, {
-        text: 'Keypad',
+        text: 'לוח מקשים',
         whiteImage: 'keypadwhite.png',
         blackImage: 'keypadblack.png',
         url: 'keypad',
         icon: 'keypadgeneric.png'
     }, {
-        text: 'Internet Gateway',
+        text: 'מגשר אינטרנט',
         whiteImage: 'ighcwhite.png',
         blackImage: 'ighcblack.png',
         url: 'internetgateway',
         icon: 'ighcwhite.png',
     }, {
-        text: 'Glass Panel',
+        text: 'פאנל זכוכית',
         whiteImage: 'glasswhite.png',
         blackImage: 'glassblack.png',
         url: 'glass',

@@ -14,7 +14,7 @@ const HeaderUnit = ({product, dark, history, productsSelector}) => {
             history.push('/products#' + product.url);
             productsSelector(false);
         }}>
-            <span style={{color: dark ? 'white' : 'black', fontWeight: 'bold'}}>{product.text}</span>
+            <span style={{color: dark ? 'white' : 'black', fontWeight: 'bold', textAlign: 'center'}}>{product.text}</span>
             <ImgWithLoader style={{flex: 1, overflow: 'hidden', width: 130, objectFit: 'contain', padding: 10}} alt={''} src={'/images/' + (dark ? product.blackImage : product.whiteImage)} />
             <img style={{display: 'none'}} src={'/images/' + product.blackImage} alt={''} />
         </div>

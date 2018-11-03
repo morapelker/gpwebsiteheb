@@ -15,7 +15,7 @@ class HotelPage extends Component {
 
     render() {
         return (
-            <PanoramicPage title={'Intelligent Green Hotel'} pageIcon={'hotel_icon_white.svg'}
+            <PanoramicPage title={'מלון חכם וירוק'} pageIcon={'hotel_icon_white.svg'}
                            topImage={'Executiveroom_0_0.jpg'}
             >
                 <div className={'root_text_container'}>

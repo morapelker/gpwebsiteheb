@@ -8,11 +8,6 @@ const ReliableSystem = () => {
     return (
         <div className={'reliable_root'}>
             <div className={'reliable_root_2'}>
-                <LargeScreen>
-                    <ImgWithLoader src={'/images/decentralized2.png'} alt={''}
-                         style={{width: '50%', height: '100%', objectFit: 'scale-down', alignSelf: 'flex-start'}}/>
-                    <div style={{width: 10}} />
-                </LargeScreen>
                 <div style={{
                     flex: 1,
                     height: '100%',
@@ -21,9 +16,15 @@ const ReliableSystem = () => {
                     flexDirection: 'column',
                     color: 'white'
                 }}>
-                    <h4 style={{marginTop: 0}}>A reliable system</h4>
+                    <h4 style={{marginTop: 0}}>אמינות</h4>
                     {reliable.split('\n').map((item, index) => <p key={index}>{item}</p>)}
                 </div>
+
+                <LargeScreen>
+                    <div style={{width: 10}} />
+                    <ImgWithLoader src={'/images/decentralized2.png'} alt={''}
+                                   style={{width: '50%', maxHeight: 300, padding: 10, height: '100%', objectFit: 'scale-down', alignSelf: 'flex-start'}}/>
+                </LargeScreen>
             </div>
         </div>
     );

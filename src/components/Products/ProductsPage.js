@@ -78,49 +78,49 @@ class ProductsPage extends Component {
                 <div className={'page_top_root'}>
                     <img className={'page_top_img'} src={'/images/product_banner1_2.jpg'} alt={''}/>
                     <div className={'page_top_bg'}>
-                        <span className={'page_top_text'}>Our Products</span>
+                        <span className={'page_top_text'}>המוצרים שלנו</span>
                     </div>
                 </div>
                 <LoadControl/>
                 <SwitchComponent id={'light'} even={true} dark={true} src={'lightwhite.png'}
-                                 title={'Light Switch'}
+                                 title={'מפסק תאורה'}
                                  preText={dimmerPre}
                                  listItems={dimmerItems}
                 />
                 <SwitchComponent id={'shutter'} even={false} dark={true} src={'shutterwhite.png'}
-                                 title={'Shutter Switch'}
+                                 title={'מפסק תריסים/ווילונות'}
                                  preText={shutterPre}
                                  listItems={shutterItems}
                 />
                 <SwitchComponent id={'power'} even={true} dark={false} src={'powerwhite.png'}
-                                 title={'Power Switch'}
+                                 title={'מפסק כוח'}
                                  preText={powerPre}
                                  listItems={powerItems}
                 />
                 <div className={'sense_parent'} id={'sense'}>
                     <SwitchComponent even={false} dark={2} src={'sensewhite.png'}
-                                     title={'Sense Switch'}
+                                     title={'מפסק סנס'}
                                      preText={sensePre}
                                      listItems={senseItems}
                     />
                 </div>
                 <div className={'sensor_parent'} id={'sensor'}>
                     <SwitchComponent even={true} dark={2} src={'sensorwhite.png'}
-                                     title={'Environmental Sensor'}
+                                     title={'חיישן סביבתי'}
                                      height={400}
                                      marginTop={30}
                                      preText={sensorPre}
                     >
-                        <span className={'h4'}>Environmental Information</span>
-                        <ul style={{textAlign: 'left'}}>
+                        <span className={'h4'}>מידע סביבתי</span>
+                        <ul>
                             {sensorItems1.map((item, index) => <li key={index}>{item}</li>)}
                         </ul>
-                        <span className={'h4'}>Self Sustainable</span>
-                        <ul style={{textAlign: 'left'}}>
+                        <span className={'h4'}>עצמאי</span>
+                        <ul>
                             {sensorItems2.map((item, index) => <li key={index}>{item}</li>)}
                         </ul>
-                        <span className={'h4'}>Easy Installation</span>
-                        <ul style={{textAlign: 'left'}}>
+                        <span className={'h4'}>התקנה פשוטה וגמישה</span>
+                        <ul>
                             {sensorItems3.map((item, index) => <li key={index}>{item}</li>)}
                         </ul>
                         <a href={'/docs/sensor_manual.pdf'}>
@@ -134,7 +134,7 @@ class ProductsPage extends Component {
                     <SwitchComponent id={'irbridge'} even={false}
                                      dark={2}
                                      src={'irwhite.png'}
-                                     title={'IR Bridge'}
+                                     title={'מגשר אינפרה אדום'}
                                      preText={irPre}
                                      height={300}
                                      listItems={irItems}
@@ -150,7 +150,7 @@ class ProductsPage extends Component {
                     <SwitchComponent id={'internetgateway'} even={true}
                                      dark={2}
                                      src={'ighcwhite.png'}
-                                     title={'Internet Gateway'}
+                                     title={'מגשר האינטרנט'}
                                      preText={ighcStrings[0]}
                                      height={300}
                     >
@@ -173,14 +173,13 @@ class ProductsPage extends Component {
                     even={false}
                     dark={false}
                     src={'keypadwhite.png'}
-                    title={'Intelligent Keypad'}
+                    title={'לוח המקשים'}
                     marginTop={30}
                     preText={keypadPre}
                 >
-                    <span className={'h4'}>Main Features</span>
+                    <span className={'h4'}>תכונות עיקריות:</span>
                     {keypadItems.map((item, index) =>
-                        <span key={index}
-                              style={{textAlign: 'left'}}><strong>{item.sub}</strong>{item.text}</span>)}
+                        <span key={index}><strong>{item.sub}</strong>{item.text}</span>)}
                     <a href={'/docs/keypad_manual.pdf'}>
                         <MatButton backgroundColor={'default'}
                                    style={{
@@ -194,7 +193,7 @@ class ProductsPage extends Component {
                     even={true}
                     dark={false}
                     src={'glasswhite.png'}
-                    title={'Glass Panels'}
+                    title={'פאנלים מזכוכית'}
                     marginTop={30}
                     preText={glassString}
                 >
@@ -208,16 +207,14 @@ class ProductsPage extends Component {
                     paddingBottom: 100,
                     alignItems: 'center'
                 }}>
-                    <span className={'h4'}>Smart Operation Features</span>
-                    <span style={{fontSize: '1.3em'}}>Basic Operation</span>
+                    <span className={'h4'}>הפעלות חכמות</span>
+                    <span style={{fontSize: '1.3em', fontWeight: 'bold'}}>הפעלות בסיסיות</span>
                     {basicOper.map((item, index) =>
-                        <span key={index}
-                              style={{textAlign: 'left'}}><strong>{item.sub}</strong>{item.text}</span>)}
+                        <span key={index}><strong>{item.sub}</strong>{item.text}</span>)}
                     <p/>
-                    <span style={{fontSize: '1.3em'}}>Advanced Operation</span>
+                    <span style={{fontSize: '1.3em', fontWeight: 'bold'}}>הפעלות מתקדמות</span>
                     {advancedOper.map((item, index) =>
-                        <span key={index}
-                              style={{textAlign: 'left'}}><strong>{item.sub}</strong>{item.text}</span>)}
+                        <span key={index}><strong>{item.sub}</strong>{item.text}</span>)}
                 </div>
             </div>
         );

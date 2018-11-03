@@ -2,9 +2,9 @@ import React from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const quotes = [
-    'It was so easy to adapt the easy life of this technology doing so much for our family .',
-    'The location handler opening my garage door on arriving without the need to do anything it is so great.',
-    'igh smart control over lights on public areas in our commercial building save us more than 30% on the electric billing'
+    'היה לי ולמשפחתי מאוד קל להתרגל לטכנולוגיה הזאת!',
+    'מנהל המיקום שפותח לי את החנייה כשאני מגיע כל כך נוח!',
+    'שליטה בתאורות בשטחים הציבוריים שלנו חוסך לנו 30% בצריכת החשמל החודשית'
 ];
 
 const QuoteSection = () => {

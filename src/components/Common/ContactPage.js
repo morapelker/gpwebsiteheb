@@ -3,15 +3,15 @@ import {useInput} from "./Hooks";
 import MatButton from "./MatButton";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import RefreshIndicator from "./RefreshIndicator";
-import {LargeScreen} from "./ScreenSizes";
+import {LargeScreen, SmallScreen} from "./ScreenSizes";
 import '../Common/contact.css';
 
 const ContactPage = () => {
 
-    const name = useInput('Full Name*');
-    const email = useInput('Email*');
-    const phoneNumber = useInput('Phone Number');
-    const message = useInput('Message*');
+    const name = useInput('שם מלא*');
+    const email = useInput('דוא״ל*');
+    const phoneNumber = useInput('מספר טלפון');
+    const message = useInput('הודעה*');
 
     const [messageSent, setMessageSent] = useState(0);
 
@@ -40,7 +40,7 @@ const ContactPage = () => {
             display: 'flex',
             flexDirection: 'column'
         }}>
-            <span style={{fontSize: '2em', fontWeight: 'bold', textAlign: 'center'}}>Contact</span>
+            <span style={{fontSize: '2em', fontWeight: 'bold', textAlign: 'center'}}>צור קשר</span>
             <div className={'contact_root'}>
                 <div style={{
                     flex: 1,
@@ -52,9 +52,9 @@ const ContactPage = () => {
                     lineHeight: 2,
                     textAlign: 'left'
                 }}>
-                    <span style={{fontWeight: 'bold'}}>Green Point Systems</span>
-                    <span>Ha'Eshel 7 st. POB 3136, Caesarea Ind. Park South, Israel</span>
-                    <span>Email: <a href={'/'}>info@greenpointsys.com</a> </span>
+                    <span style={{fontWeight: 'bold'}}>גרינפוינט מערכות בעמ</span>
+                    <span>האשל 7 אזור התעשייה הדרומי קיסריה</span>
+                    <a href={'/'}>info@greenpointsys.com</a>
                 </div>
                 <LargeScreen>
                     <div style={{width: 10}}/>
@@ -66,11 +66,19 @@ const ContactPage = () => {
                         visibility: messageSent !== 2 ? 'unset' : 'hidden'
                     }}>
                         <input {...name} style={{width: '100%'}}/>
-                        <div style={{display: 'flex', marginTop: 10, width: '100%'}}>
-                            <input {...email} style={{width: '50%'}} type={'email'}/>
-                            <input {...phoneNumber} style={{width: '50%', marginLeft: 10}}
+                        <LargeScreen>
+                            <div style={{display: 'flex', marginTop: 10, width: '100%'}}>
+                                <input {...email} style={{width: '50%'}} type={'email'}/>
+                                <input {...phoneNumber} style={{width: '50%', marginRight: 10}}
+                                       type={'tel'}/>
+                            </div>
+                        </LargeScreen>
+                        <SmallScreen>
+                            <input {...email} style={{width: '100%', marginTop: 10}} type={'email'}/>
+                            <input {...phoneNumber} style={{width: '100%', marginTop: 10}}
                                    type={'tel'}/>
-                        </div>
+                        </SmallScreen>
+
                         <textarea {...message}
                                   style={{width: '100%', marginTop: 10, resize: 'vertical'}}/>
                         <MatButton disabled={val} onClick={sendMail}
@@ -80,13 +88,13 @@ const ContactPage = () => {
                             alignSelf: 'flex-end'
                         }}>
                             <span style={{textAlign: 'center'}}>
-                                {messageSent === 0 ? 'Send' : 'Sending...'}
+                                {messageSent === 0 ? 'שלח' : 'שולח...'}
                             </span>
                             {messageSent === 0 ?
                                 <FontAwesomeIcon className={'icon'} icon={'paper-plane'} size={'2x'}
-                                                 style={{color: 'white'}}/>
+                                                 style={{color: 'white', marginRight: 10}}/>
                                 :
-                                <RefreshIndicator size={30} style={{marginLeft: 10}}/>
+                                <RefreshIndicator size={30} style={{marginLeft: 10, marginRight: 10}}/>
                             }
 
                         </MatButton>
@@ -103,7 +111,7 @@ const ContactPage = () => {
                         justifyContent: 'center',
                         alignItems: 'center'
                     }}>
-                        <h4>Message Sent</h4>
+                        <h4>הודעתך נשלחה</h4>
                     </div>
                     }
                 </div>

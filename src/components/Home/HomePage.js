@@ -12,7 +12,7 @@ class HomePage extends Component {
 
     render() {
         return (
-            <PanoramicPage title={'Intelligent Green Home'} pageIcon={'home_icon_white.svg'}
+            <PanoramicPage title={'בית חכם וירוק'} pageIcon={'home_icon_white.svg'}
                            topImage={'home1.jpg'}
             >
                 <div className={'root_text_container'}>

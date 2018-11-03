@@ -1,163 +1,143 @@
-export const products1 = 'igh intelligent switches controls any AC powered load such as lights, curtains, ' +
-    'shutters, air conditioning and much more. Each igh switch has a built-in decision making firmware allowing ' +
-    'it  to operate independently as autonomous automated load control system with rich decision making capabilities in ' +
-    'accordance with environmental and occupancy information combined  with user behavior and preferences.';
+export const products1 = 'מפסקים עצמאיים ואוטומטיים לשליטה ובקרה על הפעלות החשמל כגון: תאורה, וילונות, תריסים, מיזוג אוויר ועוד.\n' +
+    'בכל מפסק igh מוטמעת יכולת קבלת החלטות פנימית אשר הופכת אותו ליחידת בקרה אוטונומית ללא תלות בבקר מרכזי או רשת תקשורת. \n' +
+    'מצבי הפעלה משתנים אוטומטית מאפשרים קבלת ההחלטות משתנה בהתאם לנתונים סביבתיים, העדפות והתנהגות המשתמש.\n';
 
-export const autoMode = 'Lights and appliances controlled automatically according to user preferences and environmental' +
-    ' information from igh sensor without any manual intervention. Shutters move automatically maintaining current room light intensity.';
+export const autoMode = 'תאורות ומוצרים יידלקו ויתכבו אוטומטית בהתאם לגילויי חיישן והגדרות קבלת ההחלטות';
 
-export const ecoMode = 'The lights and appliances turn OFF automatically in accordance with user preferences and and environmental ' +
-    'information from igh sensor. Shutters move automatically maintaining desirable room light intensity.';
+export const ecoMode = 'תאורות ומוצרים יתכבו אוטומטית בהתאם להגדרת קבלת ההחלטות וגילויי החיישנים, אבל לא ידלקו בצורה אוטומטית';
 
-export const manMode = 'Lights, shutters and appliances manually controlled via switches touch surface, other igh products or smartphone applications.';
+export const manMode = 'תאורות ומוצרים לא ידלקו או יתכבו בצורה אוטומטית';
 
-export const dimmerPre = 'The igh Light Switch controls any dimmable or non-dimmable AC powered lighting.\n' +
-    'The Light Switch is loaded with unique features allowing customization of each light according to the user\'s needs.';
+export const dimmerPre = 'מפסק התאורה מחליף כל מתג תאורה קיים ומאפשר להפוך כל גוף תאורה לתאורה חכמה.\n' +
+    'מנורות הניתנות לדימור יהפכו גם הן לחכמות ויאפשרו לשלוט ברמת הדימור ולשנותה לאורך היום ובמצבים שונים באופן אוטומטי.' +
+    '\n';
 
 export const dimmerItems = [
-    'Dimming any approved dimmable lights.',
-    'Light intensity management - Once room occupancy occurred the switch decides whether turn the lights ON according to user preferences and amount of light in the room.',
-    'Fade speed - Soft dimming operation.',
-    'Night light - The light turns OFF automatically at sunrise.',
-    'OFF level - The light will dim to a low intensity instead of turning OFF according to user preferences.',
-    'OFF delay - After executing OFF command manually the switch allows the user to leave the room before light turn OFF.',
-    'Return level - Light turn ON to specific light intensity according to user preference or last light level.',
-    'Short timer – In case of short time visit the light will turn OFF much faster in order to avoid energy wasting.',
-    'Event Handler Switch – Allows to trigger desired scenarios by touching ON/OFF area.',
-    'Single Touch – Converts switch surface to one toggle touch area.',
-    'Learning - The switch learns the amount of movement in the room and automatically adjusts the timers.'
+    'דימור כל נורה מאושרת',
+    'ניהול עוצמת אור - לתאורה היכולת להידלק ולהיכבות בהתאם לתפוסת החדר. כשאנשים ייכנסו לחדר ועוצמת האור נמוכה, האור יידלק בצורה אוטומטית וכשייצאו מהחדר ייכבה בצורה אוטומטית',
+    'אפשרות להדלקת האור בשקיעה ו/או כיבוי בזריחה',
+    'עיכוב בכיבוי - אפשרות לכיבוי האור לאחר פרק זמן קצר בלחיצה על כיבוי במקום בצורה מיידית',
+    'אפשרות להגדרת המפסק כ Single Touch, מצב המאפשר לחיצה בכל מקום במפסק על מנת להדליק/לכבות את האור',
 ];
 
-export const shutterPre = 'igh Shutter Switch controls any AC powered shutters and blinds up to 400VA.';
+export const shutterPre = 'ניהול תריסים אוטומטי לשימור כמות האור הרצויה.\n' +
+    'יכולות למידה ייחודיות  המפסק לומד את טווח התנועה של התריס ויודע לשנות את זמני העלייה והירידה בהתאם למדידית זרם בזמן אמת ובכך מבטיח דיוק מירבי לאורך זמן.\n' +
+    'סבסוב - שליטה חכמה בתריסים ונציאניים ותריסי אור.\n';
 
 export const shutterItems = [
-    'Auto-Learning - Automatically learns the shutter opening and closure times and measures motor power consumption allowing it to perform rich control capabilities.',
-    'Specific Level - Move the shutter to a specific level using a smartphone or Keypad.',
-    'Light management - Automatically controls the amount of room light by moving the shutters/blinds.',
-    'Pass-through Shutter - Blocks remote and automatic controls downwards in order to avoid injuries.',
-    'Motor protection – igh switch will stop the motor if it’s sense over load.',
-    'Flip – Operates flip commands for Venetian blinds.'
+    'למידה אוטומטית - למידה אוטומטית של זמני הפתיחה והסגירה על מנת לאפשר אפשרויות שליטה מורחבות',
+    'אפשרות מעבר התריס/הווילון לאחוז פתיחה מסויים מכל לוח מקשים/סמארטפון',
+    'ניהול עוצמת אור - אפשרות לשמור על עוצמת אור אחידה בחדר במהלך היום על ידי סגירה ופתיחת התריס',
+    'הגדרת תריס-מעבר - ביטול סגירת תריס מאמצעים מרוחקים כמו סמארטפונים בתריסי מעבר על מנת למנוע פציעות',
+    'הגנה על מנוע התריס - מפסק igh יפסיק את פעולת המנוע אם ירגיש תצרוכת יתר',
+    'סבסוב - אפשרות לשליטה חכמה בתריסים ונציאניים ותריסי אור',
 ];
 
-export const powerPre = 'The igh power switch controls any high consumption AC powered appliance rated up to 15A such as lights, ' +
-    'air-conditioners, boilers, heaters or any other appliance.';
+export const powerPre = 'שליטה ובקרה חכמה על צרכני חשמל כבדים.' +
+    'מתאים לשליטה בתאורות, מזגנים, דודי חשמל, מערכות חימום ועוד.';
 
 export const powerItems = [
-    'Light intensity management - Once room occupancy occured the switch decides whether turn the lights ON according to user preferences and and amount of light in the room.',
-    'Room temperature management - Automatically turns ON/OFF air-conditioner appliances by settng temperature limits in the room.',
-    'Single touch – Converts touch surface to one toggle touch area.',
-    'Short visit – Allows to longer room occupation without turning the appliance ON.'
+    'ניהול עוצמת אור - למפסק זה היכולת להידלק ולהיכבות בהתאם לתפוסת החדר. כשאנשים ייכנסו לחדר תהליך קבלת ההחלטות יידלק בצורה אוטומטית וכשייצאו מהחדר ייכבה בצורה אוטומטית',
+    'אפשרות להגדרת המפסק כ Single Touch, מצב המאפשר לחיצה בכל מקום במפסק על מנת להדליק/לכבות את האור',
 ];
 
-export const sensePre = 'The igh Sense Switch measures power consumption for any appliance rated up to 15A controlled by infra-red protocol ' +
-    'via IR-Bridge emulating its remote control.';
+export const sensePre = 'מאפשר הפעלת מוצרים באמצעות פקודות IR ומדידת זרם';
 
 export const senseItems = [
-    'Room temperature management - Automatically turns ON/OFF air-conditioner appliances by setting temperature limits in the room.',
-    'Short Visit – Allows to choose longer room occupation without turning the appliance ON.',
-    'Avoid unwanted activation – In a case of toggle ON/OFF infra-red code, the switch will send OFF command only when appliance is ON.',
-    'Load Type – 1 or 3 phase consumption calculation.',
-    'ON Level – Sets higher ON level for electrical circuits with constant power consumption.'
+    'אפשרות למדידת זרם של מוצרים תלת פאזיים',
+    'הימנעות מהפעלות לא רצויות - המפסק ישדר פקודות IR להדלקה רק במידה והמזגן כבוי ופקודות IR לכיבוי רק במידה והמזגן דלוק',
 ];
 
-export const sensorPre = 'The igh sensor is recognises and monitors occupancy, temperature and light intensity and provides' +
-    ' the environmental information to one or many autonomous switch units.\nIntelligent Switches receive information from ' +
-    'the sensor and make decisions according to the user’s behaviour and environment without any network dependence.\n' +
-    'Multiple Sensors can operate together as a single motion sensing device allowing increase detection coverage to any range.';
+export const sensorPre = 'החיישן מודד את כמות האור, גובה הטמפרטוה, מזהה נוכחות של אנשים ומשדר את המידע למפסקים.\n' +
+    ' המפסקים החכמים מקבלים את המידע הסביבתי ומקבלים החלטות בצורה עצמאית בהתאם להעדפותיו ולאורח חייו של המשתמש';
 
 export const sensorItems1 = [
-    'PIR motion detector',
-    'Light intensity meter',
-    'Thermometer',
-    'Real time clock'
+    'זיהוי תנועה',
+    'מדידת עוצמת אור',
+    'מדידת טמפרטורה',
+    'שעון זמן אמת'
 ];
 
 export const sensorItems2 = [
-    'Solar powered',
-    'No maintenance',
-    'No charge needed'
+    'טעינה מאור החדר',
+    'אין צורך בטעינה ידנית'
 ];
 
 export const sensorItems3 = [
-    'Simple mount with fixed bracket',
-    'No wiring'
+    'מתלה ייעודי ופשוט לתלייה בכל מקום',
+    'אלחוטי לחלוטין',
+    'ניתן להתקנה עצמית'
 ];
 
-export const irPre = 'igh IR Bridge learns and controls any infra-red protocol emulating appliance remote control.' +
-    ' A single IR device can operate multiple appliances.';
+export const irPre = 'מאפשר הפעלת השלטים הרחוקים בבית דרך האפליקציה, כך שתוכלו לשלוט, להפעיל ולייצר תסריטים לכל המכשירים המופעלים ע”י שלט רחוק:' +
+    'מזגנים, טלוויזיה וממיר, מערכות קולנוע בייתי, סאונד ועוד.';
 
 export const irItems = [
-    'IR receiver',
-    'IR transmitter',
-    'PL port for infra-red emitter cable',
-    'Dual IR transmission',
-    '200 infra-red channels',
-    'Multiple remotes'
+    'שידור פקודות IR',
+    'מקלט IR לצורך הקלטה של כל פקודת IR',
+    'אפשרות לחיבור עיינית IR חיצונית',
+    'שידור פקודות IR במקביל מכמה עייניות',
+    'עד 200 פקודות IR למוצר',
+    'ריבוי שלטים'
 ];
 
 export const ighcStrings = [
-    'Designed to connect between igh units and the internet.',
-    'Control & Monitor',
-    'With the igh internet gateway you will get endless options for controlling and monitoring your home.',
-    'Large Area',
-    'Overcome R.F range limitations by multiplying Internet Gateway units.',
-    'Control 3rd Party Systems'
+    'מחבר בין יחידות מערכת הבית החכם לאינטרנט ומאפשר לשלוט במערכת מרחוק באמצעות האפליקציה.',
+    'שליטה ובקרה',
+    'עם מגשר האינטרנט, תיפתחו לאפשרויות בלתי מוגבלות לשליטה ובקרה על ביתכם',
+    'כיסוי שטח נרחב',
+    'מתגבר על מגבלות R.F באמצעות שכפול יחידות מגשר האינטרנט מספר לא מוגבל של פעמים ברחבי הבית',
+    'שליטה במוצרי צד שלישי',
 ];
 
 export const glassString = 'Glass String here----------------------------------------------------\n-' +
     '----------------------------------------------------\n----------------------------------------------------\n' +
     '----------------------------------------------------';
 
-export const keypadPre = 'The igh keypad allows rapid and easy management of system devices without ' +
-    'any network connection. Each pattern can be integrated with different scenario.\n' +
-    '7" portable intelligent keypad that is designed with touch technology giving it a' +
-    ' slim elegant style. Never before has it been so simple to control lights/appliances.';
+export const keypadPre = 'לוח המקשים מאפשר שליטה קלה ונוחה באביזרי המערכת השונים ללא תלות ברשת כלשהי.';
 
 export const keypadItems = [
     {
-        sub: 'Scenario on the fly - ',
-        text: 'Just select one or more lights/appliances, hit the command and you create a scenario. Control multiply appliances with a single touch was never so easy.'
+        sub: 'תסריט בזמן אמת - ',
+        text: 'בחר יחידה אחת או יותר, בחר את הפעולה הרצוייה ובכך צור תסריט ושלוט בו מלוח המקשים. הרצה ויצירת תסריטים אף פעם לא היתה כל כך קלה!'
     }, {
-        sub: 'Low maintenance - ',
-        text: 'With a Typical usage you will not remember when was the last time you have charged it.'
+        sub: 'תחזוקה מינימלית - ',
+        text: 'בשימוש סביר, לא תזכור מתי הייתה הפעם האחרונה שהטענת את לוח המקשים'
     }, {
-        sub: 'Connected - ',
-        text: 'It operates directly with other igh units, no internet connection is needed.'
+        sub: 'הטענה פשוטה - ',
+        text: 'במידה והסוללה עומדת להיגמר, פשוט חבר את לוח המקשים לחשמל בחיבור Micro USB סטנדרטי'
     }, {
-        sub: 'Configurable - ',
-        text: 'With igh app it is so easy to setup your keypad channels.'
+        sub: 'חיבור ישיר - ',
+        text: 'לוח המקשים מדבר ישירות עם מוצרי המערכת ללא צורך ברשת או אינטרנט'
     }, {
-        sub: 'Night mode - ',
-        text: 'Back light will illuminate automatically at night.'
+        sub: 'קלות הגדרה - ',
+        text: 'הלוח מוגדר באמצעות האפליקצייה על ידי שיוך פשוט של תסריט למקש'
     }, {
-        sub: 'Wall mount - ',
-        text: 'Just install the magnetic bracket and it is ready to mount on the wall.'
+        sub: 'מצב לילה - ',
+        text: 'אפשרות להדלקה מינימלית של תאורת הכפתורים בלילה למניעת סנוור'
     }];
 
 
 export const basicOper = [
     {
-        sub: 'Up/Down - ',
-        text: 'A single tap on the top/bottom area  turns ON/OFF the appliance.'
+        sub: 'לחיצה למעלה/למטה - ',
+        text: 'נגיעה בודדת על החלק העליון/התחתון ידליקו/יכבו את המוצר בהתאמה'
     }, {
-        sub: 'Modes - ',
-        text: 'Touching the icon on the center of the switch toggles between the modes.'
+        sub: 'מצבים - ',
+        text: 'נגיעה במרכז המפסק, תחליף בין המצבים האפשריים(אוטומטי, חצי אוטומטי וידני)'
     }];
 
 export const advancedOper = [
     {
-        sub: 'Schedulers - ',
-        text: 'Tap the icon on the center for 6 times to activate/deactivate all the schedulers'
+        sub: 'קבוצה - ',
+        text: 'לחיצה ארוכה במרכז המפסק תפעיל מצב קבוצה באופן זמני. במצב זה כל ההפעלות יפעילו את כל קבוצת המפסקים הקשורה לאותו מפסק. לדוגמא, עבור מפסק תאורה בסלון, לחיצה למעלה תדליק את כל המנורות בסלון ולחיצה למטה תכבה את כולם'
     }, {
-        sub: 'Group - ',
-        text: 'Control a group of switches from a single switch. touch and hold the center to activate group mode, then simply preform the needed operation.'
-    }, {
-        sub: 'Sleep - ',
-        text: 'Turn the appliance ON for a limited period of time. Set the switch to group state and then touch and hold the center area again to activate sleep mode. When the switch will turn OFF it will change its mode to manual.'
+        sub: 'מצב שינה - ',
+        text: 'במצב זה המפסק נדלק לזמן מוגדר מראש. על מנת להיכנס למצב זה לחץ באפליקצייה על מצב שינה או עבר למצב קבוצה ואז לחץ שוב ארוך במרכז המפסק'
     }
 ];
 
-export const downloadSensor = 'Download Sensor Manual';
-export const downloadIGHC = 'Download Internet Gateway Manual';
-export const downloadKeypad = 'Download Keypad Manual';
-export const downloadIR = 'Download IR Bridge Manual';
+export const downloadSensor = 'מדריך הפעלה לחיישן';
+export const downloadIGHC = 'מדריך הפעלה מגשר אינטרנט';
+export const downloadKeypad = 'מדריך הפעלה לוח מקשים';
+export const downloadIR = 'מדריך הפעלה מגשר IR';

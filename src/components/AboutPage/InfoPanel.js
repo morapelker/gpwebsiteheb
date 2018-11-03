@@ -20,7 +20,7 @@ const InfoPanel = ({image, title, text, even, marginTop}) => {
                             width: '100%',
                             alignItems: 'flex-end'
                         }}>
-                            <p style={{flex: 1, alignSelf: 'flex-end', textAlign: 'left'}}>{item}</p>
+                            <p style={{flex: 1, alignSelf: 'flex-end'}}>{item}</p>
                             <ImgWithLoader src={'/images/' + image} alt={''} style={{
                                 width: '40%',
                                 objectFit: 'scale-down',
@@ -28,7 +28,7 @@ const InfoPanel = ({image, title, text, even, marginTop}) => {
                             }}/>
                         </div>
                         : <p
-                            style={{width: '100%', textAlign: 'left'}}
+                            style={{width: '100%'}}
                             key={index}>{item}</p>))}
                 </div>
             </SmallScreen>
@@ -47,10 +47,10 @@ const InfoPanel = ({image, title, text, even, marginTop}) => {
                         objectFit: 'scale-down',
                         alignSelf: 'flex-start'
                     }}/>
-                    <div style={{flex: 1, marginLeft: 10}}>
-                        <h4 style={{textAlign: 'left'}}>{title}</h4>
+                    <div style={{flex: 1, marginRight: 10}}>
+                        <h4 style={{textAlign: 'right'}}>{title}</h4>
                         {text.split('\n').map((item, index) => <p
-                            style={{width: '100%', textAlign: 'left'}} key={index}>{item}</p>)}
+                            style={{width: '100%'}} key={index}>{item}</p>)}
                     </div>
                 </div>
             </LargeScreen>

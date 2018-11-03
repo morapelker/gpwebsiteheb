@@ -6,37 +6,43 @@ import CircularProgress from "@material-ui/core/CircularProgress/CircularProgres
 const items = [
     {
         source: 'images/slide1.jpg',
-        title: 'Decentralized',
-        text: ['The ONLY technology of its kind in the world',
-            'that enables a completely autonomous operation of the smart switches',
-            'with no any dependency of one center control unit.',
-            'Each switch or sensor works autonomously,',
-            'detects and collaborates with other units,',
-            'and delivers a perfect unique living experience.'
+        title: 'מערכת עצמאית',
+        text: ['המערכת היחידה בעולם ללא בקר מרכזי',
+            'דבר המאפשר שליטה מלאה בכל מוצרי החשמל',
+            'בצורה אינדיוידואלית ללא צורך בשום בקר מרכזי בדרך.',
+            'כל מפסק וחיישן עובד בצורה עצמאית לחלוטין',
+            'ומתקשר עם שאר המפסקים בצורה ישירה',
+            'ובכך מייצר מצב אמין ומשפר את איכות החיים'
         ],
     }, {
         source: 'images/slide2.jpg',
-        title: 'Intelligent Green Hotel',
-        text: ['SmartHome systems become a necessity for hotel rooms.',
-            'igh Technology and abilities are evident in every aspect of this field',
-            'and therefore it becomes a new standard.',
-        ]
+        title: 'מלון ירוק וחכם',
+        text: ['מערכות בית חכם ניהיו נחוצות בבתי מלון.',
+            'יכולות מערכת igh ניכרות בבתי מלון ומשפרות משמעותית את איכות האירוח',
+            'ובכך ניהיו סטנדרט חדש',
+        ],
+        link: '/hotel'
     }, {
         source: 'images/slide3.jpg',
-        title: 'Intelligent Green Office',
-        text: ['Modern dynamic working environment tends to create an overload',
-            'over electric household and office expenses.',
-            'igh SmartHome System may save up to 30% of the electric expenses and makes',
-            'each working day much more efficient.',
-        ]
+        title: 'משרד ירוק וחכם',
+        text: ['מערכת מודרנית המאפשרת שינויי הגדרות בזמן אמת ובצורה דינמית',
+            'ושליטה בכל מוצרי המשרד.',
+            'מערכת הבית החכם של igh יכולה לחסוך עד 30% מצריכת החשמל במשרדים',
+            'ללא התפשרות באיכות החיים ע״י הדלקות וכיבויים אוטומטיים',
+            'ובכך עושה את יום העבודה שלך ליעיל יותר',
+        ],
+        link: '/office'
     }, {
         source: 'images/slide4.jpg',
-        title: 'Intelligent Green Home',
-        text: ['With igh Technology you can easily enjoy a fully autonomous home.',
-            'The sensors detect movement and measure the light and temperature levels,',
-            'transmit the information to the switches that operate the electric appliances',
-            'according to preset preferences and configurations.',
-        ]
+        title: 'בית חכם וירוק',
+        text: [
+            'עם מערכת הבית החכם של igh, אפשר להנות מבית אוטומטי לחלוטין.',
+            'הסנסורים מגלים תנועה ומודדים עוצמת עור,',
+            'משדרים את המידע למפסקים וכל מפסק מקבל החלטה',
+            'בעזרת תהליך קבלת ההחלטות המובנה בתוכו ומחליט האם',
+            'להדליק/לכבות את עצמו.',
+        ],
+        link: '/home'
     }
 ];
 
@@ -52,8 +58,8 @@ const zoomOutProperties = {
 const MainSlideShow = (props) => {
     return (
         props.loaded ?
-            <Zoom {...zoomOutProperties} style={{width: '100%'}}>
-                {items.map((item, index) => <SlideItem key={index}
+            <Zoom {...zoomOutProperties} style={{width: '100%', direction: 'ltr'}}>
+                {items.map((item, index) => <SlideItem key={index} history={props.history}
                                                        item={item}/>)}
             </Zoom>
             : <div style={{

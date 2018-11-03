@@ -15,20 +15,23 @@ const PanelComponent = ({title, text, image, even, whiteText, children, marginTo
                     color: whiteText ? 'white' : 'black'
                 }}>
                     <h4>{title}</h4>
-                    {text.split('\n').map((item, index) => (index === 0 && image ? <div key={index} style={{
+                    {text.split('\n').map((item, index) => (index === 0 && image ?
+                        <div key={index} style={{
                             display: 'flex', width: '100%',
                             flexDirection: even ? 'row' : 'row-reverse'
                         }}>
                             {image ?
                                 <ImgWithLoader src={'/images/' + image} alt={''}
-                                     style={{
-                                         width: '45%', objectFit: 'scale-down', alignSelf: 'flex-start'
-                                     }}/> :
-                            <div style={{width: '45%'}} />}
+                                               style={{
+                                                   width: '45%',
+                                                   objectFit: 'scale-down',
+                                                   alignSelf: 'flex-start'
+                                               }}/> :
+                                <div style={{width: '45%'}}/>}
 
-                            <p style={{textAlign: 'left', alignSelf: 'center'}}>{item}</p>
+                            <p style={{alignSelf: 'center'}}>{item}</p>
                         </div> :
-                        <p style={{textAlign: 'left'}} key={index}>{item}</p>)
+                        <p key={index}>{item}</p>)
                     )}
                     {children}
                 </div>
@@ -42,10 +45,12 @@ const PanelComponent = ({title, text, image, even, whiteText, children, marginTo
                     flexDirection: even ? 'row' : 'row-reverse',
                 }}>
                     <ImgWithLoader src={'/images/' + image} alt={''}
-                         style={{
-                             marginTop: marginTop === undefined ? 50 : marginTop,
-                             width: '45%', objectFit: 'scale-down', alignSelf: 'flex-start'
-                         }}/>
+                                   style={{
+                                       marginTop: marginTop === undefined ? 50 : marginTop,
+                                       width: '45%',
+                                       objectFit: 'scale-down',
+                                       alignSelf: 'flex-start'
+                                   }}/>
                     <div style={{
                         flex: 1,
                         height: '100%',
@@ -57,7 +62,7 @@ const PanelComponent = ({title, text, image, even, whiteText, children, marginTo
                     }}>
                         <h4>{title}</h4>
                         {text.split('\n').map((item, index) => <p
-                            style={{textAlign: 'left'}} key={index}>{item}</p>
+                            key={index}>{item}</p>
                         )}
                         {children}
                     </div>

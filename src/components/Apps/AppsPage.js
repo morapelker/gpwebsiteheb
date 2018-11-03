@@ -16,10 +16,10 @@ class AppsPage extends Component {
                 <div className={'page_top_root'}>
                     <img className={'page_top_img'} src={'/images/app1.jpg'} alt={''} />
                     <div className={'page_top_bg'}>
-                        <span className={'page_top_text'}>Apps</span>
+                        <span className={'page_top_text'}>אפליקציות</span>
                     </div>
                 </div>
-                <PanelComponent title={'IGH App'} text={appPanel1} even={false} image={'app2.png'}>
+                <PanelComponent title={'אפליקציית igh'} text={appPanel1} even={false} image={'app2.png'}>
                     <div style={{
                         alignSelf: 'center',
                         height: 50,
@@ -30,7 +30,7 @@ class AppsPage extends Component {
                         <a style={{width: 170}} href={'https://itunes.apple.com/us/app/igh-compact/id895412247?mt=8'}>
                             <ImgWithLoader src={'/images/appstore.png'} alt={''}
                                  style={{height: '100%', width: '100%'}}/></a>
-                        <a style={{marginLeft: 10, width: 170}}
+                        <a style={{marginLeft: 10, marginRight: 10, width: 170}}
                            href={'https://play.google.com/store/apps/details?id=com.igh.ighcompact3&hl=en'}><ImgWithLoader
                             src={'/images/googleplay.png'} alt={''} style={{height: '100%', width: '100%'}}/></a>
                     </div>

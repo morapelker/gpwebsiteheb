@@ -24,7 +24,7 @@ class FaqPage extends Component {
                 <div className={'page_top_root'}>
                     <img className={'page_top_img'} src={'/images/home5_0.jpg'} alt={''} />
                     <div className={'page_top_bg'}>
-                        <span className={'page_top_text'}>FAQ</span>
+                        <span className={'page_top_text'}>שאלות נפוצות</span>
                     </div>
                 </div>
                 <div style={{

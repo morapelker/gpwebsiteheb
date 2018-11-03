@@ -10,7 +10,7 @@ class OfficePage extends Component {
 
     render() {
         return (
-            <PanoramicPage title={'Intelligent Green Office'} pageIcon={'office_icon_white.svg'}
+            <PanoramicPage title={'משרד חכם וירוק'} pageIcon={'office_icon_white.svg'}
                            topImage={'office.jpg'}
             >
                 <div className={'root_text_container'}>

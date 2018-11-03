@@ -29,13 +29,13 @@
 .page_top_text {
     color: white;
     position: absolute;
-    left: 20%;
+    right: 20%;
     bottom: 10%;
     font-size: 2.5em;
 }
 
 .page_top_text.panoramic {
-    left: 15%
+    right: 15%
 }
 
 @media only screen and (max-width: 850px) {
@@ -46,6 +46,6 @@
     }
 
     .page_top_text.panoramic {
-        left: 5%
+        right: 5%
     }
 }

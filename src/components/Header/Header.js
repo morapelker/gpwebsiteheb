@@ -47,7 +47,7 @@ class Header extends Component {
                             <IconButton style={{alignSelf: 'center'}} onClick={this.toggleDrawer(true)} color="inherit" aria-label="Menu">
                                 <MenuIcon />
                             </IconButton>
-                            <Drawer open={this.state.drawerOpen} onClose={this.toggleDrawer(false)}>
+                            <Drawer open={this.state.drawerOpen} anchor={"right"} onClose={this.toggleDrawer(false)}>
                                 <div
                                     tabIndex={0}
                                     role="button"
@@ -56,11 +56,11 @@ class Header extends Component {
                                     <HamburgerMenu closeDrawer={this.toggleDrawer(false)} history={this.props.history} />
                                 </div>
                             </Drawer>
+                            <div style={{flex: 1}} />
                         </SmallScreen>
-                        <img src={'/images/logo_green_point.svg'} alt={''} onClick={() => {
+                        <img src={'/images/logo_green_point.svg'} className={'gp_logo'} alt={''} onClick={() => {
                             this.props.history.push('/');
-                        }}
-                             style={{height: '100%', maxWidth: '100%', marginLeft: 10, cursor: 'pointer'}}/>
+                        }}/>
                         <LargeScreen>
                             <HomeRouter history={this.props.history} items={items}
                                         productsSelector={this.showProducts}/>

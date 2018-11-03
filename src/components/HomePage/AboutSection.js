@@ -1,7 +1,7 @@
 import React from 'react';
 import MatButton from "../Common/MatButton";
 import './AboutSection.css';
-import {aboutUs} from "./TextBlocks";
+import {about1} from "../AboutPage/TextBlocks";
 
 const AboutSection = ({history}) => {
     return (
@@ -24,8 +24,8 @@ const AboutSection = ({history}) => {
                 justifyContent: 'center'
             }}>
                 <div className={'about_section_root'}>
-                    <h4 style={{marginLeft: 40}}>About Us</h4>
-                    {aboutUs.split('\n').map((item, index) => <p key={index}>{item}</p>)}
+                    <h4 style={{marginRight: 40}}>אודות החברה</h4>
+                    {about1.split('\n').map((item, index) => <p style={{textAlign: 'right'}} key={index}>{item}</p>)}
                     <MatButton type={'secondary'}
                                onClick={() => {
                                     history.push('/about');
@@ -33,7 +33,7 @@ const AboutSection = ({history}) => {
                                backgroundColor={'#33cc33'} style={{
                         alignSelf: 'center'
                     }}>
-                        Read More
+                        קרא עוד
                     </MatButton>
                 </div>
 

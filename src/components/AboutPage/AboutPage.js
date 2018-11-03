@@ -24,9 +24,9 @@ class AboutPage extends Component {
         return (
             <div style={{width: '100%', display: 'flex', flexDirection: 'column'}}>
                 <div className={'page_top_root'}>
-                    <img className={'page_top_img'} src={'/images/abouttop.jpg'} alt={''} />
+                    <img className={'page_top_img'} src={'/images/abouttop.jpg'} alt={''}/>
                     <div className={'page_top_bg'}>
-                        <span className={'page_top_text'}>About Us</span>
+                        <span className={'page_top_text'}>אודות</span>
                     </div>
                 </div>
                 <div style={{
@@ -36,21 +36,22 @@ class AboutPage extends Component {
                     paddingRight: '20%'
                 }}>
                     {about1.split('\n').map((item, index) => <p
-                        style={{width: '100%', textAlign: 'left'}} key={index}>{item}</p>)}
+                        style={{width: '100%'}} key={index}>{item}</p>)}
                 </div>
                 <div style={{
                     width: '100%',
                     display: 'flex',
                     paddingLeft: '20%',
-                    paddingRight: '20%'
+                    paddingRight: '20%',
+                    marginTop: 10
                 }}>
                     <div style={{flex: 1}}>
-                        <h4 style={{textAlign: 'left'}}>Introduction</h4>
+                        <h4 style={{textAlign: 'right'}}>מבוא</h4>
                         <SmallScreen>
                             {about2.split('\n').map((item, index) => (index === 0 ?
                                 <div key={index} style={{display: 'flex', width: '100%'}}>
                                     <p
-                                        style={{flex: 1, textAlign: 'left', alignSelf: 'flex-end'}}>{item}</p>
+                                        style={{flex: 1, alignSelf: 'flex-end'}}>{item}</p>
                                     <ImgWithLoader src={'/images/intro.png'} alt={''} style={{
                                         marginLeft: 10,
                                         width: '40%',
@@ -59,19 +60,20 @@ class AboutPage extends Component {
                                     }}/>
                                 </div>
                                 : <p
-                                    style={{width: '100%', textAlign: 'left'}}
+                                    style={{width: '100%'}}
                                     key={index}>{item}</p>))}
                         </SmallScreen>
                         <LargeScreen>
                             {about2.split('\n').map((item, index) => <p
-                                style={{width: '100%', textAlign: 'left'}} key={index}>{item}</p>)}
+                                style={{width: '100%'}} key={index}>{item}</p>)}
                         </LargeScreen>
                         <a href={'/docs/introduction-en.pdf'}>
-                            <MatButton backgroundColor={'default'} style={{width: '30%', minWidth: 200}}
+                            <MatButton backgroundColor={'default'}
+                                       style={{width: '30%', minWidth: 200}}
                                        onClick={() => {
                                            console.log('pdf');
                                        }}>
-                                Introduction PDF
+                                הורדת מסמך מבוא
                             </MatButton>
                         </a>
                     </div>
@@ -85,7 +87,7 @@ class AboutPage extends Component {
                         }}/>
                     </LargeScreen>
                 </div>
-                <InfoPanel even={true} image={'app6_0.png'} title={'No Central Processing Unit'}
+                <InfoPanel even={true} image={'app6_0.png'} title={'ללא מערכת עיבוד מרכזית'}
                            text={about3}/>
                 <div style={{
                     width: '100%',
@@ -104,10 +106,10 @@ class AboutPage extends Component {
                         flexDirection: 'column',
                         alignItems: 'flex-start'
                     }}>
-                        <span style={{textAlign: 'left', fontSize: '2em', color: 'white'}}>Exceptional Features</span>
+                        <span style={{fontSize: '2em', color: 'white'}}>מאפיינים מיוחדים</span>
                         <ul>
                             {aboutFeatures.map((item, index) => <li
-                                style={{color: 'white', textAlign: 'left'}}
+                                style={{color: 'white', textAlign: 'right'}}
                                 key={index}>{item}</li>)}
                         </ul>
                     </div>
@@ -117,12 +119,11 @@ class AboutPage extends Component {
                         width: '100%',
                         paddingLeft: '20%',
                         paddingRight: '20%',
-                        marginTop: 80
                     }}>
-                        <h4 style={{textAlign: 'left'}}>Installation</h4>
+                        <h4 style={{textAlign: 'right'}}>התקנות</h4>
                         <ul>
                             {aboutInstall.map((item, index) =>
-                                <li style={{textAlign: 'left'}}
+                                <li
                                     key={index}>{item}</li>)}
                         </ul>
                     </div>
@@ -137,10 +138,10 @@ class AboutPage extends Component {
                         display: 'flex'
                     }}>
                         <div style={{flex: 1}}>
-                            <h4 style={{textAlign: 'left'}}>Installation</h4>
+                            <h4 style={{textAlign: 'right'}}>התקנות</h4>
                             <ul>
                                 {aboutInstall.map((item, index) =>
-                                    <li style={{textAlign: 'left'}}
+                                    <li
                                         key={index}>{item}</li>)}
                             </ul>
                         </div>
@@ -154,10 +155,10 @@ class AboutPage extends Component {
                     </div>
                 </LargeScreen>
                 <InfoPanel marginTop={0} even={false} text={aboutSupport}
-                           title={'Support & Service'}
+                           title={'שירות ותמיכה'}
                            image={'support2.png'}/>
                 <InfoPanel even={true} text={aboutCustomers} marginTop={0}
-                           title={'Who are our potential customers?'} image={'people2.png'}/>
+                           title={'מי הם הלקוחות הפוטנציאלים שלנו?'} image={'people2.png'}/>
             </div>
         );
     }
