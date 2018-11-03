@@ -29,7 +29,7 @@ const HamburgerMenu = ({history, closeDrawer}) => {
         <div className={'drawer_root'}>
             <ul className={'drawer_list'}>
                 {items.map((item, index) => (item.location === '/products' ?
-                    <ul className={'drawer_list sub'}>
+                    <ul key={index} className={'drawer_list sub'}>
                         <li onClick={linkClicked('/products', history, closeDrawer)}
                             className={'drawer_item'}>מוצרים
                         </li>

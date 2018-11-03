@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import Header from "./components/Header/Header";
-import HomePage from "./components/HomePage/HomePage";
+import HomePage, {loadImage} from "./components/HomePage/HomePage";
 import IGHHome from './components/Home/HomePage';
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {faQuoteRight, faPlus, faPaperPlane, faBars} from '@fortawesome/free-solid-svg-icons';
@@ -16,6 +16,7 @@ import NIY from "./components/NIY";
 import AppsPage from "./components/Apps/AppsPage";
 import HotelPage from "./components/Hotel/HotelPage";
 import OfficePage from "./components/Home/OfficePage";
+import {products} from "./components/Header/TextBlocks";
 
 library.add(faQuoteRight, faPlus, fab, faPaperPlane, faBars);
 
@@ -23,7 +24,8 @@ class App extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {shrinked: false};
-        window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true
+        window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true;
+        products.forEach(item => loadImage('/images/' + item.icon));
     }
 
     handleScroll = ({target}) => {
