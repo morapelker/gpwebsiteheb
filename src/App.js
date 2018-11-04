@@ -6,7 +6,7 @@ import IGHHome from './components/Home/HomePage';
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {faQuoteRight, faPlus, faPaperPlane, faBars} from '@fortawesome/free-solid-svg-icons';
 import {fab} from '@fortawesome/free-brands-svg-icons';
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
 import AboutPage from "./components/AboutPage/AboutPage";
 import AdvantagesPage from "./components/Advantages/AdvantagesPage";
 import FaqPage from "./components/FAQ/FaqPage";
@@ -17,14 +17,16 @@ import AppsPage from "./components/Apps/AppsPage";
 import HotelPage from "./components/Hotel/HotelPage";
 import OfficePage from "./components/Home/OfficePage";
 import {products} from "./components/Header/TextBlocks";
+import objectFitImages from 'object-fit-images';
 
 library.add(faQuoteRight, faPlus, fab, faPaperPlane, faBars);
 
 class App extends Component {
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
         this.state = {shrinked: false};
         window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true;
+        objectFitImages();
         products.forEach(item => loadImage('/images/' + item.icon));
     }
 
@@ -64,6 +66,7 @@ class App extends Component {
                                 <Route exact path='/home' component={IGHHome}/>
                                 <Route path='/products' render={() => <ProductsPage
                                     shrinked={this.state.shrinked}/>}/>
+                                <Route render={() => <Redirect to="/" replace/>}/>
                             </Switch>
                             <div style={{height: 100}}/>
                             <ContactPage/>

@@ -73,7 +73,7 @@ class AboutPage extends Component {
                                        onClick={() => {
                                            console.log('pdf');
                                        }}>
-                                הורדת מסמך מבוא
+                                להורדת פרוספקט
                             </MatButton>
                         </a>
                     </div>

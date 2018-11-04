@@ -30,6 +30,7 @@ a {
         font-size: 10px;
     }
 }
+
 textarea::placeholder, input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #3CBF95;
     opacity: 1; /* Firefox */
@@ -55,6 +56,14 @@ input, textarea {
 
 h3 {
     font-size: 1.5em;
+}
+
+textarea {
+    font-family: Skia, sans-serif;
+}
+
+input {
+    font-family: Skia, sans-serif;
 }
 
 #element::-webkit-scrollbar {

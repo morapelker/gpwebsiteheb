@@ -14,3 +14,19 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+img.contain {
+    font-family: 'object-fit: contain;';
+}
+
+img.cover {
+    font-family: 'object-fit: cover;';
+}
+
+img.scaleDown {
+    font-family: 'object-fit: scale-down;';
+}
+
+div {
+    -ms-overflow-style: none;
+}

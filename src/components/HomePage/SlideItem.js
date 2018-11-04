@@ -9,13 +9,13 @@ const SlideItem = ({item, history}) => {
              }}>
             <img src={item.source} alt={''}
                  id={'img'}
-                 style={{width: '100%', height: '100%', objectFit: 'cover'}}/>
+                 style={{width: '100%', height: '100%', objectFit: 'cover', fontFamily: 'object-fit: cover;'}}/>
             <div style={{
                 position: 'absolute',
                 left: 0,
                 top: 0,
                 right: 0,
-                background: 'rgba(0,0,0,0.5)',
+                background: 'rgba(0,0,0,0.6)',
                 bottom: 0,
             }}>
                 <div style={{

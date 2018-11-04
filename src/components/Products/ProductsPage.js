@@ -9,7 +9,7 @@ import {
     downloadIGHC,
     downloadIR,
     downloadKeypad,
-    downloadSensor, glassString,
+    downloadSensor, glassItems,
     ighcStrings,
     irItems,
     irPre, keypadItems,
@@ -203,10 +203,12 @@ class ProductsPage extends Component {
                     even={true}
                     dark={false}
                     src={'glasswhite.png'}
-                    title={'פאנלים מזכוכית'}
+                    title={'פנלים מזכוכית'}
                     marginTop={30}
-                    preText={glassString}
                 >
+                    <ul>
+                        {glassItems.map((item, index) => <li key={index}>{item}</li>)}
+                    </ul>
                 </SwitchComponent>
                 <div style={{
                     width: '100%',

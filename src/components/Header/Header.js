@@ -89,7 +89,7 @@ class Header extends Component {
                                 maxHeight: 500,
                                 overflowY: 'scroll',
                                 flexWrap: 'wrap',
-                                justifyContent: 'space-evenly'
+                                justifyContent: 'center'
                             }}>
                                 {products.map((product, index) =>
                                     <HeaderUnit key={index}
@@ -99,7 +99,7 @@ class Header extends Component {
                             </div>
                             <div style={{
                                 width: 80, height: 40, display: 'flex',
-                                justifyContent: 'space-evenly',
+                                justifyContent: 'center',
                                 paddingTop: 7
                             }}>
                             <span

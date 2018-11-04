@@ -8,7 +8,7 @@ const SwitchComponent = ({even, src, title, dark, preText, listItems, height, ch
         <div className={'switch_root ' + (even ? '' : 'odd ') + (dark ? 'dark' : '')} id={id}>
             <SmallScreen>
                 <h4 style={{margin: 'auto'}}>{title}</h4>
-                {preText && preText.split('\n').map((item, index) => (index === 0 ?
+                {preText ? preText.split('\n').map((item, index) => (index === 0 ?
                     <div key={index} style={{
                         display: 'flex',
                         width: '100%',
@@ -21,9 +21,20 @@ const SwitchComponent = ({even, src, title, dark, preText, listItems, height, ch
                             maxHeight: 100,
                             alignSelf: 'center'
                         }}/>
-                        <p style={{marginLeft: 10, marginRight: 10, alignSelf: 'flex-end'}}>{item}</p>
+                        <p style={{
+                            marginLeft: 10,
+                            marginRight: 10,
+                            alignSelf: 'flex-end'
+                        }}>{item}</p>
                     </div> :
-                    <p key={index}>{item}</p>))}
+                    <p key={index}>{item}</p>)) :
+                    <ImgWithLoader src={'/images/' + src} alt={''} style={{
+                        maxWidth: '50%',
+                        objectFit: 'contain',
+                        marginTop: marginTop || 0,
+                        maxHeight: 100,
+                        alignSelf: 'center'
+                    }}/>}
                 {listItems && <span className={'h4'}>מאפיינים ייחודיים</span>}
                 {listItems && <ul>
                     {listItems.map((item, index) => <li key={index}>

@@ -24,9 +24,24 @@ const ContactPage = () => {
     const sendMail = () => {
         if (messageSent === 0) {
             setMessageSent(1);
-            setTimeout(() => {
+            fetch(
+                'https://gpcloud-1329.appspot.com/webapi/utils/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: name.value,
+                        email: email.value,
+                        phone: phoneNumber.value,
+                        message: message.value
+                    })
+                }
+            ).then(() => {
                 setMessageSent(2);
-            }, 1000);
+            }).catch(() => {
+                setMessageSent(3);
+            });
         }
     };
     const val = validate();
@@ -63,7 +78,7 @@ const ContactPage = () => {
                     <form style={{
                         display: 'flex',
                         flexDirection: 'column',
-                        visibility: messageSent !== 2 ? 'unset' : 'hidden'
+                        visibility: messageSent < 2 ? 'unset' : 'hidden'
                     }}>
                         <input {...name} style={{width: '100%'}}/>
                         <LargeScreen>
@@ -99,7 +114,7 @@ const ContactPage = () => {
 
                         </MatButton>
                     </form>
-                    {messageSent === 2 &&
+                    {messageSent >= 2 &&
                     <div style={{
                         position: 'absolute',
                         left: 0,
@@ -111,7 +126,7 @@ const ContactPage = () => {
                         justifyContent: 'center',
                         alignItems: 'center'
                     }}>
-                        <h4>הודעתך נשלחה</h4>
+                        <h4>{messageSent === 2 ? 'הודעתך נשלחה' : 'הודעתך לא נשלחה'}</h4>
                     </div>
                     }
                 </div>
