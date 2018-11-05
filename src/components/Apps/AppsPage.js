@@ -6,8 +6,8 @@ import ImgWithLoader from "../Common/ImgWithLoader";
 import MatButton from "../Common/MatButton";
 
 class AppsPage extends Component {
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
         window.scrollTo(0, 0);
     }
 
