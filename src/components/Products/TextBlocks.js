@@ -140,5 +140,4 @@ export const advancedOper = [
 
 export const downloadSensor = 'מדריך הפעלה לחיישן';
 export const downloadIGHC = 'מדריך הפעלה מגשר אינטרנט';
-export const downloadKeypad = 'מדריך הפעלה לוח מקשים';
 export const downloadIR = 'מדריך הפעלה מגשר IR';

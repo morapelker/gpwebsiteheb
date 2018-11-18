@@ -21,11 +21,14 @@ const InfoPanel = ({image, title, text, even, marginTop}) => {
                             alignItems: 'flex-end'
                         }}>
                             <p style={{flex: 1, alignSelf: 'flex-end'}}>{item}</p>
+                            {text && text.length > 0 &&
                             <ImgWithLoader src={'/images/' + image} alt={''} style={{
                                 width: '40%',
                                 objectFit: 'scale-down',
                                 alignSelf: 'flex-start'
                             }}/>
+                            }
+
                         </div>
                         : <p
                             style={{width: '100%'}}

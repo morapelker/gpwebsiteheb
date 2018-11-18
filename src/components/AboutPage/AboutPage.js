@@ -67,7 +67,7 @@ class AboutPage extends Component {
                             {about2.split('\n').map((item, index) => <p
                                 style={{width: '100%'}} key={index}>{item}</p>)}
                         </LargeScreen>
-                        <a href={'/docs/introduction-en.pdf'}>
+                        <a href={'/docs/introduction-he.pdf'}>
                             <MatButton backgroundColor={'default'}
                                        style={{width: '30%', minWidth: 200}}
                                        onClick={() => {
@@ -102,12 +102,9 @@ class AboutPage extends Component {
                         height: '100%',
                         background: 'rgba(0,0,0,0.5)',
                         padding: '50px 50px 50px 10%',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'flex-start'
                     }}>
                         <span style={{fontSize: '2em', color: 'white'}}>מאפיינים מיוחדים</span>
-                        <ul>
+                        <ul className={'features_list_root'}>
                             {aboutFeatures.map((item, index) => <li
                                 style={{color: 'white', textAlign: 'right'}}
                                 key={index}>{item}</li>)}

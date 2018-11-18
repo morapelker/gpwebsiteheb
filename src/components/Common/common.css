@@ -11,6 +11,10 @@
     font-family: "object-fit: cover;";
 }
 
+.features_list_root {
+    width: 50%;
+}
+
 .root_text_container {
     padding-left: 20%;
     padding-right: 20%;
@@ -44,6 +48,10 @@
         padding-left: 10%;
         padding-right: 10%;
         width: 100%;
+    }
+
+    .features_list_root {
+        width: unset;
     }
 
     .page_top_text.panoramic {

@@ -7,6 +7,7 @@ const IntelligentRooms = () => {
         <div style={{
             padding: '10vh 10vw',
             width: '100%',
+            marginTop: 10,
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed',
@@ -14,6 +15,9 @@ const IntelligentRooms = () => {
             backgroundImage: 'url(/images/hotel4.jpg)',
             display: 'flex',
         }}>
+            <LargeScreen>
+                <div style={{width: '50%'}}/>
+            </LargeScreen>
             <div style={{
                 background: 'rgba(0,0,0,0.5)',
                 flex: 1,
@@ -22,15 +26,12 @@ const IntelligentRooms = () => {
                 display: 'flex',
                 flexDirection: 'column'
             }}>
-                <h4 style={{color: 'white', marginTop: 0}}>Intelligent Rooms</h4>
+                <h4 style={{color: 'white', marginTop: 0}}>חדרים חכמים</h4>
                 {hotelItems[1].text.split('\n').map((item, index) => <p key={index}
-                    style={{color: 'white', textAlign: 'left'}}>
+                                                                        style={{color: 'white'}}>
                     {item}
                 </p>)}
             </div>
-            <LargeScreen>
-                <div style={{width: '50%'}} />
-            </LargeScreen>
         </div>
     );
 };

@@ -20,17 +20,14 @@ class HotelPage extends Component {
             >
                 <div className={'root_text_container'}>
                     {hotelPreText.split('\n').map((item, index) => <p key={index}
-                                                                      style={{width: '100%', textAlign: 'left'}}>{item}</p>
+                                                                      style={{width: '100%'}}>{item}</p>
                     )}
                 </div>
-                <InfoPanel marginTop={30} even={false} text={hotelItems[0].text}
+                <InfoPanel marginTop={30} even={false} text={''}
                            title={hotelItems[0].title}
                            image={hotelItems[0].img}/>
                 <IntelligentRooms />
                 <Advantages />
-                <InfoPanel marginTop={30} even={false} text={hotelItems[3].text}
-                           title={hotelItems[3].title}
-                           image={hotelItems[3].img}/>
                 <div style={{
                     padding: '10vh 10vw',
                     width: '100%',
@@ -45,7 +42,7 @@ class HotelPage extends Component {
                         <div style={{width: '50%'}} />
                     </LargeScreen>
                     <div style={{
-                        background: 'rgba(0,0,0,0.5)',
+                        background: 'rgba(0,0,0,0.7)',
                         flex: 1,
                         height: '100%',
                         padding: 30,
@@ -55,7 +52,7 @@ class HotelPage extends Component {
                         <h4 style={{color: 'white', marginTop: 0}}>{hotelItems[4].title}</h4>
                         <ul style={{margin: 0, padding: 0}}>
                             {hotelItems[4].text.split('\n').map((item, index) => <li key={index}
-                                                                                     style={{color: 'white', textAlign: 'left'}}>
+                                                                                     style={{color: 'white'}}>
                                 {item}
                             </li>)}
                         </ul>

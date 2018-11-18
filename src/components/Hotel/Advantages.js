@@ -13,7 +13,7 @@ const Advantages = () => {
                     paddingLeft: '10%',
                     paddingRight: '10%',
                 }}>
-                    <h4 style={{textAlign: 'center'}}>Advantages</h4>
+                    <h4 style={{textAlign: 'center'}}>יתרונות</h4>
                     <ul>
                         {hotelItems[2].text.split('\n').map((item, index) => <li key={index}>{item}</li>)}
                     </ul>
@@ -34,7 +34,7 @@ const Advantages = () => {
                         alignSelf: 'flex-start'
                     }}/>
                     <div style={{flex: 1, marginLeft: 10}}>
-                        <h4 style={{textAlign: 'left'}}>Advantages</h4>
+                        <h4>יתרונות</h4>
                         <ul>
                             {hotelItems[2].text.split('\n').map((item, index) => <li key={index}>{item}</li>)}
                         </ul>

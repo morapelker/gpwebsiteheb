@@ -53,12 +53,12 @@ class HomePage extends Component {
     };
 
     componentWillMount() {
-        loadImage('/images/slide1.jpg').then(() => {
+        loadImage('/images/slide4.jpg').then(() => {
             this.imageLoaded();
         });
         loadImage('/images/slide2.jpg');
         loadImage('/images/slide3.jpg');
-        loadImage('/images/slide4.jpg');
+        loadImage('/images/slide1.jpg');
     }
 
     render() {
@@ -85,14 +85,17 @@ class HomePage extends Component {
                             paddingTop: '50%',
                             position: 'relative',
                             paddingLeft: 5,
-                            paddingRight: 5
+                            paddingRight: 5,
+                            overflowX: 'hidden',
+                            overflowY: 'hidden',
+                            background: 'black'
                         }}>
                         <iframe title={'IGH Product Introduction'} style={{
                             position: 'absolute', left: 0, top: 0, bottom: 0,
-                            width: '100%', height: '100%'
+                            width: '100%', height: '99%'
                         }}
                                 allowFullScreen="allowfullscreen"
-                                src="https://www.youtube.com/embed/w-2Khs6ftNc">
+                                src="https://www.youtube.com/embed/P1U-8Mgi-yw">
                         </iframe>
                     </div>
                     <AboutSection history={this.props.history}/>

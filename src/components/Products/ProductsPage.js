@@ -8,7 +8,6 @@ import {
     dimmerPre,
     downloadIGHC,
     downloadIR,
-    downloadKeypad,
     downloadSensor, glassItems,
     ighcStrings,
     irItems,
@@ -190,13 +189,6 @@ class ProductsPage extends Component {
                     <span className={'h4'}>תכונות עיקריות:</span>
                     {keypadItems.map((item, index) =>
                         <span key={index}><strong>{item.sub}</strong>{item.text}</span>)}
-                    <a href={'/docs/keypad_manual.pdf'}>
-                        <MatButton backgroundColor={'default'}
-                                   style={{
-                                       alignSelf: 'center',
-                                       marginTop: 30
-                                   }}>{downloadKeypad}</MatButton>
-                    </a>
                 </SwitchComponent>
                 <SwitchComponent
                     id={'glass'}

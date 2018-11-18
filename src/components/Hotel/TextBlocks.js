@@ -1,35 +1,29 @@
-export const hotelPreText = 'Intelligent room occupancy detection system that makes decision based on a door magnet and ' +
-    'a PIR detector, allowing separate Welcome and Goodbye scenario for each electric circuit in the room.\n' +
-    'Igh Keypad contains 10 programmable scenario channels allowing control on any combination of lights, A.C, T.V and curtains.';
+export const hotelPreText = 'חדר אירוח מלונאי חכם בקרת אנרגיה יחסית למצב דלת החדר וחיישן הנוכחות הסולרי,מה שמאפשר הרצת תרחיש קבלת פנים עם כניסת האורח לחדר, ותרחיש עזיבה ממודרג עם עזיבתו, ' +
+    'וזאת ללא שימוש בתחת עגינה למפתח החדר.הדיימר החכם יוכל לעמעם את מעגלי התאורה לאווירה ונוחות מרבית של האורח.בנוסף האורח יוכל לשלוט בתרחישי התאורה, הוילונות והפעלת המזגן באופן פשוט להפליא מלוח הפעלה עם תאורת רקע  שנמצא בצידי המיטה ובמסדרון החדר.\n' +
+    'מערכת הבקרה על החדרים תציג לכם כל מידע נחוץ על החדרים כגון "נחוץ ניקיון חדר" "נא לא להפריע" "דלת חדר נשארה פתוחה" "טמפרטורה בחדר קרה/חמה מידי ועוד,ותוכל להממשק למערכת הקבלה כך שמזגן החדר יופעל מיד לאחר קבלת האורח.\n' +
+    'מערכת השליטה והבקרה לשטחים הציבוריים תאפשר שליטה בכל סוגי התאורה כולל צבעונית צהובה וכן מעגלי 230 וולט, חדרי ישיבות התממשקות למערכות אודיו ווידאו באופן פשוט ונוח לעובדי המלון ומנהלי האחזקה.\n' +
+    'טכנולוגית IGH מבית גרינפוינט הינה מבוזרת וללא נקודת כשל בודדת, ללא בקר מרכזי, מה שמאפשר אמינות ללא פשרות.';
 
 export const hotelItems = [
     {
-        title: 'The only Decentralized solution in the world, allowing simple installation with high reliability.',
-        text: 'Igh system can be installed without the need for major ' +
-            'infrastructure change, direct exchange for the existing standard wall switches,' +
-            ' or hidden inside the room cabinet.',
+        title: 'המערכת המבוזרת היחידה בעולם המאפשרת התקנה פשוטה ובאמינות שרק טכנולוגית IGH  יכולה לתת.',
+        text: '',
         img: 'hotel7.png'
     },{
-        title: 'Intelligent Rooms',
-        text: 'igh guest rooms control system include multiply intelligent switches, ' +
-            'door magnet adapter+ door magnet, IR bridge and environmental sensor.\n' +
-            'igh creating a room systems with no single point of failure, no single controller, ' +
-            'no single power supply, making it very reliable system with high redundancy.\n' +
-            'igh is design for hotel room and for hotel operators specifications each intelligent switch has a build in decision ' +
-            'making firmware gathering information from the door magnet and the environmental sensor and decide if room is occupied' +
-            ' (De centralized) and activate lights and air-condition according to its status and pre setting design of the hotel operator.\n' +
-            'Any selected welcome scenario can run when guests enter the room' +
-            ' including lighting and air-condition. A selective step by step bye-bye scenario can run when guests leave the room.'
+        title: 'חדרים חכמים',
+        text: '\n' +
+            'חדר אירוח בטכנולוגית IGH כולל מספר מפסקים חכמים ,מגשר IR,מגנט דלת וחיישן סביבתי סולארי ,לוחות תרחישים שפועלים באופן מבוזר ללא בקר מרכזי או ספק כוח מרכזי  ולכן אין נקודת כשל מרכזית שיכולה לגרום לחדר לא לפעול כראוי,אמינות כזו ניתן לקבל רק בטכנולוגית IGH.\n' +
+            'החדר פועל באופן אוטונומי ללא תלות ברשת תקשורת.\n' +
+            'התחזוקה מתבצעת על ידי עובדי המלון הצורה פשוטה.\n' +
+            'בקרה חכמה על שלט חוץ "נקה חדר" "נא לא להפריע"\n' +
+            'שליטה ובקרה מרכזית על כל חדר מרחוק כולל התראות.'
     },{
-        title: 'Advantages',
-        text: 'Simple installation with limited infrastructure .\n' +
-            'Durable heavy duty Keypad can be table mount or wall mount with vibration sensitive back light, allows guest to run any scenario selected by operator.\n' +
-            'The room system does not require any network for day to day guest use, it is fully independent assuring high reliability.\n' +
-            'In house, self maintain, cost effective maintenance and setup done by hotel personals.\n' +
-            'Intelligent DND/CMR switch provides information of room occupation status in certain times allowing house keeping to know in advance if room is free to enter (even when guest do not turn ON the DND sign).\n' +
-            'Optional Tablet/Network interface can be add to each room, allowing room operation also via free igh application.\n' +
-            'Computer based room setup software is provided free of charge.',
-        img: 'hotel12_2.png'
+        title: 'יתרונות',
+        text: 'התקנה פשוטה.\n' +
+            'לוחות הפעלה אמינים במיוחד ללא צורך בחיבור תקשורת קווית , עם חיישן נגיעה לתאורת רקע להרצת תרחישים משני צידי המיטה ומהמסדרון.\n' +
+            'ללא בקר מרכזי החדר אוטונומי לחלוטין,אמינות ללא פשרות.\n' +
+            'ללא תלות ברשת תקשורת.\n' +
+            'שליטה ובקרה מרכזית.'
     },{
         title: 'Comfort, efficiency and economy',
         text: 'igh system allows serving-staff to see on their Smartphone or on any ' +
@@ -40,16 +34,13 @@ export const hotelItems = [
             'left open while room isn\'t occupied and lack of movement when the room is occupied.',
         img: 'hotel5.png'
     },{
-        title: 'Intelligent Public Areas',
-        text: 'No extra infrastructure needed.\n' +
-            'Very small foot print - space saving system, just add Sub DB near your primary DB.\n' +
-            'No single point of failure, No single controller, no single power supply making it very reliable system with high redundancy.\n' +
-            'Any Scenario can be created by hotel operator and run manually or according to schedulers from any tablet.\n' +
-            'Control over Air-Conditioner units.\n' +
-            'Optional Full TCP/IP/UDP two way communication to control any Audio/Video TCP controlled Equipme nt provided by 3rd party system (meeting rooms etc).\n' +
-            '3rd party systems lik e fire alarm can communicate via TCP and run any scenario on any event.\n' +
-            'Full Event Handler setup can be set in a moment by hotel ope rator allow to receive notification to smartphones, message to emails and run scenario when event occur.\n' +
-            'Full Control and monitor including functional re port and power consumption for each intelligent device provided via free igh app.\n' +
-            'Setup and operational applications provided free of charge with no licensing limitation.',
+        title: 'שטחים ציבוריים',
+        text: 'תשתיות מינימאליות.\n' +
+            'שטח התקנה קטן מאוד.\n' +
+            'חיסכון בעלות מעגלי תאורה שניתנים לעמעום ב 230 וולט, וכן בקרת DMX לפסי לדים צבעונים ועוד.\n' +
+            'ללא בקר מרכזי ,מערכת מבוזרת.\n' +
+            'יצירת תרחישים ותזמונים על ידי עובדי המלון.\n' +
+            'התממשקות למערכות צד ג כגון אודיו ווידאו וכד.\n' +
+            'אפליקציות ללא תשלום.',
     }
 ];

@@ -25,7 +25,7 @@ const ContactPage = () => {
         if (messageSent === 0) {
             setMessageSent(1);
             fetch(
-                'https://gpcloud-1329.appspot.com/webapi/utils/contact', {
+                'https://baloofeathers.herokuapp.com/contact', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -70,6 +70,7 @@ const ContactPage = () => {
                     <span style={{fontWeight: 'bold'}}>גרינפוינט מערכות בעמ</span>
                     <span>האשל 7 אזור התעשייה הדרומי קיסריה</span>
                     <a href={'/'}>info@greenpointsys.com</a>
+                    <span>04-6369090</span>
                 </div>
                 <LargeScreen>
                     <div style={{width: 10}}/>

@@ -17,7 +17,6 @@ class OfficePage extends Component {
                     {officePreText.split('\n').map((item, index) => <p key={index}
                                                                      style={{
                                                                          width: '100%',
-                                                                         textAlign: 'left'
                                                                      }}>{item}</p>
                     )}
                 </div>
