@@ -1,5 +1,4 @@
 import React from 'react';
-import MatButton from "../Common/MatButton";
 import ImgWithLoader from "../Common/ImgWithLoader";
 
 const HomeInfo = ({info, history}) => {
@@ -8,15 +7,10 @@ const HomeInfo = ({info, history}) => {
             history.push('/' + info.link);
         }} >
             <ImgWithLoader src={'images/' + info.image} style={{objectFit: 'contain'}} alt={''}/>
-            <h4 style={{textAlign: 'center'}}>{info.title}<span
+            <h4 className={'info_title'}>{info.title}<span
                 style={{color: 'green'}}> ירוק</span><span> וחכם</span></h4>
-            <span>{info.text}</span>
+            <span className={'info_text'}>{info.text}</span>
             <p/>
-            <MatButton type={'secondary'} onClick={() => {
-                history.push('/' + info.link);
-            }} backgroundColor={'default'}>
-                קרא עוד
-            </MatButton>
         </div>
     );
 };

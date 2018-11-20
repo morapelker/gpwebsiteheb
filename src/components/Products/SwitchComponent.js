@@ -35,7 +35,7 @@ const SwitchComponent = ({even, src, title, dark, preText, listItems, height, ch
                         maxHeight: 100,
                         alignSelf: 'center'
                     }}/>}
-                {listItems && <span className={'h4'}>מאפיינים ייחודיים</span>}
+                {listItems && <span className={'h4 small'}>מאפיינים ייחודיים</span>}
                 {listItems && <ul>
                     {listItems.map((item, index) => <li key={index}>
                         {item}
@@ -45,30 +45,30 @@ const SwitchComponent = ({even, src, title, dark, preText, listItems, height, ch
             </SmallScreen>
             <LargeScreen>
                 <div style={{
-                    width: '50%', height: height || 200,
+                    height: height || 300,
                     paddingLeft: 40, paddingRight: 40,
-                    justifyContent: even ? 'flex-end' : 'flex-start',
+                    marginTop: marginTop || 80,
+                    justifyContent: 'flex-start',
                     display: 'flex'
                 }}>
                     <ImgWithLoader src={'/images/' + src} alt={''} style={{
-                        maxWidth: '100%',
                         objectFit: 'contain',
-                        marginTop: marginTop || 0,
                         height: '100%',
+                        objectPosition: 'left',
                         alignSelf: 'flex-start'
                     }}/>
                 </div>
                 <div style={{
-                    background: dark === 2 ? 'rgba(0,0,0,0.7)' : dark ? '#333333' : 'white',
-                    flex: 1,
+                    background: 'white',
+                    width: '50%',
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'flex-start',
                     padding: 20
                 }}>
                     <span className={'h4'}>{title}</span>
-                    {preText && preText.split('\n').map((item, index) => <p key={index}>{item}</p>)}
-                    {listItems && <span className={'h4'}>מאפיינים ייחודיים</span>}
+                    {preText && preText.split('\n').map((item, index) => <p className={'product_paragraph'} key={index}>{item}</p>)}
+                    {listItems && <span className={'h4 small'}>מאפיינים ייחודיים</span>}
                     {listItems && <ul>
                         {listItems.map((item, index) => <li key={index}>
                             {item}

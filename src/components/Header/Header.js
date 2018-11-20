@@ -34,15 +34,7 @@ class Header extends Component {
         return (
             <div>
                 <div className={'header_root ' + (this.props.shrinked ? 'shrinked' : '')}>
-                    <div
-                        style={{
-                            display: 'flex',
-                            height: '100%',
-                            width: '100%',
-                            maxWidth: 1230,
-                            margin: 'auto',
-                            alignItems: 'flex-start'
-                        }}>
+                    <div className={'header_title'}>
                         <SmallScreen>
                             <IconButton style={{alignSelf: 'center'}} onClick={this.toggleDrawer(true)} color="inherit" aria-label="Menu">
                                 <MenuIcon />
@@ -62,6 +54,7 @@ class Header extends Component {
                             this.props.history.push('/');
                         }}/>
                         <LargeScreen>
+                            <div style={{flex: 1}} />
                             <HomeRouter history={this.props.history} items={items}
                                         productsSelector={this.showProducts}/>
                         </LargeScreen>

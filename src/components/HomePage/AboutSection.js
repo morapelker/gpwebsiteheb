@@ -13,6 +13,28 @@ const AboutSection = ({history}) => {
             backgroundAttachment: 'fixed',
             backgroundSize: 'cover',
         }}>
+
+            <div
+                style={{
+                    width: '100%',
+                    height: 0,
+                    paddingTop: '50%',
+                    position: 'relative',
+                    paddingLeft: 5,
+                    paddingRight: 5,
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+
+                }}>
+                <iframe title={'IGH Product Introduction'} style={{
+                    position: 'absolute', top: '10%', bottom: 0,
+                    width: '50%', height: '80%', left: '25%'
+                }}
+                        allowFullScreen="allowfullscreen"
+                        src="https://www.youtube.com/embed/w-2Khs6ftNc">
+                </iframe>
+            </div>
+
             <div style={{
                 width: '100%',
                 paddingTop: 30,
@@ -23,15 +45,19 @@ const AboutSection = ({history}) => {
                 flexDirection: 'column',
                 justifyContent: 'center'
             }}>
+
+
                 <div className={'about_section_root'}>
-                    <h4 style={{marginRight: 40}}>אודות החברה</h4>
-                    {about1.split('\n').map((item, index) => <p style={{textAlign: 'right'}} key={index}>{item}</p>)}
+                    {about1.split('\n').map((item, index) => <span
+                        style={{textAlign: 'right'}}
+                        key={index}>{item}</span>)}
                     <MatButton type={'secondary'}
                                onClick={() => {
-                                    history.push('/about');
+                                   history.push('/about');
                                }}
                                backgroundColor={'#33cc33'} style={{
-                        alignSelf: 'center'
+                        alignSelf: 'flex-start',
+                        fontSize: '1em'
                     }}>
                         קרא עוד
                     </MatButton>

@@ -40,8 +40,9 @@ const HomeRouter = ({items, productsSelector, history}) => {
             display: 'flex',
             listStyle: 'none',
             height: '100%',
+            fontWeight: 'bold',
             alignItems: 'center',
-            justifyContent: 'flex-end', width: '100%'
+            justifyContent: 'flex-end'
         }}>
             {items.map((item, index) =>
                 <span className={'routeSpan'} key={index}

@@ -1,5 +1,5 @@
 import React from 'react';
-import {autoMode, ecoMode, manMode, products1} from "./TextBlocks";
+import {autoMode, ecoMode, manMode, modesPreText, products1, productsAfterText} from "./TextBlocks";
 import MatButton from "../Common/MatButton";
 import {LargeScreen} from "../Common/ScreenSizes";
 import ImgWithLoader from "../Common/ImgWithLoader";
@@ -14,18 +14,23 @@ const LoadControl = () => {
                 maxWidth: '100%',
                 display: 'flex',
                 flexDirection: 'column',
-                background: 'rgba(0,0,0,0.8)',
-                color: 'white',
-                fontSize: '1.2em',
+                background: 'rgba(255,255,255,0.9)',
+                color: 'black',
             }}>
                 <span className={'h4'}>המפסק החכם</span>
-                <p/>
                 {products1.split('\n').map((item, index) => <p key={index}>{item}</p>)}
+                <p>
+                    <div style={{display: 'flex', flexDirection: 'column'}}>
+                        {modesPreText}
+                        <span style={{marginTop: 10}}><strong style={{fontStyle: 'italic'}}>מצב אוטומטי - </strong>{autoMode}</span>
+                        <span><strong style={{fontStyle: 'italic'}}>מצב כיבוי אוטומטי - </strong>{ecoMode}</span>
+                        <span><strong style={{fontStyle: 'italic'}}>מצב ידני - </strong>{manMode}</span>
+                    </div>
+
+                </p>
+                <p>{productsAfterText}</p>
                 <p/>
-                <span className={'h4'}>מצבים אוטומטים</span>
-                <p><strong style={{color: 'green'}}>אוטומטי - </strong>{autoMode}</p>
-                <p><strong style={{color: 'orange'}}>חצי אוטומטי - </strong>{ecoMode}</p>
-                <p><strong style={{color: '#c6c6c6'}}>ידני - </strong>{manMode}</p>
+
                 <a href={'/docs/smart_switch.pdf'}>
                     <MatButton style={{width: 300, alignSelf: 'center'}}
                                backgroundColor={'default'}>

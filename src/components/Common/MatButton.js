@@ -15,6 +15,7 @@ const styles = {
 const MatButton = ({type, onClick, backgroundColor, classes, style, children, disabled}) => {
     return (
         <Button disabled={disabled} variant="contained" color={type} onClick={onClick} style={{
+            fontSize: '1em',
             ...style,
             backgroundColor: backgroundColor === 'default' ? '#00aa00' : backgroundColor
         }}
