@@ -28,6 +28,10 @@ class AdvantagesPage extends Component {
                         <span className={'page_top_text'}>יתרונות</span>
                     </div>
                 </div>
+
+
+                <InfoPanel even={true} image={'app6_0.png'} title={'ללא מערכת עיבוד מרכזית'}
+                           text={about3}/>
                 <InfoPanel marginTop={30} even={false} text={holistic}
                            title={'פתרון רחב וכולל'}
                            image={'igh2_0.png'}/>
@@ -76,14 +80,11 @@ class AdvantagesPage extends Component {
                         }}/>
                     </div>
                 </LargeScreen>
-
-
-                <InfoPanel even={true} image={'app6_0.png'} title={'ללא מערכת עיבוד מרכזית'}
-                           text={about3}/>
                 <div style={{
                     width: '100%',
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'center',
+                    marginTop: 50,
                     backgroundAttachment: 'fixed',
                     backgroundSize: 'cover',
                     backgroundImage: 'url(/images/mesh_0.jpg)',

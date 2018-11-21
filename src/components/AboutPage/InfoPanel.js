@@ -10,6 +10,7 @@ const InfoPanel = ({image, title, text, even, marginTop}) => {
                     display: 'flex', flexDirection: 'column',
                     width: '100%',
                     paddingLeft: '10%',
+                    textAlign: 'justify',
                     paddingRight: '10%',
                 }}>
                     <h4 style={{textAlign: 'center'}}>{title}</h4>
@@ -42,6 +43,7 @@ const InfoPanel = ({image, title, text, even, marginTop}) => {
                     paddingLeft: '20%',
                     paddingRight: '20%',
                     marginTop: 70,
+                    textAlign: 'justify',
                     flexDirection: even ? 'row' : 'row-reverse'
                 }}>
                     <ImgWithLoader src={'/images/' + image} alt={''} style={{

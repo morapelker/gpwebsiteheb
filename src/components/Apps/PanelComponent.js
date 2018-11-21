@@ -11,6 +11,7 @@ const PanelComponent = ({title, text, image, even, whiteText, children, marginTo
                 <div style={{
                     paddingLeft: '10%',
                     paddingRight: '10%',
+                    paddingBottom: 30,
                     display: 'flex', flexDirection: 'column', width: '100%',
                     color: whiteText ? 'white' : 'black'
                 }}>
