@@ -32,7 +32,7 @@ export const products = [
         url: 'light',
         icon: 'lightgeneric.png'
     }, {
-        text: 'תריסים/וילונות',
+        text: 'תריסים',
         whiteImage: 'shutterwhite.png',
         blackImage: 'shutterblack.png',
         url: 'shutter',
@@ -50,7 +50,7 @@ export const products = [
         url: 'sense',
         icon: 'sensegeneric.png'
     }, {
-        text: 'חיישן סביבתי',
+        text: 'חיישן',
         whiteImage: 'sensorwhite.png',
         blackImage: 'sensorblack.png',
         url: 'sensor',
