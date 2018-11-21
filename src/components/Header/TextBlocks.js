@@ -32,7 +32,7 @@ export const products = [
         url: 'light',
         icon: 'lightgeneric.png'
     }, {
-        text: 'תריס/וילון',
+        text: 'תריסים/וילונות',
         whiteImage: 'shutterwhite.png',
         blackImage: 'shutterblack.png',
         url: 'shutter',
@@ -50,31 +50,31 @@ export const products = [
         url: 'sense',
         icon: 'sensegeneric.png'
     }, {
-        text: 'חיישן',
+        text: 'חיישן סביבתי',
         whiteImage: 'sensorwhite.png',
         blackImage: 'sensorblack.png',
         url: 'sensor',
         icon: 'sensorgeneric.png'
     }, {
-        text: 'מגשר IR',
+        text: 'מגשר אינפרא אדום',
         whiteImage: 'irwhite.png',
         blackImage: 'irblack.png',
         url: 'irbridge',
         icon: 'remotegeneric.png'
     }, {
-        text: 'לוח מקשים',
+        text: 'לוח המקשים',
         whiteImage: 'keypadwhite.png',
-        blackImage: 'keypadblack2.png',
+        blackImage: 'keypadblack.png',
         url: 'keypad',
         icon: 'keypadgeneric.png'
     }, {
-        text: 'מגשר אינטרנט',
+        text: 'מגשר האינטרנט',
         whiteImage: 'ighcwhite.png',
         blackImage: 'ighcblack.png',
         url: 'internetgateway',
         icon: 'ighcwhite.png',
     }, {
-        text: 'פאנל זכוכית',
+        text: 'מפסקי מגע מזכוכית',
         whiteImage: 'glasswhite.png',
         blackImage: 'glassblack.png',
         url: 'glass',

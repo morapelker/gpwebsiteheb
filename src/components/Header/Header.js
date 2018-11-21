@@ -122,6 +122,7 @@ class Header extends Component {
                                         borderColor: this.state.dark ? 'white' : '#00ff00',
                                         height: 25,
                                         background: 'white',
+                                        marginRight: 5,
                                         cursor: 'pointer'
                                     }}/>
                             </div>

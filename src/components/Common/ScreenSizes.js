@@ -11,7 +11,7 @@ export const SmallScreen = ({children}) => {
 
 export const LargeScreen = ({children}) => {
     return (
-        <MediaQuery minWidth={850}>
+        <MediaQuery minWidth={851}>
             {children}
         </MediaQuery>
     );

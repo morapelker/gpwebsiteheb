@@ -19,20 +19,18 @@ const LoadControl = () => {
             }}>
                 <span className={'h4'}>המפסק החכם</span>
                 {products1.split('\n').map((item, index) => <p key={index}>{item}</p>)}
-                <p>
+                <p />
                     <div style={{display: 'flex', flexDirection: 'column'}}>
                         {modesPreText}
                         <span style={{marginTop: 10}}><strong style={{fontStyle: 'italic'}}>מצב אוטומטי - </strong>{autoMode}</span>
                         <span><strong style={{fontStyle: 'italic'}}>מצב כיבוי אוטומטי - </strong>{ecoMode}</span>
                         <span><strong style={{fontStyle: 'italic'}}>מצב ידני - </strong>{manMode}</span>
                     </div>
-
-                </p>
                 <p>{productsAfterText}</p>
                 <p/>
 
                 <a href={'/docs/smart_switch.pdf'}>
-                    <MatButton style={{width: 300, alignSelf: 'center'}}
+                    <MatButton style={{alignSelf: 'center'}}
                                backgroundColor={'default'}>
                         מדריך למפסק החכם
                     </MatButton>

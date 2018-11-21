@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import LoadControl from "./LoadControl";
 import SwitchComponent from "./SwitchComponent";
 import {
-    advancedOper,
-    basicOper,
     dimmerItems,
     dimmerPre,
     downloadIGHC,
@@ -25,6 +23,7 @@ import MatButton from "../Common/MatButton";
 import {withRouter} from "react-router-dom";
 import '../Common/common.css';
 import './products.css';
+import OurProducts from "./OurProducts";
 
 class ProductsPage extends Component {
 
@@ -81,6 +80,7 @@ class ProductsPage extends Component {
                         <span className={'page_top_text'}>המוצרים שלנו</span>
                     </div>
                 </div>
+                <OurProducts />
                 <LoadControl/>
                 <SwitchComponent id={'light'} even={true} dark={false} src={'lightblack.png'}
                                  title={'מפסק תאורה'}
@@ -105,7 +105,6 @@ class ProductsPage extends Component {
                 <SwitchComponent id={'sensor'} even={true} dark={2} src={'sensorblack.png'}
                                  title={'חיישן סביבתי'}
                                  height={300}
-                                 marginTop={30}
                                  preText={sensorPre}
                 >
 
@@ -156,7 +155,6 @@ class ProductsPage extends Component {
                     src={'keypadblack.png'}
                     title={'לוח המקשים'}
                     preText={keypadPre}
-                    marginTop={1}
                     listItems={keypadItems}
                 >
                 </SwitchComponent>
@@ -166,7 +164,6 @@ class ProductsPage extends Component {
                     dark={false}
                     src={'glassblack.png'}
                     title={'מפסקי מגע מזכוכית קריסטלית'}
-                    marginTop={80}
                 >
                     {glassText.split('\n').map((item, index) => <p className={'product_paragraph'} key={index}>{item}</p>)}
                     <ul>
