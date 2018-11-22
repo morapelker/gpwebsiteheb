@@ -10,7 +10,7 @@
     color: white;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 950px) {
     .about_section_root {
         width: 100%;
     }

@@ -75,7 +75,7 @@
     height: 50px;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 950px) {
     .header_title {
         flex-direction: row;
         padding-right: 0;

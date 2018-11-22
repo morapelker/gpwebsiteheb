@@ -12,7 +12,6 @@
 }
 
 .features_list_root {
-    width: 50%;
 }
 
 .root_text_container {
@@ -43,7 +42,7 @@
     right: 15%
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 950px) {
     .root_text_container {
         padding-left: 10%;
         padding-right: 10%;

@@ -8,15 +8,15 @@ import '../Common/contact.css';
 
 const ContactPage = () => {
 
-    const name = useInput('שם מלא*');
-    const email = useInput('דוא״ל*');
-    const phoneNumber = useInput('מספר טלפון');
-    const message = useInput('הודעה*');
+    const name = useInput('שם מלא');
+    const email = useInput('דוא״ל');
+    const phoneNumber = useInput('מספר טלפון*');
+    const message = useInput('הודעה');
 
     const [messageSent, setMessageSent] = useState(0);
 
     const validate = () => {
-        if (name.value.length > 0 && email.value.length > 0 && message.value.length > 0)
+        if (phoneNumber.value.length > 0)
             return undefined;
         return true;
     };
@@ -62,15 +62,21 @@ const ContactPage = () => {
                     fontSize: '1.3em',
                     display: 'flex',
                     flexDirection: 'column',
-                    alignItems: 'flex-start',
-                    marginTop: 40,
+                    alignItems: 'center',
                     lineHeight: 2,
                     textAlign: 'left'
                 }}>
                     <span style={{fontWeight: 'bold'}}>גרינפוינט מערכות בעמ</span>
                     <span>האשל 7 אזור התעשייה הדרומי קיסריה</span>
                     <a href={'/'}>info@greenpointsys.com</a>
-                    <span>04-6369090</span>
+
+                    <div style={{display: 'flex'}}>
+                        <span style={{fontSize: '1.5em', marginLeft: 10}}>04-6369090</span>
+                        <FontAwesomeIcon className={'icon'} icon={'phone'}
+                                         style={{alignSelf: 'center',
+                                             color: 'green',
+                                         }}/>
+                    </div>
                 </div>
                 <LargeScreen>
                     <div style={{width: 10}}/>
@@ -97,23 +103,45 @@ const ContactPage = () => {
 
                         <textarea {...message}
                                   style={{width: '100%', marginTop: 10, resize: 'vertical'}}/>
-                        <MatButton disabled={val} onClick={sendMail}
-                                   backgroundColor={val ? 'gray' : 'default'} style={{
-                            width: 300,
-                            borderRadius: 20,
-                            alignSelf: 'flex-end'
-                        }}>
+                        <SmallScreen>
+                            <MatButton disabled={val} onClick={sendMail}
+                                       backgroundColor={val ? 'gray' : 'default'} style={{
+                                width: 300,
+                                borderRadius: 20,
+                                alignSelf: 'flex-end',
+                                fontSize: '1.5em'
+                            }}>
                             <span style={{textAlign: 'center'}}>
                                 {messageSent === 0 ? 'שלח' : 'שולח...'}
                             </span>
-                            {messageSent === 0 ?
-                                <FontAwesomeIcon className={'icon'} icon={'paper-plane'} size={'2x'}
-                                                 style={{color: 'white', marginRight: 10}}/>
-                                :
-                                <RefreshIndicator size={30} style={{marginLeft: 10, marginRight: 10}}/>
-                            }
+                                {messageSent === 0 ?
+                                    <FontAwesomeIcon className={'icon'} icon={'paper-plane'} size={'2x'}
+                                                     style={{color: 'white', marginRight: 10}}/>
+                                    :
+                                    <RefreshIndicator size={30} style={{marginLeft: 10, marginRight: 10}}/>
+                                }
 
-                        </MatButton>
+                            </MatButton>
+                        </SmallScreen>
+                        <LargeScreen>
+                            <MatButton disabled={val} onClick={sendMail}
+                                       backgroundColor={val ? 'gray' : 'default'} style={{
+                                width: 300,
+                                borderRadius: 20,
+                                alignSelf: 'flex-end',
+                            }}>
+                            <span style={{textAlign: 'center'}}>
+                                {messageSent === 0 ? 'שלח' : 'שולח...'}
+                            </span>
+                                {messageSent === 0 ?
+                                    <FontAwesomeIcon className={'icon'} icon={'paper-plane'} size={'2x'}
+                                                     style={{color: 'white', marginRight: 10}}/>
+                                    :
+                                    <RefreshIndicator size={30} style={{marginLeft: 10, marginRight: 10}}/>
+                                }
+
+                            </MatButton>
+                        </LargeScreen>
                     </form>
                     {messageSent >= 2 &&
                     <div style={{

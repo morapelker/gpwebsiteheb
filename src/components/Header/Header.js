@@ -10,6 +10,9 @@ import Drawer from "@material-ui/core/Drawer/Drawer";
 import IconButton from "@material-ui/core/IconButton/IconButton";
 import MenuIcon from '@material-ui/icons/Menu';
 import HamburgerMenu from "./HamburgerMenu";
+import MediaQuery from "react-responsive";
+import ImgWithLoader from "../Common/ImgWithLoader";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 class Header extends Component {
     constructor(props) {
@@ -30,31 +33,84 @@ class Header extends Component {
         this.setState({drawerOpen: open});
     };
 
+    scrollToContacts = () => {
+        const contactSection = document.getElementById('contactSection');
+        if (contactSection) {
+            try {
+                window.scroll({
+                    top: contactSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            } catch {
+                window.scroll(0, contactSection.offsetTop);
+            }
+        }
+    };
+
     render() {
         return (
             <div>
                 <div className={'header_root ' + (this.props.shrinked ? 'shrinked' : '')}>
                     <div className={'header_title'}>
                         <SmallScreen>
-                            <IconButton style={{alignSelf: 'center'}} onClick={this.toggleDrawer(true)} color="inherit" aria-label="Menu">
-                                <MenuIcon />
+                            <IconButton style={{alignSelf: 'center'}}
+                                        onClick={this.toggleDrawer(true)} color="inherit"
+                                        aria-label="Menu">
+                                <MenuIcon/>
                             </IconButton>
-                            <Drawer open={this.state.drawerOpen} anchor={"right"} onClose={this.toggleDrawer(false)}>
+                            <Drawer open={this.state.drawerOpen} anchor={"right"}
+                                    onClose={this.toggleDrawer(false)}>
                                 <div
                                     tabIndex={0}
                                     role="button"
                                     onKeyDown={this.toggleDrawer(false)}
                                 >
-                                    <HamburgerMenu closeDrawer={this.toggleDrawer(false)} history={this.props.history} />
+                                    <HamburgerMenu closeDrawer={this.toggleDrawer(false)}
+                                                   history={this.props.history}/>
                                 </div>
                             </Drawer>
-                            <div style={{flex: 1}} />
+                            <div style={{flex: 1}}/>
+                            {this.props.shrinked &&
+                            <a href={'tel:046369090'} style={{
+                                alignSelf: 'center',
+                                marginLeft: 10,
+                                fontSize: '1.5em',
+                                color: 'green',
+                                fontWeight: 'bold'
+                            }}>
+                                <span>04-6369090</span>
+                            </a>
+                            }
+                            <a href={'tel:046369090'} style={{
+                                alignSelf: 'center',
+                                fontSize: '1.5em',
+                                color: 'green'
+                            }}>
+                                <FontAwesomeIcon className={'icon'}
+                                                 icon={'phone'}
+                                />
+                            </a>
                         </SmallScreen>
-                        <img src={'/images/logo_green_point.svg'} className={'gp_logo'} alt={''} onClick={() => {
-                            this.props.history.push('/');
-                        }}/>
+                        <ImgWithLoader src={'/images/logo_green_point.svg'} className={'gp_logo'}
+                                       alt={''}
+                                       onClick={() => {
+                                           this.props.history.push('/');
+                                       }}/>
                         <LargeScreen>
-                            <div style={{flex: 1}} />
+                            <MediaQuery minWidth={this.props.shrinked ? 1000 : 1120}>
+                                <FontAwesomeIcon onClick={this.scrollToContacts} className={'icon'} style={{
+                                    alignSelf: 'center',
+                                    color: 'green'
+                                }}
+                                                 icon={'phone'}
+                                />
+                                <span style={{
+                                    alignSelf: 'center',
+                                    marginLeft: 10,
+                                    color: 'green'
+                                }}>04-6369090</span>
+                            </MediaQuery>
+                            <div style={{flex: 1}}/>
                             <HomeRouter history={this.props.history} items={items}
                                         productsSelector={this.showProducts}/>
                         </LargeScreen>

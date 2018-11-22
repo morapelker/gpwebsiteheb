@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import HomePage, {loadImage} from "./components/HomePage/HomePage";
 import IGHHome from './components/Home/HomePage';
 import {library} from '@fortawesome/fontawesome-svg-core';
-import {faQuoteRight, faPlus, faPaperPlane, faBars} from '@fortawesome/free-solid-svg-icons';
+import {faQuoteRight, faPlus, faPaperPlane, faBars, faWindowClose, faPhone} from '@fortawesome/free-solid-svg-icons';
 import {fab} from '@fortawesome/free-brands-svg-icons';
 import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
 import AboutPage from "./components/AboutPage/AboutPage";
@@ -19,7 +19,7 @@ import OfficePage from "./components/Home/OfficePage";
 import {products} from "./components/Header/TextBlocks";
 import objectFitImages from 'object-fit-images';
 
-library.add(faQuoteRight, faPlus, fab, faPaperPlane, faBars);
+library.add(faQuoteRight, faPlus, fab, faPaperPlane, faBars, faWindowClose, faPhone);
 
 class App extends Component {
     constructor(props) {

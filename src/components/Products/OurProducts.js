@@ -26,7 +26,7 @@ const OurProducts = ({history}) => {
                             <span className={'product_title'} style={{textAlign: 'center', fontSize: '1.4em'}}>{item.text}</span>
                             <ImgWithLoader
                                 src={'/images/' + item.blackImage} alt={''}
-                                style={{height: 200, objectFit: 'contain'}}/>
+                                style={{height: 200, objectFit: 'contain', objectPosition: 'top'}}/>
                         </div>)}
                     <div style={{minWidth: 30, height: 5}} />
                 </div>
@@ -42,7 +42,7 @@ const OurProducts = ({history}) => {
                                 <span style={{textAlign: 'center'}}>{item.text}</span>
                                 <ImgWithLoader
                                     src={'/images/' + item.blackImage} alt={''}
-                                    style={{maxWidth: '100%', height: 200, objectFit: 'contain'}}/>
+                                    style={{maxWidth: '100%', height: 200, objectFit: 'contain', objectPosition: 'top'}}/>
                             </div>)}
                     </div>
                     <div style={{display: 'flex', marginTop: 50}}>
@@ -53,7 +53,7 @@ const OurProducts = ({history}) => {
                                 <span style={{width: '100%', textAlign: 'center'}}>{item.text}</span>
                                 <ImgWithLoader
                                     src={'/images/' + item.blackImage} alt={''}
-                                    style={{height: 200, objectFit: 'contain'}}/>
+                                    style={{height: 200, objectFit: 'contain', objectPosition: 'top'}}/>
                             </div>)}
                     </div>
                 </div>

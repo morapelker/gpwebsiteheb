@@ -24,7 +24,7 @@ const AppPanel = () => {
                             <p key={index}>{item}</p>
                     ))}
                     <div style={{
-                        alignSelf: 'flex-center',
+                        alignSelf: 'center',
                         height: 50,
                         width: 350,
                         display: 'flex',

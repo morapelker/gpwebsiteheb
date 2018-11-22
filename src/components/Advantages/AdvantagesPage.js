@@ -82,23 +82,18 @@ class AdvantagesPage extends Component {
                 </LargeScreen>
                 <div style={{
                     width: '100%',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'center',
                     marginTop: 50,
-                    backgroundAttachment: 'fixed',
-                    backgroundSize: 'cover',
-                    backgroundImage: 'url(/images/mesh_0.jpg)',
+                    paddingLeft: '20%',
+                    paddingRight: '20%'
                 }}>
                     <div style={{
                         width: '100%',
                         height: '100%',
-                        background: 'rgba(0,0,0,0.5)',
-                        padding: '50px 50px 50px 10%',
                     }}>
-                        <span style={{fontSize: '2em', color: 'white'}}>מאפיינים מיוחדים</span>
+                        <span style={{fontSize: '2em', color: 'black', fontWeight: 'bold'}}>מאפיינים מיוחדים</span>
                         <ul className={'features_list_root'}>
                             {aboutFeatures.map((item, index) => <li
-                                style={{color: 'white', textAlign: 'right'}}
+                                style={{color: 'black', textAlign: 'right'}}
                                 key={index}>{item}</li>)}
                         </ul>
                     </div>
