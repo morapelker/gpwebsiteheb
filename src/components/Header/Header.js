@@ -71,17 +71,17 @@ class Header extends Component {
                             </Drawer>
                             <div style={{flex: 1}}/>
                             {this.props.shrinked &&
-                            <a href={'tel:046369090'} style={{
+                            <a href={'tel:046039090'} style={{
                                 alignSelf: 'center',
                                 marginLeft: 10,
                                 fontSize: '1.5em',
                                 color: 'green',
                                 fontWeight: 'bold'
                             }}>
-                                <span>04-6369090</span>
+                                <span>04-6039090</span>
                             </a>
                             }
-                            <a href={'tel:046369090'} style={{
+                            <a href={'tel:046039090'} style={{
                                 alignSelf: 'center',
                                 fontSize: '1.5em',
                                 color: 'green'
@@ -108,7 +108,7 @@ class Header extends Component {
                                     alignSelf: 'center',
                                     marginLeft: 10,
                                     color: 'green'
-                                }}>04-6369090</span>
+                                }}>04-6039090</span>
                             </MediaQuery>
                             <div style={{flex: 1}}/>
                             <HomeRouter history={this.props.history} items={items}

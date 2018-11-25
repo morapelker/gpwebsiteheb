@@ -13,6 +13,7 @@
     "es6-promise": "^4.2.5",
     "i": "^0.3.6",
     "isomorphic-fetch": "^2.2.1",
+    "node-sass": "^4.10.0",
     "npm": "^6.4.1",
     "object-fit-images": "^3.2.4",
     "react": "^16.7.0-alpha.0",

@@ -68,10 +68,10 @@ const ContactPage = () => {
                 }}>
                     <span style={{fontWeight: 'bold'}}>גרינפוינט מערכות בעמ</span>
                     <span>האשל 7 אזור התעשייה הדרומי קיסריה</span>
-                    <a href={'/'}>info@greenpointsys.com</a>
+                    <a href={'mailto:info@greenpointsys.com'}>info@greenpointsys.com</a>
 
                     <div style={{display: 'flex'}}>
-                        <span style={{fontSize: '1.5em', marginLeft: 10}}>04-6369090</span>
+                        <span style={{fontSize: '1.5em', marginLeft: 10}}>04-6039090</span>
                         <FontAwesomeIcon className={'icon'} icon={'phone'}
                                          style={{alignSelf: 'center',
                                              color: 'green',
