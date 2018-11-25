@@ -5,7 +5,6 @@ const Clock = ({hours, mins, secs}) => {
     const hoursDegrees = (hours * 30 + mins / 2);
     const minutesDegrees = (mins * 6 + (secs % 60) / 10);
     const secondsDegrees = (secs * 6);
-    console.log(mins, minutesDegrees);
 
     const divStyleHours = {
         transform: "rotateZ(" + hoursDegrees + "deg)",

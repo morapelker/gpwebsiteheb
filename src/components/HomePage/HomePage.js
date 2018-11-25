@@ -8,6 +8,12 @@ import CircularProgress from "@material-ui/core/CircularProgress/CircularProgres
 
 const info = [
     {
+        title: 'בית',
+        text: 'המערכת הביתית החכמה של גרינפוינט יודעת לשלוט על תאורה, תריסים, מזגנים ועוד.\n' +
+            'ניתן לשלוט על העומסים באמצעות אפליקציה, לוח מקשים מעוצב ומואר ותכונות אוטומטיות הקיימות במערכת',
+        image: 'home_icon.svg',
+        link: 'home'
+    }, {
         title: 'משרד',
         text: 'מערכת המשרד החכם של גרינפוינט מגדירה מחדש הרגלי עבודה וחוסכת חשמל. עושה את היום הרבה יותר נעים ויעיל במשרד',
         image: 'office_icon.svg',
@@ -17,16 +23,10 @@ const info = [
         text: 'המערכת המלונאית החכמה של גרינפוינט, שולטת על תאורה, תריסים ומזגנים על ידי לוח מקשים מעוצב ומואר ומקבלת החלטות אוטומטיות באמצעות חיישנים.\n',
         image: 'hotel_icon.svg',
         link: 'hotel'
-    }, {
-        title: 'בית',
-        text: 'המערכת הביתית החכמה של גרינפוינט יודעת לשלוט על תאורה, תריסים, מזגנים ועוד.\n' +
-            'ניתן לשלוט על העומסים באמצעות אפליקציה, לוח מקשים מעוצב ומואר ותכונות אוטומטיות הקיימות במערכת',
-        image: 'home_icon.svg',
-        link: 'home'
     }
 ];
 
- export function loadImage(url) {
+export function loadImage(url) {
     const r = (img, resolve) => () => {
         img.removeEventListener('load', r);
         img.removeEventListener('error', r);
@@ -91,15 +91,16 @@ class HomePage extends Component {
                             background: 'rgba(255,255,255,0.5)'
                         }}>
                             <div style={{
-                                width: '70%', height: 200,
+                                width: '70vw', height: 200,
                                 position: 'absolute',
                                 top: 80,
-                                margin: 'auto',
+                                left: '15vw',
                                 display: 'flex',
                                 flexDirection: 'column',
                                 alignItems: 'center'
                             }}>
-                                <span style={{fontSize: '3em', color: '#767676'}}>Switch to <span style={{color: '#00cc00'}}>green</span></span>
+                                <span style={{fontSize: '3em', color: '#767676'}}>Switch to <span
+                                    style={{color: '#00cc00'}}>green</span></span>
                             </div>
                             <img className={'contain'} src={'/images/glasswhite.png'} alt={''}
                                  style={{
