@@ -76,8 +76,8 @@ class HomePage extends Component {
                             {this.state.currentText.length === 0 ? <MatButton onClick={() => {
                                     this.itemClicked(0);
                                 }} backgroundColor={'default'}>התחל את היום</MatButton> :
-                                <div>
-                                    <span className={'h4'}>{getTime(this.state.hours, this.state.mins)}</span>
+                                <div style={{display: 'flex', flexDirection: 'column'}}>
+                                    <span className={'h4'} style={{alignSelf: 'center'}}>{getTime(this.state.hours, this.state.mins)}</span>
                                     {this.state.currentText.split('\n').map((item, index) =>
                                         <p key={index}>{item}</p>)}
                                 </div>

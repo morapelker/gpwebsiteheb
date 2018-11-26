@@ -5,7 +5,6 @@ import {
     holistic, modular, quickInstall,
     stayInTouch,
 } from "./TextBlocks";
-import EnergySavingPanel from "./EnergySavingPanel";
 import AppPanel from "./AppPanel";
 import ReliableSystem from "./ReliableSystem";
 import '../Common/common.css';
@@ -98,7 +97,6 @@ class AdvantagesPage extends Component {
                         </ul>
                     </div>
                 </div>
-                <EnergySavingPanel />
                 <InfoPanel marginTop={30} even={false} text={modular}
                            title={'מודולריות'}
                            image={'quickinstall.png'}/>

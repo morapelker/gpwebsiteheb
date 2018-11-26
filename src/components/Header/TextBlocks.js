@@ -32,7 +32,7 @@ export const products = [
         url: 'light',
         icon: 'lightgeneric.png'
     }, {
-        text: 'תריסים',
+        text: 'תריס',
         whiteImage: 'shutterwhite.png',
         blackImage: 'shutterblack.png',
         url: 'shutter',
@@ -56,7 +56,7 @@ export const products = [
         url: 'sensor',
         icon: 'sensorgeneric.png'
     }, {
-        text: 'מגשר אינפרא אדום',
+        text: 'מגשר אינפרה אדום',
         whiteImage: 'irwhite.png',
         blackImage: 'irblack.png',
         url: 'irbridge',

@@ -44,13 +44,15 @@ class AppsPage extends Component {
                 {otherPanels.map((item, index) => (index === 2 ?
                     <div key={index} style={{
                         width: '100%',
+                        height: 500,
+                        maxHeight: '50%',
                         backgroundRepeat: 'no-repeat',
                         backgroundPosition: 'center',
                         backgroundAttachment: 'fixed',
                         backgroundSize: 'cover',
                         backgroundImage: 'url(/images/app8.jpg)',
                     }}>
-                        <div style={{background: 'rgba(0,0,0,0.7)'}}>
+                        <div style={{background: 'rgba(0,0,0,0.7)', style: '50%', width: '50%', height: '100%'}}>
                             <PanelComponent title={item.title} key={index} text={item.text}
                                             whiteText={true}
                                             image={item.image} even={true}/>

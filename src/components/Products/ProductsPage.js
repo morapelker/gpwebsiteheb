@@ -88,7 +88,7 @@ class ProductsPage extends Component {
                                  listItems={dimmerItems}
                 />
                 <SwitchComponent id={'shutter'} even={true} dark={false} src={'shutterblack.png'}
-                                 title={'מפסק תריסים/ווילונות'}
+                                 title={'מפסק תריס/וילון'}
                                  preText={shutterPre}
                                  listItems={shutterItems}
                 />

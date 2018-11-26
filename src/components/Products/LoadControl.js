@@ -17,7 +17,7 @@ const LoadControl = () => {
                 background: 'rgba(255,255,255,0.9)',
                 color: 'black',
             }}>
-                <span className={'h4'}>המפסק החכם</span>
+                <span className={'h4'}>המפסקים החכמים</span>
                 {products1.split('\n').map((item, index) => <p key={index}>{item}</p>)}
                 <p />
                     <div style={{display: 'flex', flexDirection: 'column'}}>
@@ -32,7 +32,7 @@ const LoadControl = () => {
                 <a href={'/docs/smart_switch.pdf'}>
                     <MatButton style={{alignSelf: 'center'}}
                                backgroundColor={'default'}>
-                        מדריך למפסק החכם
+                        מדריך למפסקים החכמים
                     </MatButton>
                 </a>
             </div>

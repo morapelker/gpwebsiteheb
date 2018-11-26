@@ -23,7 +23,8 @@ const SwitchComponent = ({even, src, title, dark, preText, listItems, height, ch
                             alignSelf: 'center'
                         }}/>
                         <div>
-                            {!titleAbove && <h4 style={{margin: '0 20px', textAlign: 'right'}}>{title}</h4>}
+                            {!titleAbove &&
+                            <h4 style={{margin: '0 20px', textAlign: 'right'}}>{title}</h4>}
                             <p style={{
                                 marginLeft: 10,
                                 marginRight: 10,
@@ -39,6 +40,7 @@ const SwitchComponent = ({even, src, title, dark, preText, listItems, height, ch
                         maxHeight: 100,
                         alignSelf: 'center'
                     }}/>}
+                <p/>
                 {listItems && <span className={'h4 small'}>מאפיינים ייחודיים</span>}
                 {listItems && <ul>
                     {listItems.map((item, index) => <li key={index}>
@@ -75,6 +77,8 @@ const SwitchComponent = ({even, src, title, dark, preText, listItems, height, ch
                     <span className={'h4'}>{title}</span>
                     {preText && preText.split('\n').map((item, index) => <p
                         className={'product_paragraph'} key={index}>{item}</p>)}
+                    <p/>
+
                     {listItems && <span className={'h4 small'}>מאפיינים ייחודיים</span>}
                     {listItems && <ul>
                         {listItems.map((item, index) => <li key={index}>

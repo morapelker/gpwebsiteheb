@@ -12,6 +12,7 @@ const ReliableSystem = () => {
                     padding: 30,
                     display: 'flex',
                     flexDirection: 'column',
+                    fontSize: '1.3em',
                     color: 'black'
                 }}>
                     <h4 style={{margin: 0}}>אמינות</h4>
