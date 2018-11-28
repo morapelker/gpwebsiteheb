@@ -66,7 +66,7 @@ const ContactPage = () => {
                     lineHeight: 2,
                     textAlign: 'left'
                 }}>
-                    <span style={{fontWeight: 'bold'}}>גרינפוינט מערכות בעמ</span>
+                    <span style={{fontWeight: 'bold'}}>גרינפוינט מערכות בע״מ</span>
                     <span>האשל 7 אזור התעשייה הדרומי קיסריה</span>
                     <a href={'mailto:info@greenpointsys.com'}>info@greenpointsys.com</a>
 
