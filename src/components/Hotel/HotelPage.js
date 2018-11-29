@@ -20,7 +20,7 @@ class HotelPage extends Component {
             >
                 <div className={'root_text_container'}>
                     {hotelPreText.split('\n').map((item, index) => <p key={index}
-                                                                      style={{width: '100%'}}>{item}</p>
+                                                                      style={{width: '100%', fontSize: '1.3em'}}>{item}</p>
                     )}
                 </div>
                 <InfoPanel marginTop={30} even={false} text={''}
@@ -49,9 +49,9 @@ class HotelPage extends Component {
                         display: 'flex',
                         flexDirection: 'column'
                     }}>
-                        <h4 style={{color: 'white', marginTop: 0}}>{hotelItems[4].title}</h4>
+                        <h4 style={{color: 'white', marginTop: 0}}>{hotelItems[3].title}</h4>
                         <ul style={{margin: 0, padding: 0}}>
-                            {hotelItems[4].text.split('\n').map((item, index) => <li key={index}
+                            {hotelItems[3].text.split('\n').map((item, index) => <li key={index}
                                                                                      style={{color: 'white'}}>
                                 {item}
                             </li>)}
