@@ -54,7 +54,7 @@ const HomeRouter = ({items, productsSelector, history}) => {
             <a href={'https://www.facebook.com/Green-point-systems-238798076273979/'}>
                 <FontAwesomeIcon className={'icon'} icon={['fab', 'facebook']}/>
             </a>
-            <a href='https://www.youtube.com/channel/UCC7898iqiW5suONL54YRoXg'>
+            <a href='https://www.youtube.com/channel/UCAn89wY0c7NTpykHt2CW3wQ'>
                 <FontAwesomeIcon className={'icon'} icon={['fab', 'youtube']}/>
             </a>
         </div>

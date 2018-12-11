@@ -3,7 +3,7 @@ import './products.css';
 import {LargeScreen, SmallScreen} from "../Common/ScreenSizes";
 import ImgWithLoader from "../Common/ImgWithLoader";
 
-const SwitchComponent = ({even, src, title, dark, preText, listItems, height, children, marginTop, id}) => {
+const SwitchComponent = ({even, src, title, dark, preText, listItems, height, children, marginTop, id, alt}) => {
     const titleAbove = (id === 'glass' || id === 'keypad');
     return (
         <div className={'switch_root ' + (even ? '' : 'odd ') + (dark ? 'dark' : '')} id={id}>
@@ -15,7 +15,7 @@ const SwitchComponent = ({even, src, title, dark, preText, listItems, height, ch
                         width: '100%',
                         flexDirection: 'row'
                     }}>
-                        <ImgWithLoader src={'/images/' + src} alt={''} style={{
+                        <ImgWithLoader src={'/images/' + src} alt={alt || title || ''} style={{
                             maxWidth: '50%',
                             objectFit: 'contain',
                             marginTop: 0,
@@ -33,7 +33,7 @@ const SwitchComponent = ({even, src, title, dark, preText, listItems, height, ch
                         </div>
                     </div> :
                     <p key={index}>{item}</p>)) :
-                    <ImgWithLoader src={'/images/' + src} alt={''} style={{
+                    <ImgWithLoader src={'/images/' + src} alt={alt || title || ''} style={{
                         maxWidth: '50%',
                         objectFit: 'contain',
                         marginTop: marginTop || 0,

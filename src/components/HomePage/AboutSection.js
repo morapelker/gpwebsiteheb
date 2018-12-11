@@ -14,7 +14,7 @@ const AboutSection = ({history}) => {
             backgroundSize: 'cover',
         }}>
 
-            <div
+            <div id={'movie_div'}
                 style={{
                     width: '100%',
                     height: 0,

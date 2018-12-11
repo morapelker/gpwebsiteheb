@@ -27,6 +27,7 @@ import HotelPage from "./components/Hotel/HotelPage";
 import OfficePage from "./components/Home/OfficePage";
 import {products} from "./components/Header/TextBlocks";
 import objectFitImages from 'object-fit-images';
+import LocationListener from "./components/Common/LocationListener";
 
 library.add(faQuoteRight, faPlus, fab, faPaperPlane, faBars, faWindowClose, faPhone, faArrowCircleDown, faArrowCircleUp);
 
@@ -61,27 +62,29 @@ class App extends Component {
         return (
             <div className="App">
                 <BrowserRouter>
-                    <div>
-                        <div className={'appRoot'}>
-                            <Switch>
-                                <Route exact path='/' component={HomePage}/>
-                                <Route exact path='/about' component={AboutPage}/>
-                                <Route exact path='/advantages' component={AdvantagesPage}/>
-                                <Route exact path='/faq' component={FaqPage}/>
-                                <Route exact path='/niy' component={NIY}/>
-                                <Route exact path='/apps' component={AppsPage}/>
-                                <Route exact path='/hotel' component={HotelPage}/>
-                                <Route exact path='/office' component={OfficePage}/>
-                                <Route exact path='/home' component={IGHHome}/>
-                                <Route path='/products' render={() => <ProductsPage
-                                    shrinked={this.state.shrinked}/>}/>
-                                <Route render={() => <Redirect to="/" replace/>}/>
-                            </Switch>
-                            <div style={{height: 100}}/>
-                            <ContactPage/>
+                    <LocationListener>
+                        <div>
+                            <div className={'appRoot'}>
+                                <Switch>
+                                    <Route exact path='/' component={HomePage}/>
+                                    <Route exact path='/about' component={AboutPage}/>
+                                    <Route exact path='/advantages' component={AdvantagesPage}/>
+                                    <Route exact path='/faq' component={FaqPage}/>
+                                    <Route exact path='/niy' component={NIY}/>
+                                    <Route exact path='/apps' component={AppsPage}/>
+                                    <Route exact path='/hotel' component={HotelPage}/>
+                                    <Route exact path='/office' component={OfficePage}/>
+                                    <Route exact path='/home' component={IGHHome}/>
+                                    <Route path='/products' render={() => <ProductsPage
+                                        shrinked={this.state.shrinked}/>}/>
+                                    <Route render={() => <Redirect to="/" replace/>}/>
+                                </Switch>
+                                <div style={{height: 100}}/>
+                                <ContactPage/>
+                            </div>
+                            <Header shrinked={this.state.shrinked}/>
                         </div>
-                        <Header shrinked={this.state.shrinked}/>
-                    </div>
+                    </LocationListener>
                 </BrowserRouter>
             </div>
         );

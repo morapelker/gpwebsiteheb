@@ -5,6 +5,8 @@ import QuoteSection from "./QuoteSection";
 import {withRouter} from "react-router-dom";
 import './info_h4.css'
 import CircularProgress from "@material-ui/core/CircularProgress/CircularProgress";
+import MatButtonBlack from "../Common/MatButtonBlack";
+import {event} from "react-ga";
 
 const info = [
     {
@@ -108,6 +110,31 @@ class HomePage extends Component {
                                      maxWidth: '80%',
                                      objectFit: 'contain'
                                  }}/>
+                            <div style={{height: 50}} />
+                            <MatButtonBlack onClick={() => {
+                                try {
+                                    event({
+                                        category: 'VideoButton',
+                                        action: 'ClickedVideoButton',
+                                        value: 1
+                                    })
+                                }catch {}
+                                let top = document.getElementById('movie_div');
+                                if (top) {
+                                    top = top.offsetTop;
+
+                                    try {
+                                        window.scroll({
+                                            top: top - 40,
+                                            left: 0,
+                                            behavior: 'smooth'
+                                        });
+                                    } catch {
+                                        window.scroll(0, top - 40);
+                                    }
+
+                                }
+                            }} style={{width: 400, maxWidth: '80%'}} backgroundColor={'#37e2cc'}>לצפייה בסרטון הדגמה - הבית החכם של גרינפוינט</MatButtonBlack>
                         </div>
                     </div> :
                     <div style={{
