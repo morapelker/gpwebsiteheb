@@ -12,7 +12,8 @@ import {
     faWindowClose,
     faPhone,
     faArrowCircleDown,
-    faArrowCircleUp
+    faArrowCircleUp,
+    faMinusSquare
 } from '@fortawesome/free-solid-svg-icons';
 import {fab} from '@fortawesome/free-brands-svg-icons';
 import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
@@ -29,7 +30,7 @@ import {products} from "./components/Header/TextBlocks";
 import objectFitImages from 'object-fit-images';
 import LocationListener from "./components/Common/LocationListener";
 
-library.add(faQuoteRight, faPlus, fab, faPaperPlane, faBars, faWindowClose, faPhone, faArrowCircleDown, faArrowCircleUp);
+library.add(faQuoteRight, faPlus, fab, faPaperPlane, faBars, faWindowClose, faPhone, faArrowCircleDown, faArrowCircleUp, faMinusSquare);
 
 class App extends Component {
     constructor(props) {

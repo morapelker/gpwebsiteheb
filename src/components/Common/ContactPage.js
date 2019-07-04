@@ -8,7 +8,7 @@ import '../Common/contact.css';
 
 const ContactPage = () => {
 
-    const name = useInput('שם מלא');
+    const name = useInput('שם');
     const email = useInput('דוא״ל');
     const phoneNumber = useInput('מספר טלפון*');
     const message = useInput('הודעה');

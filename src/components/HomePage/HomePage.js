@@ -7,6 +7,7 @@ import './info_h4.css'
 import CircularProgress from "@material-ui/core/CircularProgress/CircularProgress";
 import MatButtonBlack from "../Common/MatButtonBlack";
 import {event} from "react-ga";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const info = [
     {
@@ -110,7 +111,7 @@ class HomePage extends Component {
                                      maxWidth: '80%',
                                      objectFit: 'contain'
                                  }}/>
-                            <div style={{height: 50}} />
+                            <div style={{height: 30}}/>
                             <MatButtonBlack onClick={() => {
                                 try {
                                     event({
@@ -118,11 +119,11 @@ class HomePage extends Component {
                                         action: 'ClickedVideoButton',
                                         value: 1
                                     })
-                                }catch {}
+                                } catch {
+                                }
                                 let top = document.getElementById('movie_div');
                                 if (top) {
                                     top = top.offsetTop;
-
                                     try {
                                         window.scroll({
                                             top: top - 40,
@@ -134,7 +135,11 @@ class HomePage extends Component {
                                     }
 
                                 }
-                            }} style={{width: 400, maxWidth: '80%'}} backgroundColor={'#37e2cc'}>לצפייה בסרטון הדגמה - הבית החכם של גרינפוינט</MatButtonBlack>
+                            }} style={{width: 150, maxWidth: '80%', fontSize: '2em'}} backgroundColor={'#ffffff'}>
+                                <FontAwesomeIcon style={{
+                                    color: 'red'
+                                }} icon={['fab', 'youtube']}/>
+                            </MatButtonBlack>
                         </div>
                     </div> :
                     <div style={{

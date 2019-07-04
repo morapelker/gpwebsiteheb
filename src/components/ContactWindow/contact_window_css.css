@@ -1,0 +1,18 @@
+.contact_window_root {
+    min-width: 300px;
+    background-color: white;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_window_input {
+    margin-top: 3px;
+}
+
+@media only screen and (max-width: 950px) {
+    .contact_window_root {
+        width: auto;
+        right: 50px;
+    }
+}

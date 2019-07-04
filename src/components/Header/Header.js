@@ -13,6 +13,7 @@ import HamburgerMenu from "./HamburgerMenu";
 import MediaQuery from "react-responsive";
 import ImgWithLoader from "../Common/ImgWithLoader";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import ContactWindow from "../ContactWindow/ContactWindow";
 
 class Header extends Component {
     constructor(props) {
@@ -20,10 +21,15 @@ class Header extends Component {
         this.state = {
             showProducts: false,
             dark: false,
-            drawerOpen: false
+            drawerOpen: false,
+            minimizeContact: false
         };
     }
 
+    setMinimzeContact = () => {
+        this.setState({minimizeContact: true});
+    };
+    
     showProducts = showProducts => {
         if (showProducts !== this.state.showProducts)
             this.setState({showProducts});
@@ -49,7 +55,7 @@ class Header extends Component {
 
     render() {
         return (
-            <div>
+            <div className={'header_main_root'} style={{display: 'flex', flexDirection: 'column'}}>
                 <div className={'header_root ' + (this.props.shrinked ? 'shrinked' : '')}>
                     <div className={'header_title'}>
                         <SmallScreen>
@@ -98,10 +104,11 @@ class Header extends Component {
                                        }}/>
                         <LargeScreen>
                             <MediaQuery minWidth={this.props.shrinked ? 1000 : 1120}>
-                                <FontAwesomeIcon onClick={this.scrollToContacts} className={'icon'} style={{
-                                    alignSelf: 'center',
-                                    color: 'green'
-                                }}
+                                <FontAwesomeIcon onClick={this.scrollToContacts} className={'icon'}
+                                                 style={{
+                                                     alignSelf: 'center',
+                                                     color: 'green'
+                                                 }}
                                                  icon={'phone'}
                                 />
                                 <span style={{
@@ -114,6 +121,7 @@ class Header extends Component {
                             <HomeRouter history={this.props.history} items={items}
                                         productsSelector={this.showProducts}/>
                         </LargeScreen>
+
                     </div>
 
                 </div>
@@ -182,9 +190,20 @@ class Header extends Component {
                                         cursor: 'pointer'
                                     }}/>
                             </div>
-
                         </div>
                     </Collapse>
+                    {!this.state.minimizeContact &&
+                    <div style={{display: 'flex', flexDirection: 'row'}}>
+                        <FontAwesomeIcon style={{
+                            color: 'black',
+                            fontSize: '1.3em',
+                            cursor: 'pointer'
+                        }} icon={'minus-square'} onClick={() => {
+                            this.setState({minimizeContact: true});
+                        }}/>
+                        <ContactWindow shrinked={this.props.shrinked} minimizeFunc={this.setMinimzeContact}/>
+                    </div>}
+
                 </LargeScreen>
             </div>
         );
